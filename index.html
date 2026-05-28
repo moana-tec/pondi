@@ -33,6 +33,158 @@
 html{scroll-behavior:smooth;}
 body{background:var(--cream);color:var(--dark);font-family:'EB Garamond',serif;overflow-x:hidden;}
 
+/* ── TOP BAR ── */
+.top-bar{
+  position:relative;
+  background:var(--dark);
+  overflow:hidden;
+  padding:28px 24px 20px;
+  text-align:center;
+  border-bottom:2px solid var(--maroon);
+  min-height:110px;
+}
+.top-bar-balls{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+.tb-ball{
+  position:absolute;
+  border-radius:50%;
+  animation:floatBall linear infinite;
+  opacity:0.85;
+}
+.top-bar-title{
+  position:relative;
+  z-index:2;
+  display:flex;align-items:center;justify-content:center;gap:18px;
+  font-family:'Cinzel',serif;
+  font-size:clamp(22px,5vw,46px);
+  font-weight:900;
+  letter-spacing:0.18em;
+  color:#ffffff;
+  text-shadow:0 2px 24px rgba(107,26,42,0.5);
+  animation:fadeUp 0.8s ease 0.1s both;
+}
+.tb-diamond{font-size:0.5em;color:var(--maroon-lt);opacity:0.8;}
+.top-bar-sub{
+  position:relative;z-index:2;
+  font-family:'EB Garamond',serif;
+  font-size:clamp(12px,2vw,16px);
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.45);
+  margin-top:6px;
+  animation:fadeUp 0.8s ease 0.3s both;
+}
+@keyframes floatBall{
+  0%{transform:translateY(120px) translateX(0) rotate(0deg);opacity:0;}
+  10%{opacity:0.85;}
+  90%{opacity:0.85;}
+  100%{transform:translateY(-60px) translateX(var(--drift)) rotate(360deg);opacity:0;}
+}
+
+/* ── PRE-HERO ── */
+.pre-hero{
+  background:var(--dark);
+  padding:0 0 0;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+/* Animated balls strip */
+.balls-strip{
+  background:var(--maroon);
+  overflow:hidden;
+  padding:14px 0;
+  border-bottom:1px solid rgba(201,168,76,0.2);
+}
+.balls-track{
+  display:flex;
+  gap:22px;
+  align-items:center;
+  white-space:nowrap;
+  animation:ballsRoll 18s linear infinite;
+  width:max-content;
+}
+.ball-item{
+  width:44px;height:44px;
+  border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:900;font-family:'Cinzel',serif;
+  flex-shrink:0;
+  position:relative;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4), inset 0 -3px 8px rgba(0,0,0,0.25);
+  animation:ballBounce 1.6s ease-in-out infinite;
+}
+.ball-item::before{
+  content:'';
+  position:absolute;
+  top:6px;left:9px;
+  width:14px;height:9px;
+  background:rgba(255,255,255,0.35);
+  border-radius:50%;
+  transform:rotate(-30deg);
+}
+.b1{background:radial-gradient(circle at 38% 35%, #f5d040, #c9a010); color:#111;}
+.b2{background:radial-gradient(circle at 38% 35%, #3366ee, #1133aa); color:white;}
+.b3{background:radial-gradient(circle at 38% 35%, #ee2222, #aa0000); color:white;}
+.b4{background:radial-gradient(circle at 38% 35%, #9933cc, #661199); color:white;}
+.b5{background:radial-gradient(circle at 38% 35%, #ff8800, #cc5500); color:white;}
+.b6{background:radial-gradient(circle at 38% 35%, #22aa44, #117722); color:white;}
+.b7{background:radial-gradient(circle at 38% 35%, #dd4411, #992200); color:white;}
+.b8{background:radial-gradient(circle at 38% 35%, #222222, #000000); color:white; box-shadow:0 4px 16px rgba(0,0,0,0.6),inset 0 -3px 8px rgba(0,0,0,0.4),0 0 18px rgba(255,255,255,0.08);}
+.b9{background:radial-gradient(circle at 38% 35%, #f5d040, #c9a010); color:#111;}
+.b10{background:radial-gradient(circle at 38% 35%, #3366ee, #1133aa); color:white;}
+.b11{background:radial-gradient(circle at 38% 35%, #ee2222, #aa0000); color:white;}
+.b12{background:radial-gradient(circle at 38% 35%, #9933cc, #661199); color:white;}
+.b13{background:radial-gradient(circle at 38% 35%, #ff8800, #cc5500); color:white;}
+.b14{background:radial-gradient(circle at 38% 35%, #22aa44, #117722); color:white;}
+.b15{background:radial-gradient(circle at 38% 35%, #dd4411, #992200); color:white;}
+/* Delay per ball for staggered bounce */
+.ball-item:nth-child(2n){animation-delay:0.2s;}
+.ball-item:nth-child(3n){animation-delay:0.4s;}
+.ball-item:nth-child(4n){animation-delay:0.6s;}
+.ball-item:nth-child(5n){animation-delay:0.8s;}
+.ball-item:nth-child(6n){animation-delay:1.0s;}
+.ball-item:nth-child(7n){animation-delay:1.2s;}
+
+/* Pondi Tavern heading */
+.pondi-header{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  padding:32px 24px 8px;
+}
+.pondi-gem{
+  font-size:12px;
+  color:var(--gold);
+  opacity:0.7;
+}
+.pondi-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(28px,7vw,72px);
+  font-weight:900;
+  letter-spacing:0.18em;
+  color:var(--cream);
+  text-transform:uppercase;
+  line-height:1;
+  text-shadow:0 2px 24px rgba(201,168,76,0.25);
+}
+.pondi-sub{
+  font-family:'EB Garamond',serif;
+  font-size:clamp(14px,2.5vw,22px);
+  font-style:italic;
+  color:var(--gold);
+  letter-spacing:0.25em;
+  padding-bottom:28px;
+  opacity:0.85;
+}
+@keyframes ballsRoll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes ballBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
 /* ── HERO ── */
 .hero{
   min-height:100vh;
@@ -703,6 +855,32 @@ footer{
 <body>
 
 <!-- ═══ HERO ═══ -->
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-balls" id="topBalls"></div>
+  <div class="top-bar-title">
+    <span class="tb-diamond">◆</span>
+    <span class="tb-name">PONDI TAVERN</span>
+    <span class="tb-diamond">◆</span>
+  </div>
+  <div class="top-bar-sub">Pro 32 Winter Tour · 20 June 2026</div>
+</div>
+
+<!-- ═══ PRE-HERO HEADER ═══ -->
+<div class="pre-hero">
+  <!-- Animated pool balls strip -->
+  <div class="balls-strip">
+    <div class="balls-track" id="ballsTrack"></div>
+  </div>
+  <!-- Pondi Tavern title -->
+  <div class="pondi-header">
+    <div class="pondi-gem">◆</div>
+    <h1 class="pondi-title">PONDI TAVERN</h1>
+    <div class="pondi-gem">◆</div>
+  </div>
+  <div class="pondi-sub">Presents</div>
+</div>
+
 <section class="hero">
   <div class="hero-img">
     <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;">
@@ -1082,13 +1260,12 @@ footer{
 <!-- ═══ ADMIN ═══ -->
 <section class="admin-section">
   <div class="container">
-    <div class="adm-toggle" onclick="toggleAdm()">🔐 Organiser Admin Panel</div>
+    <div class="adm-toggle" onclick="toggleAdm()" style="opacity:0;user-select:none;font-size:8px;color:transparent;cursor:default;">·</div>
     <div class="adm-panel" id="admPanel">
       <div class="adm-login" id="admLogin">
         <span class="sec-eyebrow">Admin Access</span>
         <input type="password" id="admPass" placeholder="Password" onkeydown="if(event.key==='Enter')doLogin()"/>
         <button class="adm-btn" onclick="doLogin()">Login</button>
-        <p style="font-size:11px;color:var(--lite);margin-top:10px;">Default: <em>pondi2026</em></p>
       </div>
       <div id="admContent" style="display:none;">
         <span class="sec-eyebrow">All Submissions</span>
@@ -1123,6 +1300,25 @@ footer{
 const SK='pro32_v2';
 const AP='pondi2026';
 const PRE_CONFIRMED=['Slahla','PK','Sandile','Sduduzo','Thabani','Makhenikha'];
+
+// ── Build animated balls strip ──
+(function(){
+  const track = document.getElementById('ballsTrack');
+  if(!track) return;
+  const balls = [
+    {n:'1',c:'b1'},{n:'2',c:'b2'},{n:'3',c:'b3'},{n:'4',c:'b4'},
+    {n:'5',c:'b5'},{n:'6',c:'b6'},{n:'7',c:'b7'},{n:'8',c:'b8'},
+    {n:'9',c:'b9'},{n:'10',c:'b10'},{n:'11',c:'b11'},{n:'12',c:'b12'},
+    {n:'13',c:'b13'},{n:'14',c:'b14'},{n:'15',c:'b15'},
+    {n:'8',c:'b8'},{n:'1',c:'b1'},{n:'3',c:'b3'},{n:'5',c:'b5'},
+    {n:'2',c:'b2'},{n:'7',c:'b7'},{n:'4',c:'b4'},{n:'6',c:'b6'},
+    {n:'9',c:'b9'},{n:'11',c:'b11'},{n:'13',c:'b13'},{n:'15',c:'b15'},
+    {n:'10',c:'b10'},{n:'12',c:'b12'},{n:'14',c:'b14'}
+  ];
+  // Duplicate for seamless loop
+  const all = [...balls,...balls];
+  track.innerHTML = all.map(b=>`<div class="ball-item ${b.c}">${b.n}</div>`).join('');
+})();
 const PLAYERS=[
   'Slahla','Mcabango','Nqaba','PK','Sandile','Tshepo','Mabuza','Khaya',
   'Mandla','Jobe','Thabani','Sduduzo','Makhenikha','Mazakaza',
