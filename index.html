@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en")>
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Pro 32 Winter Tour 2026 · Pondi Tavern</title>
+<title>Pro 32 Umncintiswano Wasebusika 2026 · Pondi Tavern</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"/>
 <style>
 :root {
@@ -32,6 +32,45 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--cream);color:var(--dark);font-family:'EB Garamond',serif;overflow-x:hidden;}
+
+/* ── MAIN TOP LANGUAGE SWITCHER BAR ── */
+.global-lang-bar {
+  background: #11090b;
+  border-bottom: 1px solid rgba(201,168,76,0.3);
+  padding: 10px 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: 10000;
+}
+.lang-switch {
+  display: flex;
+  border: 1px solid rgba(201,168,76,0.5);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.lang-btn {
+  padding: 6px 14px;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.lang-btn.active {
+  background: var(--gold);
+  color: var(--dark);
+}
+.lang-btn:hover:not(.active) {
+  color: var(--gold2);
+  background: rgba(255, 255, 255, 0.05);
+}
 
 /* ── TOP BAR ── */
 .top-bar{
@@ -85,6 +124,13 @@ body{background:var(--cream);color:var(--dark);font-family:'EB Garamond',serif;o
   100%{transform:translateY(-60px) translateX(var(--drift)) rotate(360deg);opacity:0;}
 }
 
+/* ── ADMIN SECRET TRIGGER ── */
+.adm-secret{
+  cursor:default;user-select:none;
+  font-size:10px;color:transparent;
+  position:relative;
+}
+
 /* ── PRE-HERO ── */
 .pre-hero{
   background:var(--dark);
@@ -109,46 +155,16 @@ body{background:var(--cream);color:var(--dark);font-family:'EB Garamond',serif;o
   width:max-content;
 }
 .ball-item{
-  width:44px;height:44px;
-  border-radius:50%;
-  display:inline-flex;align-items:center;justify-content:center;
-  font-size:15px;font-weight:900;font-family:'Cinzel',serif;
   flex-shrink:0;
-  position:relative;
-  box-shadow:0 4px 12px rgba(0,0,0,0.4), inset 0 -3px 8px rgba(0,0,0,0.25);
   animation:ballBounce 1.6s ease-in-out infinite;
+  display:inline-block;
 }
-.ball-item::before{
-  content:'';
-  position:absolute;
-  top:6px;left:9px;
-  width:14px;height:9px;
-  background:rgba(255,255,255,0.35);
-  border-radius:50%;
-  transform:rotate(-30deg);
-}
-.b1{background:radial-gradient(circle at 38% 35%, #f5d040, #c9a010); color:#111;}
-.b2{background:radial-gradient(circle at 38% 35%, #3366ee, #1133aa); color:white;}
-.b3{background:radial-gradient(circle at 38% 35%, #ee2222, #aa0000); color:white;}
-.b4{background:radial-gradient(circle at 38% 35%, #9933cc, #661199); color:white;}
-.b5{background:radial-gradient(circle at 38% 35%, #ff8800, #cc5500); color:white;}
-.b6{background:radial-gradient(circle at 38% 35%, #22aa44, #117722); color:white;}
-.b7{background:radial-gradient(circle at 38% 35%, #dd4411, #992200); color:white;}
-.b8{background:radial-gradient(circle at 38% 35%, #222222, #000000); color:white; box-shadow:0 4px 16px rgba(0,0,0,0.6),inset 0 -3px 8px rgba(0,0,0,0.4),0 0 18px rgba(255,255,255,0.08);}
-.b9{background:radial-gradient(circle at 38% 35%, #f5d040, #c9a010); color:#111;}
-.b10{background:radial-gradient(circle at 38% 35%, #3366ee, #1133aa); color:white;}
-.b11{background:radial-gradient(circle at 38% 35%, #ee2222, #aa0000); color:white;}
-.b12{background:radial-gradient(circle at 38% 35%, #9933cc, #661199); color:white;}
-.b13{background:radial-gradient(circle at 38% 35%, #ff8800, #cc5500); color:white;}
-.b14{background:radial-gradient(circle at 38% 35%, #22aa44, #117722); color:white;}
-.b15{background:radial-gradient(circle at 38% 35%, #dd4411, #992200); color:white;}
-/* Delay per ball for staggered bounce */
-.ball-item:nth-child(2n){animation-delay:0.2s;}
-.ball-item:nth-child(3n){animation-delay:0.4s;}
-.ball-item:nth-child(4n){animation-delay:0.6s;}
-.ball-item:nth-child(5n){animation-delay:0.8s;}
-.ball-item:nth-child(6n){animation-delay:1.0s;}
-.ball-item:nth-child(7n){animation-delay:1.2s;}
+.ball-item:nth-child(2n){animation-delay:0.25s;}
+.ball-item:nth-child(3n){animation-delay:0.5s;}
+.ball-item:nth-child(4n){animation-delay:0.75s;}
+.ball-item:nth-child(5n){animation-delay:1.0s;}
+.ball-item:nth-child(6n){animation-delay:1.25s;}
+.ball-item:nth-child(7n){animation-delay:1.5s;}
 
 /* Pondi Tavern heading */
 .pondi-header{
@@ -801,117 +817,87 @@ footer{
 }
 .ft-logo{
   font-family:'Playfair Display',serif;
-  font-size:clamp(28px,5vw,46px);
-  font-weight:700;font-style:italic;
-  color:#ffffff;margin-bottom:6px;
+  font-size:26px;font-weight:700;letter-spacing:0.05em;
+  color:var(--white);display:inline-block;margin-bottom:12px;
 }
+.ft-logo span{color:var(--gold2);font-weight:400;font-style:italic;}
 .ft-sub{
   font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:0.45em;text-transform:uppercase;
-  color:rgba(255,255,255,0.55);margin-bottom:28px;
+  letter-spacing:0.35em;text-transform:uppercase;
+  color:rgba(255,255,255,0.4);margin-bottom:44px;
 }
-.ft-rule{
-  width:60px;height:1px;
-  background:rgba(201,168,76,0.35);
-  margin:0 auto 28px;
-}
-.ft-contacts{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;}
-.ft-contacts a{
-  font-family:'EB Garamond',serif;font-size:16px;
-  font-weight:500;color:#ffffff;text-decoration:none;
+.ft-powered{
+  font-size:12px;color:rgba(255,255,255,0.25);
   letter-spacing:0.05em;
 }
-.ft-contacts a:hover{color:rgba(255,255,255,0.7);}
-.ft-email{font-size:15px;color:rgba(255,255,255,0.65);margin-bottom:28px;font-family:'EB Garamond',serif;}
-.ft-powered{
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:0.25em;text-transform:uppercase;
-  color:rgba(255,255,255,0.4);
+.ft-powered a{color:rgba(255,255,255,0.4);text-decoration:none;}
+.ft-powered a:hover{color:var(--gold2);}
+
+/* ── TOAST ── */
+.toast{
+  position:fixed;bottom:24px;left:24px;z-index:99999;
+  background:var(--dark);color:var(--white);
+  padding:14px 24px;font-size:13px;
+  box-shadow:var(--shadow2);border-left:3px solid var(--gold);
+  opacity:0;transform:translateY(20px);transition:all 0.3s ease;
+  pointer-events:none;
 }
-.ft-powered strong{color:rgba(255,255,255,0.7);}
+.toast.show{opacity:1;transform:translateY(0);pointer-events:auto;}
+.toast.err{border-left-color:#8b2a2a;}
 
-/* ── LIGHTBOX & TOAST ── */
-.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;}
-.lb.open{display:flex;}
-.lb img{max-width:90vw;max-height:85vh;border:2px solid rgba(201,168,76,0.4);}
-.lb-x{position:absolute;top:20px;right:28px;font-size:32px;color:var(--gold2);cursor:pointer;font-family:'Playfair Display',serif;}
-.toast{position:fixed;bottom:28px;right:28px;background:var(--dark);color:var(--white);font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.1em;padding:14px 22px;border-left:3px solid var(--gold);transform:translateX(160%);transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);z-index:999;max-width:280px;box-shadow:var(--shadow2);}
-.toast.show{transform:translateX(0);}
-.toast.err{border-left-color:var(--maroon);}
+/* ── REVEAL ANIMATION ── */
+.reveal{opacity:0;transform:translateY(30px);transition:all 0.8s ease;}
+.reveal.active{opacity:1;transform:translateY(0);}
 
-/* ── REVEAL ── */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.75s ease,transform 0.75s ease;}
-.reveal.on{opacity:1;transform:translateY(0);}
-
-/* ── KEYFRAMES ── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes slowZoom{from{transform:scale(1)}to{transform:scale(1.08)}}
-@keyframes scrollBob{0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:0.4;transform:scaleY(0.7)}}
-@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@keyframes cuePulse{0%,100%{transform:translateX(0) rotate(-1deg)}50%{transform:translateX(8px) rotate(-1deg)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes scrollBob{0%,100%{transform:translateY(0);opacity:0.7;}50%{transform:translateY(6px);opacity:0.2;}}
 </style>
 </head>
 <body>
 
-<!-- ═══ HERO ═══ -->
-<!-- TOP BAR -->
-<div class="top-bar">
-  <div class="top-bar-balls" id="topBalls"></div>
-  <div class="top-bar-title">
-    <span class="tb-diamond">◆</span>
-    <span class="tb-name">PONDI TAVERN</span>
-    <span class="tb-diamond">◆</span>
+<div class="global-lang-bar">
+  <div class="lang-switch">
+    <button class="lang-btn" id="lang-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="lang-zu" onclick="setLang('zu')">ZU</button>
   </div>
-  <div class="top-bar-sub">Pro 32 Winter Tour · 20 June 2026</div>
 </div>
 
-<!-- ═══ PRE-HERO HEADER ═══ -->
+<div class="top-bar">
+  <div class="top-bar-balls" id="topBarBalls"></div>
+  <h1 class="top-bar-title">PRO 32 <span class="tb-diamond">◆</span> WINTER CUP</h1>
+  <p class="top-bar-sub" id="top-bar-sub-el">Pondi Tavern · Isipingo Rail</p>
+</div>
+
 <div class="pre-hero">
-  <!-- Animated pool balls strip -->
   <div class="balls-strip">
     <div class="balls-track" id="ballsTrack"></div>
   </div>
-  <!-- Pondi Tavern title -->
   <div class="pondi-header">
-    <div class="pondi-gem">◆</div>
-    <h1 class="pondi-title">PONDI TAVERN</h1>
-    <div class="pondi-gem">◆</div>
+    <span class="pondi-gem">◆</span>
+    <h2 class="pondi-title">Pondi Tavern</h2>
+    <span class="pondi-gem">◆</span>
   </div>
-  <div class="pondi-sub">Presents</div>
+  <p class="pondi-sub" id="pondi-sub-el">Where Champions Converge</p>
 </div>
 
 <section class="hero">
+  <div class="hero-bg"></div>
   <div class="hero-img">
-    <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;">
+    <svg width="100%" height="100%" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <!-- Felt gradient -->
-        <radialGradient id="felt" cx="50%" cy="50%" r="60%">
-          <stop offset="0%" stop-color="#1e6b38"/>
-          <stop offset="100%" stop-color="#0c3d1c"/>
-        </radialGradient>
-        <!-- Table wood -->
-        <linearGradient id="wood" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#6b3a10"/>
-          <stop offset="100%" stop-color="#3a1e06"/>
+        <linearGradient id="lamp1" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="rgba(255,230,150,0.3)"/>
+          <stop offset="40%" stop-color="rgba(255,210,100,0.08)"/>
+          <stop offset="100%" stop-color="rgba(255,200,100,0)"/>
         </linearGradient>
-        <!-- Lamp cone 1 -->
-        <radialGradient id="lamp1" cx="50%" cy="0%" r="100%">
-          <stop offset="0%" stop-color="rgba(255,230,140,0.55)"/>
-          <stop offset="100%" stop-color="transparent"/>
+        <radialGradient id="sh" cx="40%" cy="30%" r="70%">
+          <stop offset="0%" stop-color="rgba(255,255,255,0.3)"/>
+          <stop offset="40%" stop-color="rgba(255,255,255,0)"/>
+          <stop offset="100%" stop-color="rgba(0,0,0,0.6)"/>
         </radialGradient>
-        <!-- Lamp cone 2 -->
-        <radialGradient id="lamp2" cx="50%" cy="0%" r="100%">
-          <stop offset="0%" stop-color="rgba(255,220,120,0.4)"/>
-          <stop offset="100%" stop-color="transparent"/>
-        </radialGradient>
-        <!-- Ball shine -->
-        <radialGradient id="sh" cx="35%" cy="30%" r="55%">
-          <stop offset="0%" stop-color="rgba(255,255,255,0.5)"/>
-          <stop offset="100%" stop-color="transparent"/>
-        </radialGradient>
-        <!-- Cue stick -->
-        <linearGradient id="cue" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="wood" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stop-color="#2a1005"/>
           <stop offset="30%" stop-color="#7a4a18"/>
           <stop offset="75%" stop-color="#d4a060"/>
@@ -921,571 +907,124 @@ footer{
         <filter id="softblur"><feGaussianBlur stdDeviation="6"/></filter>
         <filter id="tinyblur"><feGaussianBlur stdDeviation="1.5"/></filter>
       </defs>
-
-      <!-- Background -->
       <rect width="1200" height="700" fill="#060e08"/>
       <radialGradient id="bgGlow" cx="50%" cy="55%" r="55%">
         <stop offset="0%" stop-color="#122a18"/>
         <stop offset="100%" stop-color="#060e08"/>
       </radialGradient>
       <rect width="1200" height="700" fill="url(#bgGlow)"/>
-
-      <!-- Pendant lamp 1 -->
       <line x1="380" y1="0" x2="380" y2="55" stroke="rgba(200,160,80,0.4)" stroke-width="2"/>
       <path d="M342,55 Q380,70 418,55 L408,42 Q380,52 352,42 Z" fill="#2a1a04"/>
       <ellipse cx="380" cy="52" rx="20" ry="7" fill="rgba(255,220,100,0.6)" filter="url(#tinyblur)"/>
       <path d="M310,65 L220,340 L540,340 L450,65 Z" fill="url(#lamp1)" opacity="0.7"/>
-
-      <!-- Pendant lamp 2 -->
       <line x1="820" y1="0" x2="820" y2="55" stroke="rgba(200,160,80,0.4)" stroke-width="2"/>
       <path d="M782,55 Q820,70 858,55 L848,42 Q820,52 792,42 Z" fill="#2a1a04"/>
       <ellipse cx="820" cy="52" rx="20" ry="7" fill="rgba(255,220,100,0.6)" filter="url(#tinyblur)"/>
-      <path d="M750,65 L660,340 L980,340 L890,65 Z" fill="url(#lamp2)" opacity="0.6"/>
-
-      <!-- TABLE shadow -->
-      <ellipse cx="600" cy="630" rx="420" ry="28" fill="rgba(0,0,0,0.7)" filter="url(#softblur)"/>
-
-      <!-- Table legs -->
-      <rect x="198" y="490" width="22" height="110" rx="6" fill="#3a1e06"/>
-      <rect x="980" y="490" width="22" height="110" rx="6" fill="#3a1e06"/>
-
-      <!-- Table outer body -->
-      <rect x="155" y="290" width="890" height="220" rx="20" fill="url(#wood)"/>
-
-      <!-- Rail -->
-      <rect x="175" y="305" width="850" height="190" rx="14" fill="#2e1508"/>
-
-      <!-- Felt surface -->
-      <rect x="205" y="322" width="790" height="156" rx="8" fill="url(#felt)"/>
-
-      <!-- Lamp glow on felt -->
-      <ellipse cx="380" cy="390" rx="200" ry="60" fill="rgba(255,230,140,0.13)" filter="url(#softblur)"/>
-      <ellipse cx="820" cy="390" rx="180" ry="55" fill="rgba(255,220,120,0.10)" filter="url(#softblur)"/>
-
-      <!-- Felt lines -->
-      <line x1="600" y1="322" x2="600" y2="478" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-      <line x1="355" y1="322" x2="355" y2="478" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
-
-      <!-- Corner pockets -->
-      <circle cx="210" cy="326" r="18" fill="#050a06" stroke="rgba(180,130,60,0.3)" stroke-width="1.5"/>
-      <circle cx="990" cy="326" r="18" fill="#050a06" stroke="rgba(180,130,60,0.3)" stroke-width="1.5"/>
-      <circle cx="210" cy="474" r="18" fill="#050a06" stroke="rgba(180,130,60,0.3)" stroke-width="1.5"/>
-      <circle cx="990" cy="474" r="18" fill="#050a06" stroke="rgba(180,130,60,0.3)" stroke-width="1.5"/>
-      <!-- Middle pockets -->
-      <ellipse cx="600" cy="322" rx="16" ry="11" fill="#050a06" stroke="rgba(180,130,60,0.25)" stroke-width="1"/>
-      <ellipse cx="600" cy="478" rx="16" ry="11" fill="#050a06" stroke="rgba(180,130,60,0.25)" stroke-width="1"/>
-
-      <!-- Spot markers -->
-      <circle cx="600" cy="400" r="3" fill="rgba(255,255,255,0.18)"/>
-      <circle cx="780" cy="400" r="2.5" fill="rgba(255,255,255,0.12)"/>
-      <circle cx="355" cy="400" r="2.5" fill="rgba(255,255,255,0.1)"/>
-
-      <!-- ═══ BALLS — full rack triangle ═══ -->
-      <!-- Cue ball -->
-      <circle cx="340" cy="400" r="20" fill="white" filter="url(#glow)"/>
-      <circle cx="334" cy="393" r="7" fill="rgba(220,200,140,0.25)"/>
-
-      <!-- TRIANGLE RACK (right side, apex pointing left) -->
-      <!-- Row 1 — apex -->
-      <circle cx="730" cy="400" r="19" fill="#f0c030"/><circle cx="730" cy="400" r="19" fill="url(#sh)"/><text x="730" y="406" text-anchor="middle" font-size="13" font-weight="900" fill="#111" font-family="Georgia">1</text>
-
-      <!-- Row 2 -->
-      <circle cx="766" cy="381" r="19" fill="#1a44cc"/><circle cx="766" cy="381" r="19" fill="url(#sh)"/><text x="766" y="387" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="Georgia">2</text>
-      <circle cx="766" cy="419" r="19" fill="#cc1a1a"/><circle cx="766" cy="419" r="19" fill="url(#sh)"/><text x="766" y="425" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="Georgia">3</text>
-
-      <!-- Row 3 -->
-      <circle cx="802" cy="362" r="19" fill="#7722aa"/><circle cx="802" cy="362" r="19" fill="url(#sh)"/><text x="802" y="368" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="Georgia">4</text>
-      <!-- 8 ball centre -->
-      <circle cx="802" cy="400" r="19" fill="#111" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><circle cx="802" cy="400" r="9" fill="white"/><text x="802" y="405" text-anchor="middle" font-size="11" font-weight="900" fill="#111" font-family="Georgia">8</text><circle cx="802" cy="400" r="19" fill="url(#sh)" opacity="0.4"/>
-      <circle cx="802" cy="438" r="19" fill="#cc7700"/><circle cx="802" cy="438" r="19" fill="url(#sh)"/><text x="802" y="444" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="Georgia">5</text>
-
-      <!-- Row 4 -->
-      <circle cx="838" cy="343" r="19" fill="#228833"/><circle cx="838" cy="343" r="19" fill="url(#sh)"/><text x="838" y="349" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="Georgia">6</text>
-      <circle cx="838" cy="381" r="19" fill="#cc4411"/><circle cx="838" cy="381" r="19" fill="url(#sh)"/><text x="838" y="387" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="Georgia">7</text>
-      <circle cx="838" cy="419" r="19" fill="#ddcc00"/><circle cx="838" cy="419" r="19" fill="url(#sh)"/><text x="838" y="425" text-anchor="middle" font-size="12" font-weight="900" fill="#333" font-family="Georgia">9</text>
-      <circle cx="838" cy="457" r="19" fill="#3388cc"/><circle cx="838" cy="457" r="19" fill="url(#sh)"/><text x="838" y="463" text-anchor="middle" font-size="11" font-weight="900" fill="white" font-family="Georgia">10</text>
-
-      <!-- ═══ CUE STICK ═══ -->
-      <g style="transform-origin:100px 402px; animation:cuePulse 3.5s ease-in-out 1s infinite;">
-        <rect x="100" y="395" width="230" height="6" rx="3" fill="url(#cue)" transform="rotate(-1,100,398)"/>
-        <rect x="100" y="395.5" width="10" height="5" rx="2" fill="#4a88cc" transform="rotate(-1,100,398)"/>
-        <ellipse cx="107" cy="397" rx="6" ry="4" fill="rgba(80,140,220,0.35)" filter="url(#tinyblur)" transform="rotate(-1,100,398)"/>
+      <path d="M750,65 L660,340 L980,340 L890,65 Z" fill="url(#lamp1)" opacity="0.7"/>
+      <g filter="url(#softblur)" opacity="0.4">
+        <ellipse cx="380" cy="420" rx="220" ry="80" fill="rgba(255,210,120,0.15)"/>
+        <ellipse cx="820" cy="420" rx="220" ry="80" fill="rgba(255,210,120,0.15)"/>
       </g>
-
-      <!-- Vignette edges -->
-      <rect width="1200" height="700" fill="url(#vignette)"/>
-      <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
-        <stop offset="55%" stop-color="transparent"/>
-        <stop offset="100%" stop-color="rgba(4,8,5,0.75)"/>
-      </radialGradient>
-
-      <!-- Top dark fade so hero text is readable -->
-      <rect width="1200" height="280" fill="url(#topFade)"/>
-      <linearGradient id="topFade" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="rgba(4,8,5,0.75)"/>
-        <stop offset="100%" stop-color="transparent"/>
-      </linearGradient>
+      <path d="M100,600 L1100,600 L950,320 L250,320 Z" fill="#0f3d1d" stroke="#1c5c2e" stroke-width="3"/>
+      <path d="M70,615 L1130,615 L1100,600 L100,600 Z" fill="url(#wood)"/>
+      <path d="M250,320 L950,320 L935,308 L265,308 Z" fill="#1d1006"/>
+      <path d="M70,615 L100,600 L250,320 L265,308 L250,320 L100,600" fill="#261408"/>
+      <path d="M1130,615 L1100,600 L950,320 L935,308 L950,320 L1100,600" fill="#3a200f"/>
+      <g opacity="0.85">
+        <circle cx="340" cy="480" r="19" fill="#cc0000"/><circle cx="340" cy="480" r="19" fill="url(#sh)"/><text x="340" y="486" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="Georgia">3</text>
+        <circle cx="390" cy="495" r="19" fill="#f5c800"/><circle cx="390" cy="495" r="19" fill="url(#sh)"/><text x="390" y="501" text-anchor="middle" font-size="13" font-weight="900" fill="#111" font-family="Georgia">1</text>
+        <circle cx="435" cy="465" r="19" fill="#cc0000"/><circle cx="435" cy="465" r="19" fill="url(#sh)"/><text x="435" y="471" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="Georgia">7</text>
+        <circle cx="305" cy="515" r="19" fill="#f5c800"/><circle cx="305" cy="515" r="19" fill="url(#sh)"/><text x="305" y="521" text-anchor="middle" font-size="13" font-weight="900" fill="#111" font-family="Georgia">5</text>
+        <circle cx="460" cy="510" r="19" fill="#0044cc"/><circle cx="460" cy="510" r="19" fill="url(#sh)"/><text x="460" y="516" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="Georgia">2</text>
+      </g>
+      <g opacity="0.9">
+        <circle cx="802" cy="400" r="19" fill="#111" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><circle cx="802" cy="400" r="9" fill="white"/><text x="802" y="405" text-anchor="middle" font-size="11" font-weight="900" fill="#111" font-family="Georgia">8</text><circle cx="802" cy="400" r="19" fill="url(#sh)" opacity="0.4"/>
+      </g>
     </svg>
   </div>
-  <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge"><span>Iyashisa &nbsp;·&nbsp; Best of the Best</span></div>
-    <h1 class="hero-title">
-      Pro 32
-      <em>Winter Tour 2026</em>
-    </h1>
+    <div class="hero-badge">
+      <span id="hb-text-el">Pondi Tavern Presents</span>
+    </div>
+    <h2 class="hero-title" id="ht-el">Isipingo Pool <em>Masterpiece</em></h2>
     <div class="hero-rule"><div class="hero-rule-gem"></div></div>
     <div class="hero-meta">
-      <div class="meta-pill"><span class="meta-lbl">Venue</span><span class="meta-val">Pondi Tavern</span></div>
-      <div class="meta-pill"><span class="meta-lbl">Date</span><span class="meta-val">20 June 2026</span></div>
-      <div class="meta-pill"><span class="meta-lbl">Draw</span><span class="meta-val">11:00 AM</span></div>
-      <div class="meta-pill"><span class="meta-lbl">Matches</span><span class="meta-val">17:00 PM</span></div>
-      <div class="meta-pill"><span class="meta-lbl">Entry</span><span class="meta-val">R250</span></div>
+      <div class="meta-pill"><span class="meta-lbl" id="m1-lbl-el">Date</span><span class="meta-val" id="m1-val-el">18 July 2026</span></div>
+      <div class="meta-pill"><span class="meta-lbl" id="m2-lbl-el">Entry Fee</span><span class="meta-val">R250</span></div>
+      <div class="meta-pill"><span class="meta-lbl" id="m3-lbl-el">First Prize</span><span class="meta-val">R4,500</span></div>
     </div>
-    <a href="#confirm" class="hero-btn"><span>Secure Your Spot &nbsp;→</span></a>
+    <div>
+      <a href="#register" class="hero-btn"><span id="hb-btn-el">Secure Entry Slot →</span></a>
+    </div>
   </div>
   <div class="scroll-down">
-    <p>Scroll</p>
+    <p id="sd-txt-el">Scroll to explore</p>
     <div class="scroll-down-line"></div>
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="ticker"><div class="ticker-inner" id="tickerEl"></div></div>
+<div class="ticker">
+  <div class="ticker-inner" id="tickerInner"></div>
+</div>
 
-<!-- ═══ PRIZES ═══ -->
-<section class="terms-section" id="terms">
-  <div class="container">
-    <span class="sec-eyebrow reveal">Rules & Regulations</span>
-    <h2 class="sec-title reveal">Tournament <em>Terms</em></h2>
-    <div class="sec-rule reveal"></div>
-
-    <div class="lock-notice reveal">
-      <span class="l-icon">🔒</span>
-      <div>
-        <h4>Terms Are Final</h4>
-        <p>No amendments will be entertained on the day of the tournament. The organisers' published terms and conditions are <strong>final and binding</strong> for all registered participants.</p>
-      </div>
-    </div>
-
-    <div class="terms-grid reveal">
-      <div class="t-card">
-        <span class="t-num">01</span><span class="t-icon">🎱</span>
-        <h3>Rules of Play</h3>
-        <p>Black ball rules apply exclusively throughout the tournament. <strong>Re-entries are permitted in the first round only.</strong> To qualify for a re-entry, a first-round loser must face another first-round loser exclusively. Under no circumstances may a first-round loser be drawn against a standby player or any participant who has not yet played a single match in the first round. No re-entries are permitted from the second round onwards.</p>
-        <a href="https://blackballsa.co.za/rules/" target="_blank" rel="noopener" class="rules-link">📄 View Official SA Black Ball Rules</a>
-      </div>
-      <div class="t-card">
-        <span class="t-num">02</span><span class="t-icon">🏆</span>
-        <h3>Race Format</h3>
-        <p>All group matches: <strong>Race to 7.</strong> Semi-finals: <strong>Race to 9.</strong> The Grand Final: <strong>Race to 11.</strong></p>
-      </div>
-      <div class="t-card">
-        <span class="t-num">03</span><span class="t-icon">🕐</span>
-        <h3>Schedule</h3>
-        <p>The official draw commences at <strong>11:00 AM</strong> at Pondi Tavern. All competitive matches begin at <strong>17:00 PM</strong> on Saturday, 20 June 2026.</p>
-      </div>
-      <div class="t-card">
-        <span class="t-num">04</span><span class="t-icon">⚖️</span>
-        <h3>Officiating</h3>
-        <p>All matches will be officially refereed. <strong>The referee's decision is final and absolute</strong> — no disputes, protests, or appeals will be entertained under any circumstances.</p>
-      </div>
-      <div class="t-card">
-        <span class="t-num">05</span><span class="t-icon">⏰</span>
-        <h3>Punctuality</h3>
-        <p>Players arriving after 11:00 AM will be subject to an <strong>additional R50 late penalty.</strong></p>
-      </div>
-      <div class="t-card">
-        <span class="t-num">06</span><span class="t-icon">💰</span>
-        <h3>Payment Structure</h3>
-        <p>Total entry fee: <strong>R250.</strong> A non-refundable deposit of <strong>R150</strong> is required to secure your place. The outstanding balance of <strong>R100</strong> is due on tournament day. No deposit, no entry.</p>
-      </div>
-      <div class="t-card">
-        <span class="t-num">07</span><span class="t-icon">🎯</span>
-        <h3>Draw & Fixtures</h3>
-        <p>The official draw is held at <strong>11:00 AM</strong> at Pondi Tavern. Upon completion, all fixtures will be published and displayed on this digital platform for all players to access.</p>
-      </div>
-      <div class="t-card">
-        <span class="t-num">08</span><span class="t-icon">✅</span>
-        <h3>Eligibility</h3>
-        <p>This tournament is <strong>open to all players.</strong> Everyone is welcome to participate regardless of club or branch affiliation. Any player omitted from the official list due to an administrative oversight will be verified and accommodated subject to these same terms and conditions.</p>
-      </div>
-      <div class="t-card">
-        <span class="t-num">09</span><span class="t-icon">⚡</span>
-        <h3>Level Playing Field</h3>
-        <p>This tournament is conducted on a strictly <strong>size-to-size basis — pro versus pro.</strong> The draw is structured to ensure every player is matched according to their calibre, preserving the competitive integrity and prestige of the Pro 32 Winter Tour.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ PRIZES ═══ -->
 <section class="prizes-section" id="prizes">
   <div class="container">
-    <span class="sec-eyebrow reveal">What You're Playing For</span>
-    <h2 class="sec-title reveal">Prize <em>Structure</em></h2>
+    <span class="sec-eyebrow reveal" id="prizes-eyebrow-el">Guaranteed Rewards</span>
+    <h2 class="sec-title reveal" id="prizes-title-el">The <em>Prize Pool</em></h2>
     <div class="sec-rule reveal"></div>
-
     <div class="notice-box reveal">
       <span class="n-icon">⚠️</span>
       <div>
         <h4>Minimum Participation Condition</h4>
-        <p>All prizes are conditional upon a <strong>minimum of 32 confirmed and paid participants</strong> being reached. Players are strongly encouraged to pay their deposit promptly to guarantee the full prize fund.</p>
+        <p id="prize-notice-body-el">All tiers heavily scale based on hitting <strong>at least 32 paid entries</strong>. Ensure quick confirmation to lock down structural totals.</p>
       </div>
     </div>
-
     <div class="podium reveal">
       <div class="p-card gold"><span class="p-bg-num">1</span><span class="p-emoji">🏆</span><span class="p-rank">Champion</span><span class="p-amount">R4,500</span></div>
       <div class="p-card silver"><span class="p-bg-num">2</span><span class="p-emoji">🥈</span><span class="p-rank">Runner Up</span><span class="p-amount">R2,500</span></div>
       <div class="p-card bronze"><span class="p-bg-num">3</span><span class="p-emoji">🥉</span><span class="p-rank">Third Place</span><span class="p-amount">R1,500</span></div>
       <div class="p-card"><span class="p-bg-num">4</span><span class="p-emoji">🎱</span><span class="p-rank">Fourth Place</span><span class="p-amount">R1,000</span></div>
     </div>
-
     <div class="beer-grid reveal">
-      <div class="b-card"><span class="b-rank">5th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
-      <div class="b-card"><span class="b-rank">6th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
-      <div class="b-card"><span class="b-rank">7th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
-      <div class="b-card"><span class="b-rank">8th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
+      <div class="b-card"><span class="b-rank" id="p5-el">5th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
+      <div class="b-card"><span class="b-rank" id="p6-el">6th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
+      <div class="b-card"><span class="b-rank" id="p7-el">7th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
+      <div class="b-card"><span class="b-rank" id="p8-el">8th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
     </div>
-
     <div class="prize-total reveal">
-      <div><div class="pt-lbl">Total Cash Prize Pool</div><div class="pt-num">R9,500</div></div>
-      <div class="pt-note">Plus Castle Lite for 5th–8th place. Subject to <strong>32 confirmed paid entries</strong> — confirm your deposit today.</div>
+      <div>
+        <div class="pt-lbl" id="prize-total-label-el">Total Evaluation Value</div>
+        <div class="pt-num">R9,500+</div>
+      </div>
+      <div class="pt-note" id="prize-total-note-el">Combined structural rewards matrix configured explicitly under strict baseline alignment conditions.</div>
     </div>
   </div>
 </section>
 
-<!-- ═══ TRACKER ═══ -->
-<section class="tracker-section" id="players">
+<section class="terms-section" id="terms">
   <div class="container">
-    <span class="sec-eyebrow reveal">Live Status</span>
-    <h2 class="sec-title reveal">Player <em>Tracker</em></h2>
+    <span class="sec-eyebrow reveal" id="terms-eyebrow-el">Tournament Framework</span>
+    <h2 class="sec-title reveal" id="terms-title-el">Rules & <em>Regulations</em></h2>
     <div class="sec-rule reveal"></div>
-    <div class="stats-strip reveal">
-      <div class="s-box"><span class="s-num maroon" id="sTotal">52</span><span class="s-lbl">Registered</span></div>
-      <div class="s-box"><span class="s-num green" id="sConf">0</span><span class="s-lbl">Confirmed</span></div>
-      <div class="s-box"><span class="s-num gold" id="sPend">0</span><span class="s-lbl">Pending</span></div>
-      <div class="s-box"><span class="s-num red" id="sRem">52</span><span class="s-lbl">To Confirm</span></div>
-    </div>
-    <div class="legend reveal">
-      <div class="leg"><div class="dot c"></div>Confirmed & Paid</div>
-      <div class="leg"><div class="dot p"></div>Submitted — Pending Review</div>
-      <div class="leg"><div class="dot n"></div>Not Yet Confirmed</div>
-    </div>
-    <div class="p-grid reveal" id="playerGrid"></div>
-  </div>
-</section>
-
-<!-- ═══ CONFIRM FORM ═══ -->
-<section class="form-section" id="confirm">
-  <div class="container">
-    <span class="sec-eyebrow reveal">Reserve Your Place</span>
-    <h2 class="sec-title reveal">Confirm <em>Entry</em></h2>
-    <div class="sec-rule reveal"></div>
-    <p class="form-intro reveal">Select your name, complete your details and upload your <strong>proof of R150 deposit</strong>. Your entry will be reviewed and confirmed by the organiser. The <strong>R100 balance</strong> is payable on the day.</p>
-    <div class="fee-strip reveal">
-      <div class="f-box"><span class="f-amt">R250</span><span class="f-lbl">Total Entry Fee</span></div>
-      <div class="f-box"><span class="f-amt">R150</span><span class="f-lbl">Deposit Now — Non-refundable</span></div>
-      <div class="f-box hi"><span class="f-amt">R100</span><span class="f-lbl">Balance Due on the Day</span></div>
-    </div>
-    <div class="cf reveal" id="cfWrap">
-      <div class="form-done" id="formDone">
-        <span class="fd-icon">🎱</span>
-        <h3>You're In!</h3>
-        <p>Your submission has been received. Bring your <strong>R100 balance</strong> on tournament day. See you at Pondi Tavern — <strong>20 June 2026.</strong></p>
-      </div>
-      <div id="formBody">
-        <div class="f-row">
-          <div class="fg"><label for="iName">Full Name</label><input type="text" id="iName" placeholder="Your full name"/></div>
-          <div class="fg"><label for="iNick">Nickname</label><input type="text" id="iNick" placeholder="e.g. Slahla"/></div>
-        </div>
-        <div class="f-row">
-          <div class="fg"><label for="iPhone">Phone Number</label><input type="tel" id="iPhone" placeholder="0XX XXX XXXX"/></div>
-          <div class="fg"><label for="iEmail">Email (Optional)</label><input type="email" id="iEmail" placeholder="your@email.com"/></div>
-        </div>
-        <div class="fg">
-          <label for="iSelect">Select Your Name</label>
-          <select id="iSelect"><option value="">— Select your name —</option></select>
-        </div>
-        <div class="fg">
-          <label>Upload Proof of R150 Deposit</label>
-          <div class="upload-zone" id="uz">
-            <input type="file" id="iFile" accept="image/*,.pdf"/>
-            <span class="uz-icon">📎</span>
-            <div class="uz-txt">Tap or drag to upload</div>
-            <div class="uz-sub">EFT screenshot or bank notification — max 2MB</div>
-          </div>
-          <div class="file-prev" id="filePrev">
-            <img id="prevImg" src="" alt="proof"/>
-            <div class="file-nm" id="fileNm"></div>
-            <span class="rm-file" onclick="rmFile()">✕ Remove</span>
-          </div>
-        </div>
-        <div class="fg"><label for="iMsg">Message for Organiser (Optional)</label><textarea id="iMsg" placeholder="Any questions or notes..."></textarea></div>
-        <div class="chk">
-          <input type="checkbox" id="iAgree"/>
-          <span>I have read and agree to all published terms including the non-refundable R150 deposit, R100 balance on the day, Race to 7/9/11 format, size-to-size draw, and that no amendments will be made on tournament day.</span>
-        </div>
-        <button class="sub-btn" id="subBtn" onclick="doSubmit()"><span>Confirm My Entry →</span></button>
+    <div class="lock-notice reveal">
+      <span class="l-icon">🔒</span>
+      <div>
+        <h4 id="lock-title-el">Binding Structural Agreement</h4>
+        <p id="lock-body-el">Published system declarations serve as legally operational guidelines for all registered configurations.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ═══ SPONSORS ═══ -->
-<section class="sponsors-section" id="sponsors">
-  <div class="container">
-    <span class="sec-eyebrow reveal">Our Partners</span>
-    <h2 class="sec-title reveal">Proudly <em>Supported By</em></h2>
-    <div class="sec-rule reveal"></div>
-    <div class="sp-grid reveal">
-      <div class="sp-card">
-        <span class="sp-emoji">🍺</span>
-        <span class="sp-role">Title Sponsor</span>
-        <div class="sp-name">Pondi Tavern</div>
-        <div class="sp-sub">Chunda Trading</div>
+    <div class="terms-grid reveal">
+      <div class="t-card">
+        <span class="t-num">01</span><span class="t-icon">🎱</span>
+        <h3 id="t1-title-el">Rules of Play</h3>
+        <p id="t1-body-el">Official South African Black Ball rules govern all interactions. Re-entries limited exclusively to initial round.</p>
+        <a id="rules-link-el" href="https://blackballsa.co.za/rules/" target="_blank" rel="noopener" class="rules-link">📄 View Official SA Rules</a>
       </div>
-      <div class="sp-card">
-        <span class="sp-emoji">🍺</span>
-        <span class="sp-role">Official Refreshments</span>
-        <div class="sp-name">Castle Lite</div>
-        <div class="sp-sub">Ice Cold. Every Round.</div>
+      <div class="t-card">
+        <span class="t-num">02</span><span class="t-icon">🏆</span>
+        <h3 id="t2-title-el">Race Format</h3>
+        <p id="t2-body-el">Group Matches: Race to 7. Semis: Race to 9. Grand Final match targets Race to 11.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ ADMIN ═══ -->
-<section class="admin-section">
-  <div class="container">
-    <div class="adm-toggle" onclick="toggleAdm()" style="opacity:0;user-select:none;font-size:8px;color:transparent;cursor:default;">·</div>
-    <div class="adm-panel" id="admPanel">
-      <div class="adm-login" id="admLogin">
-        <span class="sec-eyebrow">Admin Access</span>
-        <input type="password" id="admPass" placeholder="Password" onkeydown="if(event.key==='Enter')doLogin()"/>
-        <button class="adm-btn" onclick="doLogin()">Login</button>
-      </div>
-      <div id="admContent" style="display:none;">
-        <span class="sec-eyebrow">All Submissions</span>
-        <div class="tbl-wrap">
-          <table><thead><tr><th>#</th><th>Player</th><th>Full Name</th><th>Phone</th><th>Submitted</th><th>Proof</th><th>Status</th><th>Actions</th></tr></thead>
-          <tbody id="admBody"></tbody></table>
-        </div>
-        <button class="exp-btn" onclick="doExport()">⬇ Export CSV</button>
-        <button class="adm-btn danger" onclick="doClear()">Clear All</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FOOTER ═══ -->
-<footer>
-  <div class="ft-logo">Pro 32 Winter Tour</div>
-  <div class="ft-sub">8 Ball Pool &nbsp;·&nbsp; Pondi Tavern &nbsp;·&nbsp; 2026</div>
-  <div class="ft-rule"></div>
-  <div class="ft-contacts">
-    <a href="tel:0780016136">078 001 6136</a>
-    <a href="tel:0833023408">083 302 3408</a>
-  </div>
-  <div class="ft-email">mxolisi@auctioneer.net</div>
-  <div class="ft-powered">Secured and powered by <strong>Moana Technologies</strong></div>
-</footer>
-
-<div class="toast" id="toastEl"></div>
-<div class="lb" id="lb" onclick="closeLb()"><span class="lb-x">✕</span><img id="lbImg" src="" alt="proof"/></div>
-
-<script>
-const SK='pro32_v2';
-const AP='pondi2026';
-const PRE_CONFIRMED=['Slahla','PK','Sandile','Sduduzo','Thabani','Makhenikha'];
-
-// ── Build animated balls strip ──
-(function(){
-  const track = document.getElementById('ballsTrack');
-  if(!track) return;
-  const balls = [
-    {n:'1',c:'b1'},{n:'2',c:'b2'},{n:'3',c:'b3'},{n:'4',c:'b4'},
-    {n:'5',c:'b5'},{n:'6',c:'b6'},{n:'7',c:'b7'},{n:'8',c:'b8'},
-    {n:'9',c:'b9'},{n:'10',c:'b10'},{n:'11',c:'b11'},{n:'12',c:'b12'},
-    {n:'13',c:'b13'},{n:'14',c:'b14'},{n:'15',c:'b15'},
-    {n:'8',c:'b8'},{n:'1',c:'b1'},{n:'3',c:'b3'},{n:'5',c:'b5'},
-    {n:'2',c:'b2'},{n:'7',c:'b7'},{n:'4',c:'b4'},{n:'6',c:'b6'},
-    {n:'9',c:'b9'},{n:'11',c:'b11'},{n:'13',c:'b13'},{n:'15',c:'b15'},
-    {n:'10',c:'b10'},{n:'12',c:'b12'},{n:'14',c:'b14'}
-  ];
-  // Duplicate for seamless loop
-  const all = [...balls,...balls];
-  track.innerHTML = all.map(b=>`<div class="ball-item ${b.c}">${b.n}</div>`).join('');
-})();
-const PLAYERS=[
-  'Slahla','Mcabango','Nqaba','PK','Sandile','Tshepo','Mabuza','Khaya',
-  'Mandla','Jobe','Thabani','Sduduzo','Makhenikha','Mazakaza',
-  'Mjakhura','Nkabinde','Thulani','Thishela',
-  'Maphosa','Trompies','Bhayane','Lucky','Demu-demu','Muzi','Washington','Ace',
-  'Vela','Masina','Sgora','Mlamuli','Mamba','Mlaba','Super','Mpex',
-  'Kid Moh','Tony NDE','Andile NDE','Rasta NDE','Lucky NDE','Mayor',
-  'Mkhize','Mzoh','Mehloh','Deni','Jobe NV','Vice','Msallz','Timkin',
-  'Sobancane','Lwazi','Makhathini','Degree'
-];
-
-// Storage
-function getE(){try{return JSON.parse(localStorage.getItem(SK)||'[]');}catch{return[];}}
-function saveE(a){localStorage.setItem(SK,JSON.stringify(a));}
-
-// Seed confirmed
-function seed(){
-  let arr=getE();
-  arr=arr.filter(e=>e.phone!=='—'||PRE_CONFIRMED.includes(e.player));
-  PRE_CONFIRMED.forEach(n=>{
-    const ex=arr.find(e=>e.player===n);
-    if(!ex) arr.push({id:Date.now()+Math.random(),player:n,fullName:n,nickname:'',phone:'—',email:'',message:'',proof:null,proofName:null,submittedAt:new Date().toISOString(),status:'confirmed'});
-    else ex.status='confirmed';
-  });
-  saveE(arr);
-}
-seed();
-
-// Ticker
-(function(){
-  const el=document.getElementById('tickerEl');
-  const items=[
-    '🎱 Pro 32 Winter Tour 2026','📅 20 June 2026 · Pondi Tavern',
-    '🏆 R9,500 Prize Pool','⚡ Race to 7 · 9 · 11',
-    '💰 Entry R250 · Deposit R150','🎯 Draw 11:00 AM · Matches 17:00 PM',
-    '⚠️ 32 players required','⚡ Size to Size · Pro vs Pro',
-    ...PLAYERS.map(p=>`<strong>${p}</strong>`)
-  ];
-  const html=items.map(i=>`<span class="t-item">${i}</span><span class="t-sep">◆</span>`).join('');
-  el.innerHTML=html+html;
-})();
-
-// Populate select
-const sel=document.getElementById('iSelect');
-PLAYERS.forEach((n,i)=>{
-  const o=document.createElement('option');
-  o.value=n;o.textContent=`${String(i+1).padStart(2,'0')} — ${n}`;
-  sel.appendChild(o);
-});
-
-// Render grid
-function render(){
-  const arr=getE();
-  const grid=document.getElementById('playerGrid');
-  grid.innerHTML='';
-  let c=0,p=0;
-  PLAYERS.forEach((n,i)=>{
-    const e=arr.find(x=>x.player===n);
-    let cls='',sc='sn',st='Not confirmed',dc='n';
-    if(e&&e.status==='confirmed'){cls='confirmed';sc='sc';st='✓ Confirmed';dc='c';c++;}
-    else if(e){cls='pending';sc='sp';st='⏳ Pending';dc='p';p++;}
-    const d=document.createElement('div');
-    d.className=`pc ${cls}`;
-    d.innerHTML=`<span class="pc-num">${String(i+1).padStart(2,'0')}</span><div class="pc-info"><div class="pc-name">${n}</div><div class="pc-status ${sc}">${st}</div></div><div class="pc-dot ${dc}"></div>`;
-    grid.appendChild(d);
-  });
-  document.getElementById('sTotal').textContent=PLAYERS.length;
-  document.getElementById('sConf').textContent=c;
-  document.getElementById('sPend').textContent=p;
-  document.getElementById('sRem').textContent=PLAYERS.length-c-p;
-}
-
-// File upload
-let proofData=null,proofName=null;
-document.getElementById('iFile').addEventListener('change',function(e){
-  const f=e.target.files[0];if(!f)return;
-  if(f.size>2.5*1024*1024){toast('File too large — max 2MB',true);return;}
-  proofName=f.name;
-  const r=new FileReader();
-  r.onload=ev=>{
-    proofData=ev.target.result;
-    document.getElementById('prevImg').src=proofData;
-    document.getElementById('fileNm').textContent=f.name;
-    document.getElementById('filePrev').style.display='block';
-    document.getElementById('uz').style.borderColor='var(--gold2)';
-  };
-  r.readAsDataURL(f);
-});
-const uz=document.getElementById('uz');
-uz.addEventListener('dragover',e=>{e.preventDefault();uz.classList.add('drag');});
-uz.addEventListener('dragleave',()=>uz.classList.remove('drag'));
-uz.addEventListener('drop',e=>{
-  e.preventDefault();uz.classList.remove('drag');
-  const f=e.dataTransfer.files[0];
-  if(f){const dt=new DataTransfer();dt.items.add(f);document.getElementById('iFile').files=dt.files;document.getElementById('iFile').dispatchEvent(new Event('change'));}
-});
-function rmFile(){proofData=null;proofName=null;document.getElementById('iFile').value='';document.getElementById('filePrev').style.display='none';document.getElementById('uz').style.borderColor='';}
-
-// Toast
-function toast(msg,err=false){const t=document.getElementById('toastEl');t.textContent=msg;t.className='toast show'+(err?' err':'');setTimeout(()=>t.className='toast',3500);}
-
-// Submit
-function doSubmit(){
-  const name=document.getElementById('iName').value.trim();
-  const nick=document.getElementById('iNick').value.trim();
-  const phone=document.getElementById('iPhone').value.trim();
-  const email=document.getElementById('iEmail').value.trim();
-  const player=document.getElementById('iSelect').value;
-  const msg=document.getElementById('iMsg').value.trim();
-  const agreed=document.getElementById('iAgree').checked;
-  if(!name){toast('Please enter your full name',true);return;}
-  if(!phone){toast('Please enter your phone number',true);return;}
-  if(!player){toast('Please select your name from the list',true);return;}
-  if(!proofData){toast('Please upload proof of payment',true);return;}
-  if(!agreed){toast('Please agree to the terms first',true);return;}
-  const arr=getE();
-  if(arr.find(e=>e.player===player)){toast(player+' has already submitted',true);return;}
-  const btn=document.getElementById('subBtn');
-  btn.disabled=true;btn.querySelector('span').textContent='Submitting...';
-  arr.push({id:Date.now(),player,fullName:name,nickname:nick,phone,email,message:msg,proof:proofData,proofName,submittedAt:new Date().toISOString(),status:'pending'});
-  saveE(arr);render();
-  const sub=encodeURIComponent(`Pro 32 Entry: ${player} – ${name}`);
-  const body=encodeURIComponent(`PRO 32 WINTER TOUR 2026\nEntry via website\n\nPlayer: ${player}\nFull Name: ${name}\nNickname: ${nick||'N/A'}\nPhone: ${phone}\nEmail: ${email||'N/A'}\nMessage: ${msg||'N/A'}\nTime: ${new Date().toLocaleString('en-ZA')}\n\nProof uploaded — check admin panel.`);
-  window.open(`mailto:mxolisi@auctioneer.net?subject=${sub}&body=${body}`,'_blank');
-  setTimeout(()=>{document.getElementById('formBody').style.display='none';document.getElementById('formDone').style.display='block';},600);
-}
-
-// Admin
-function toggleAdm(){document.getElementById('admPanel').classList.toggle('open');}
-function doLogin(){
-  if(document.getElementById('admPass').value===AP){
-    document.getElementById('admLogin').style.display='none';
-    document.getElementById('admContent').style.display='block';
-    admRender();
-  }else toast('Incorrect password',true);
-}
-function admRender(){
-  const arr=getE();const tb=document.getElementById('admBody');tb.innerHTML='';
-  if(!arr.length){tb.innerHTML='<tr><td colspan="8" style="text-align:center;padding:40px;color:var(--lite);">No submissions yet.</td></tr>';return;}
-  arr.forEach((e,i)=>{
-    const d=new Date(e.submittedAt).toLocaleString('en-ZA',{dateStyle:'short',timeStyle:'short'});
-    const pr=e.proof?`<img class="p-thumb" src="${e.proof}" onclick="openLb('${e.proof}')" alt="proof"/>`:'<span style="color:var(--lite);font-size:11px;">None</span>';
-    const r=document.createElement('tr');
-    r.innerHTML=`<td>${i+1}</td><td><strong>${e.player}</strong></td><td>${e.fullName}<br/><small style="color:var(--lite)">${e.phone}</small></td><td>${e.phone}</td><td style="font-size:11px;">${d}</td><td>${pr}</td><td><span class="badge ${e.status}">${e.status==='confirmed'?'✓ Confirmed':'⏳ Pending'}</span></td><td>${e.status!=='confirmed'?`<button class="act-btn cb" onclick="confE(${e.id})">Confirm</button>`:''}<button class="act-btn db" onclick="delE(${e.id})">Delete</button></td>`;
-    tb.appendChild(r);
-  });
-}
-function confE(id){const a=getE(),e=a.find(x=>x.id===id);if(e){e.status='confirmed';saveE(a);render();admRender();toast('✓ '+e.player+' confirmed!');}}
-function delE(id){if(!confirm('Delete this entry?'))return;saveE(getE().filter(e=>e.id!==id));render();admRender();toast('Entry deleted.');}
-function doClear(){if(!confirm('Delete ALL entries?'))return;localStorage.removeItem(SK);seed();render();admRender();toast('Cleared.');}
-function doExport(){
-  const arr=getE();if(!arr.length){toast('No entries',true);return;}
-  const rows=[['#','Player','Full Name','Nickname','Phone','Email','Submitted','Status','Message']];
-  arr.forEach((e,i)=>rows.push([i+1,e.player,e.fullName,e.nickname||'',e.phone,e.email||'',new Date(e.submittedAt).toLocaleString('en-ZA'),e.status,(e.message||'').replace(/,/g,' ')]));
-  const csv=rows.map(r=>r.map(v=>`"${v}"`).join(',')).join('\n');
-  const a=document.createElement('a');a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);a.download='pro32-entries.csv';a.click();
-}
-
-// Lightbox
-function openLb(src){document.getElementById('lbImg').src=src;document.getElementById('lb').classList.add('open');}
-function closeLb(){document.getElementById('lb').classList.remove('open');}
-
-// Scroll reveal
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');});},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-render();
-</script>
-</body>
-</html>
+      <div class="t-card">
+        <span class="t-num">
