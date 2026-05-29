@@ -1,1030 +1,2532 @@
 <!DOCTYPE html>
-<html lang="en")>
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Pro 32 Umncintiswano Wasebusika 2026 · Pondi Tavern</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"/>
-<style>
-:root {
-  --maroon:     #6b1a2a;
-  --maroon2:    #8b2535;
-  --maroon3:    #a83040;
-  --maroon-lt:  #c4697a;
-  --maroon-pale:#f5e8ea;
-  --maroon-mist:#fdf0f2;
-  --gold:       #c9a84c;
-  --gold2:      #e0bc6a;
-  --gold3:      #f5d98a;
-  --cream:      #faf7f3;
-  --offwhite:   #f4ede8;
-  --sand:       #e8ddd5;
-  --dark:       #1a0f12;
-  --charcoal:   #2d1f23;
-  --mid:        #5a4048;
-  --lite:       #9a8088;
-  --navy:       #0d1b2e;
-  --navy2:      #152540;
-  --white:      #ffffff;
-  --shadow:     0 4px 24px rgba(107,26,42,0.10);
-  --shadow2:    0 16px 56px rgba(107,26,42,0.18);
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--cream);color:var(--dark);font-family:'EB Garamond',serif;overflow-x:hidden;}
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pro 32 Umncintiswano Wasebusika 2026 · Pondi Tavern</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --maroon:     #6b1a2a;
+      --maroon2:    #8b2535;
+      --maroon3:    #a83040;
+      --maroon-lt:  #c4697a;
+      --maroon-pale:#f5e8ea;
+      --maroon-mist:#fdf0f2;
+      --gold:       #c9a84c;
+      --gold2:      #e0bc6a;
+      --gold3:      #f5d98a;
+      --cream:      #faf7f3;
+      --offwhite:   #f4ede8;
+      --sand:       #e8ddd5;
+      --dark:       #1a0f12;
+      --charcoal:   #2d1f23;
+      --mid:        #5a4048;
+      --lite:       #9a8088;
+      --navy:       #0d1b2e;
+      --navy2:      #152540;
+      --white:      #ffffff;
+      --shadow:     0 4px 24px rgba(107,26,42,0.10);
+      --shadow2:    0 16px 56px rgba(107,26,42,0.18);
+    }
 
-/* ── MAIN TOP LANGUAGE SWITCHER BAR ── */
-.global-lang-bar {
-  background: #11090b;
-  border-bottom: 1px solid rgba(201,168,76,0.3);
-  padding: 10px 24px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  z-index: 10000;
-}
-.lang-switch {
-  display: flex;
-  border: 1px solid rgba(201,168,76,0.5);
-  border-radius: 4px;
-  overflow: hidden;
-}
-.lang-btn {
-  padding: 6px 14px;
-  font-family: 'Cinzel', serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.6);
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.lang-btn.active {
-  background: var(--gold);
-  color: var(--dark);
-}
-.lang-btn:hover:not(.active) {
-  color: var(--gold2);
-  background: rgba(255, 255, 255, 0.05);
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* ── TOP BAR ── */
-.top-bar{
-  position:relative;
-  background:var(--dark);
-  overflow:hidden;
-  padding:28px 24px 20px;
-  text-align:center;
-  border-bottom:2px solid var(--maroon);
-  min-height:110px;
-}
-.top-bar-balls{
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  overflow:hidden;
-}
-.tb-ball{
-  position:absolute;
-  border-radius:50%;
-  animation:floatBall linear infinite;
-  opacity:0.85;
-}
-.top-bar-title{
-  position:relative;
-  z-index:2;
-  display:flex;align-items:center;justify-content:center;gap:18px;
-  font-family:'Cinzel',serif;
-  font-size:clamp(22px,5vw,46px);
-  font-weight:900;
-  letter-spacing:0.18em;
-  color:#ffffff;
-  text-shadow:0 2px 24px rgba(107,26,42,0.5);
-  animation:fadeUp 0.8s ease 0.1s both;
-}
-.tb-diamond{font-size:0.5em;color:var(--maroon-lt);opacity:0.8;}
-.top-bar-sub{
-  position:relative;z-index:2;
-  font-family:'EB Garamond',serif;
-  font-size:clamp(12px,2vw,16px);
-  letter-spacing:0.3em;
-  text-transform:uppercase;
-  color:rgba(255,255,255,0.45);
-  margin-top:6px;
-  animation:fadeUp 0.8s ease 0.3s both;
-}
-@keyframes floatBall{
-  0%{transform:translateY(120px) translateX(0) rotate(0deg);opacity:0;}
-  10%{opacity:0.85;}
-  90%{opacity:0.85;}
-  100%{transform:translateY(-60px) translateX(var(--drift)) rotate(360deg);opacity:0;}
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* ── ADMIN SECRET TRIGGER ── */
-.adm-secret{
-  cursor:default;user-select:none;
-  font-size:10px;color:transparent;
-  position:relative;
-}
+    body {
+      background: var(--cream);
+      color: var(--dark);
+      font-family: 'EB Garamond', serif;
+      overflow-x: hidden;
+    }
 
-/* ── PRE-HERO ── */
-.pre-hero{
-  background:var(--dark);
-  padding:0 0 0;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-}
-/* Animated balls strip */
-.balls-strip{
-  background:var(--maroon);
-  overflow:hidden;
-  padding:14px 0;
-  border-bottom:1px solid rgba(201,168,76,0.2);
-}
-.balls-track{
-  display:flex;
-  gap:22px;
-  align-items:center;
-  white-space:nowrap;
-  animation:ballsRoll 18s linear infinite;
-  width:max-content;
-}
-.ball-item{
-  flex-shrink:0;
-  animation:ballBounce 1.6s ease-in-out infinite;
-  display:inline-block;
-}
-.ball-item:nth-child(2n){animation-delay:0.25s;}
-.ball-item:nth-child(3n){animation-delay:0.5s;}
-.ball-item:nth-child(4n){animation-delay:0.75s;}
-.ball-item:nth-child(5n){animation-delay:1.0s;}
-.ball-item:nth-child(6n){animation-delay:1.25s;}
-.ball-item:nth-child(7n){animation-delay:1.5s;}
+    /* ── TOP BAR ── */
+    .top-bar {
+      position: relative;
+      background: var(--dark);
+      overflow: hidden;
+      padding: 28px 24px 20px;
+      text-align: center;
+      border-bottom: 2px solid var(--maroon);
+      min-height: 140px;
+    }
 
-/* Pondi Tavern heading */
-.pondi-header{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:20px;
-  padding:32px 24px 8px;
-}
-.pondi-gem{
-  font-size:12px;
-  color:var(--gold);
-  opacity:0.7;
-}
-.pondi-title{
-  font-family:'Cinzel',serif;
-  font-size:clamp(28px,7vw,72px);
-  font-weight:900;
-  letter-spacing:0.18em;
-  color:var(--cream);
-  text-transform:uppercase;
-  line-height:1;
-  text-shadow:0 2px 24px rgba(201,168,76,0.25);
-}
-.pondi-sub{
-  font-family:'EB Garamond',serif;
-  font-size:clamp(14px,2.5vw,22px);
-  font-style:italic;
-  color:var(--gold);
-  letter-spacing:0.25em;
-  padding-bottom:28px;
-  opacity:0.85;
-}
-@keyframes ballsRoll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@keyframes ballBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    .top-bar-balls {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
 
-/* ── HERO ── */
-.hero{
-  min-height:100vh;
-  display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  text-align:center;
-  padding:80px 24px 80px;
-  position:relative;overflow:hidden;
-}
-.hero-bg{
-  position:absolute;inset:0;
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.6) 100%);
-  z-index:1;
-}
-.hero-img{
-  position:absolute;inset:0;
-  z-index:0;
-  background:#0d1a10;
-}
-.hero-img::after{
-  content:'';
-  position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 80% 50% at 50% 60%, rgba(20,60,30,0.9) 0%, #060e08 100%);
-}
-.hero-overlay{
-  position:absolute;inset:0;z-index:2;
-  background:rgba(0,0,0,0.15);
-}
-.hero-content{position:relative;z-index:3;}
+    .tb-ball {
+      position: absolute;
+      border-radius: 50%;
+      animation: floatBall linear infinite;
+      opacity: 0.85;
+    }
 
-.hero-badge{
-  display:inline-flex;align-items:center;gap:12px;
-  background:rgba(201,168,76,0.18);
-  border:1px solid rgba(201,168,76,0.45);
-  padding:9px 24px;margin-bottom:36px;
-  opacity:0;animation:fadeUp 0.8s ease 0.3s forwards;
-}
-.hero-badge span{
-  font-family:'Cinzel',serif;font-size:10px;
-  letter-spacing:0.45em;text-transform:uppercase;
-  color:var(--gold2);
-}
-.hero-badge::before,.hero-badge::after{content:'◆';font-size:7px;color:rgba(201,168,76,0.6);}
+    .top-bar-title {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      font-family: 'Cinzel', serif;
+      font-size: clamp(22px, 5vw, 46px);
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      color: #ffffff;
+      text-shadow: 0 2px 24px rgba(107,26,42,0.5);
+      animation: fadeUp 0.8s ease 0.1s both;
+    }
 
-.hero-title{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(54px,11vw,130px);
-  line-height:0.9;font-weight:700;
-  color:var(--white);
-  letter-spacing:0.02em;
-  opacity:0;animation:fadeUp 1s ease 0.5s forwards;
-}
-.hero-title em{
-  font-style:italic;
-  color:var(--gold2);
-  display:block;font-size:0.65em;
-  font-weight:400;letter-spacing:0.08em;
-  margin-top:6px;
-}
+    .tb-diamond {
+      font-size: 0.5em;
+      color: var(--maroon-lt);
+      opacity: 0.8;
+    }
 
-.hero-rule{
-  display:flex;align-items:center;gap:16px;
-  justify-content:center;margin:32px auto;
-  opacity:0;animation:fadeIn 1s ease 0.9s forwards;
-  max-width:320px;
-}
-.hero-rule::before,.hero-rule::after{
-  content:'';flex:1;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(201,168,76,0.6));
-}
-.hero-rule::after{background:linear-gradient(270deg,transparent,rgba(201,168,76,0.6));}
-.hero-rule-gem{
-  width:8px;height:8px;background:var(--gold2);
-  transform:rotate(45deg);
-}
+    .top-bar-sub {
+      position: relative;
+      z-index: 2;
+      font-family: 'EB Garamond', serif;
+      font-size: clamp(12px, 2vw, 16px);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-top: 6px;
+      animation: fadeUp 0.8s ease 0.3s both;
+    }
 
-.hero-meta{
-  display:flex;gap:0;justify-content:center;
-  flex-wrap:wrap;margin-bottom:44px;
-  opacity:0;animation:fadeUp 0.8s ease 1s forwards;
-  border:1px solid rgba(201,168,76,0.2);
-  display:inline-flex;
-}
-.meta-pill{
-  padding:18px 28px;
-  border-right:1px solid rgba(201,168,76,0.2);
-  text-align:center;
-}
-.meta-pill:last-child{border-right:none;}
-.meta-lbl{
-  font-family:'Cinzel',serif;font-size:8px;
-  letter-spacing:0.4em;text-transform:uppercase;
-  color:rgba(201,168,76,0.7);display:block;margin-bottom:5px;
-}
-.meta-val{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(16px,2.5vw,22px);font-weight:600;
-  color:var(--white);display:block;line-height:1;
-}
+    @keyframes floatBall {
+      0% {
+        transform: translateY(120px) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.85;
+      }
+      90% {
+        opacity: 0.85;
+      }
+      100% {
+        transform: translateY(-60px) translateX(var(--drift)) rotate(360deg);
+        opacity: 0;
+      }
+    }
 
-.hero-btn{
-  opacity:0;animation:fadeUp 0.8s ease 1.2s forwards;
-  display:inline-block;
-  background:var(--gold);color:var(--dark);
-  font-family:'Cinzel',serif;font-size:10px;
-  font-weight:600;letter-spacing:0.35em;
-  text-transform:uppercase;padding:17px 44px;
-  text-decoration:none;position:relative;overflow:hidden;
-  transition:all 0.35s;
-  border:1px solid var(--gold);
-}
-.hero-btn::before{
-  content:'';position:absolute;inset:0;
-  background:var(--maroon);transform:scaleX(0);
-  transform-origin:right;transition:transform 0.4s ease;
-}
-.hero-btn:hover::before{transform:scaleX(1);transform-origin:left;}
-.hero-btn:hover{color:var(--white);border-color:var(--maroon);}
-.hero-btn span{position:relative;z-index:1;}
+    /* ── REWRITTEN INTEGRATED LANGUAGE SWITCHER ── */
+    .lang-switcher-container {
+      position: relative;
+      z-index: 10;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeUp 0.8s ease both;
+    }
 
-.scroll-down{
-  position:absolute;bottom:32px;left:50%;
-  transform:translateX(-50%);z-index:3;
-  display:flex;flex-direction:column;align-items:center;gap:6px;
-  opacity:0;animation:fadeIn 1s ease 1.8s forwards;
-}
-.scroll-down p{
-  font-family:'Cinzel',serif;font-size:8px;
-  letter-spacing:0.4em;text-transform:uppercase;
-  color:rgba(255,255,255,0.35);
-}
-.scroll-down-line{
-  width:1px;height:40px;
-  background:linear-gradient(to bottom,rgba(201,168,76,0.7),transparent);
-  animation:scrollBob 2s ease-in-out infinite;
-}
+    .lang-select-dropdown {
+      background: rgba(107, 26, 42, 0.2);
+      color: var(--gold2);
+      border: 1.5px solid rgba(201, 168, 76, 0.6);
+      padding: 6px 14px;
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
 
-/* ── TICKER ── */
-.ticker{
-  background:var(--maroon);
-  padding:13px 0;overflow:hidden;
-  border-top:1px solid rgba(201,168,76,0.25);
-  border-bottom:1px solid rgba(201,168,76,0.25);
-}
-.ticker-inner{
-  display:flex;white-space:nowrap;
-  animation:ticker 35s linear infinite;
-}
-.ticker-inner:hover{animation-play-state:paused;}
-.t-item{
-  font-family:'Cinzel',serif;font-size:10px;
-  letter-spacing:0.25em;text-transform:uppercase;
-  color:rgba(255,255,255,0.55);padding:0 32px;
-}
-.t-item strong{color:var(--gold2);}
-.t-sep{color:rgba(201,168,76,0.4);padding:0 4px;}
+    .lang-select-dropdown:hover {
+      background: rgba(201, 168, 76, 0.15);
+      border-color: var(--gold3);
+    }
 
-/* ── SHARED SECTION STYLES ── */
-section{padding:96px 24px;}
-.container{max-width:1080px;margin:0 auto;}
-.sec-eyebrow{
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:0.5em;text-transform:uppercase;
-  color:var(--maroon3);display:block;margin-bottom:14px;
-}
-.sec-title{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(36px,6vw,68px);
-  font-weight:700;line-height:1;
-  color:var(--dark);margin-bottom:52px;
-}
-.sec-title em{font-style:italic;color:var(--maroon2);}
-.sec-rule{
-  width:60px;height:2px;
-  background:linear-gradient(90deg,var(--maroon),var(--gold));
-  margin-bottom:52px;
-}
+    .lang-select-dropdown option {
+      background: var(--dark);
+      color: var(--white);
+      font-family: sans-serif;
+    }
 
-/* ── PRIZES SECTION ── */
-.prizes-section{background:var(--cream);}
+    /* ── ADMIN SECRET TRIGGER ── */
+    .adm-secret {
+      cursor: default;
+      user-select: none;
+      font-size: 10px;
+      color: transparent;
+      position: relative;
+    }
 
-.notice-box{
-  display:flex;gap:18px;align-items:flex-start;
-  background:var(--maroon-pale);
-  border-left:4px solid var(--maroon2);
-  padding:22px 28px;margin-bottom:52px;max-width:760px;
-}
-.notice-box .n-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
-.notice-box h4{
-  font-family:'Cinzel',serif;font-size:10px;
-  letter-spacing:0.3em;text-transform:uppercase;
-  color:var(--maroon2);margin-bottom:7px;
-}
-.notice-box p{font-size:13px;line-height:1.8;color:var(--mid);}
-.notice-box p strong{color:var(--dark);}
+    /* ── PRE-HERO ── */
+    .pre-hero {
+      background: var(--dark);
+      padding: 0 0 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-.podium{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:3px;background:var(--sand);margin-bottom:3px;}
-.p-card{
-  background:var(--cream);padding:36px 24px;text-align:center;
-  position:relative;overflow:hidden;
-  transition:transform 0.3s,box-shadow 0.3s;
-}
-.p-card:hover{transform:translateY(-5px);box-shadow:var(--shadow2);z-index:1;}
-.p-card.gold{background:linear-gradient(150deg,#fffdf5,#fdf5e0);}
-.p-card.silver{background:linear-gradient(150deg,#f8f9fb,#eef0f4);}
-.p-card.bronze{background:linear-gradient(150deg,#fdf8f2,#f5ead8);}
-.p-bg-num{
-  position:absolute;top:8px;right:14px;
-  font-family:'Playfair Display',serif;
-  font-size:80px;font-weight:700;
-  color:rgba(107,26,42,0.04);line-height:1;
-}
-.p-emoji{font-size:30px;display:block;margin-bottom:14px;}
-.p-rank{
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:0.4em;text-transform:uppercase;
-  display:block;margin-bottom:10px;
-}
-.gold .p-rank{color:var(--gold);}
-.silver .p-rank{color:#7080a0;}
-.bronze .p-rank{color:#a07840;}
-.p-card .p-rank{color:var(--lite);}
-.p-amount{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(42px,5vw,58px);font-weight:700;
-  line-height:1;display:block;
-}
-.gold .p-amount{color:var(--gold);}
-.silver .p-amount{color:#7080a0;}
-.bronze .p-amount{color:#a07840;}
-.p-card .p-amount{color:var(--dark);}
+    /* Animated balls strip */
+    .balls-strip {
+      background: var(--maroon);
+      overflow: hidden;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
 
-.beer-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:3px;background:var(--sand);margin-bottom:3px;
-}
-@media(max-width:560px){.beer-grid{grid-template-columns:repeat(2,1fr);}}
-.b-card{
-  background:var(--offwhite);padding:22px 16px;
-  text-align:center;
-}
-.b-rank{
-  font-family:'Cinzel',serif;font-size:8px;
-  letter-spacing:0.3em;text-transform:uppercase;
-  color:var(--lite);display:block;margin-bottom:8px;
-}
-.b-prize{
-  font-family:'Playfair Display',serif;
-  font-size:18px;font-weight:600;color:var(--dark);
-  line-height:1.3;
-}
-.b-sub{font-size:11px;color:var(--lite);margin-top:3px;}
+    .balls-track {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      white-space: nowrap;
+      animation: ballsRoll 18s linear infinite;
+      width: max-content;
+    }
 
-.prize-total{
-  background:var(--maroon);
-  display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:20px;padding:32px 40px;
-}
-.pt-lbl{
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:0.4em;text-transform:uppercase;
-  color:rgba(255,255,255,0.45);
-}
-.pt-num{
-  font-family:'Playfair Display',serif;
-  font-size:56px;font-weight:700;color:var(--gold2);line-height:1;
-}
-.pt-note{
-  font-size:13px;line-height:1.8;
-  color:rgba(255,255,255,0.5);max-width:380px;
-}
-.pt-note strong{color:rgba(255,255,255,0.85);}
+    .ball-item {
+      flex-shrink: 0;
+      animation: ballBounce 1.6s ease-in-out infinite;
+      display: inline-block;
+    }
 
-/* ── TERMS SECTION ── */
-.terms-section{background:var(--offwhite);}
+    .ball-item:nth-child(2n) { animation-delay: 0.25s; }
+    .ball-item:nth-child(3n) { animation-delay: 0.5s; }
+    .ball-item:nth-child(4n) { animation-delay: 0.75s; }
+    .ball-item:nth-child(5n) { animation-delay: 1.0s; }
+    .ball-item:nth-child(6n) { animation-delay: 1.25s; }
+    .ball-item:nth-child(7n) { animation-delay: 1.5s; }
 
-.lock-notice{
-  background:var(--dark);
-  display:flex;gap:16px;align-items:flex-start;
-  padding:22px 28px;margin-bottom:48px;max-width:740px;
-}
-.lock-notice .l-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
-.lock-notice h4{
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:0.35em;text-transform:uppercase;
-  color:#ffffff;margin-bottom:6px;
-}
-.lock-notice p{font-size:13px;line-height:1.8;color:rgba(255,255,255,0.6);}
-.lock-notice p strong{color:rgba(255,255,255,0.9);}
+    /* Pondi Tavern heading */
+    .pondi-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 32px 24px 8px;
+    }
 
-.terms-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
-  gap:2px;background:var(--sand);
-}
-.t-card{
-  background:var(--offwhite);padding:34px 30px;
-  transition:background 0.25s;
-  position:relative;
-}
-.t-card:hover{background:var(--cream);}
-.t-num{
-  font-family:'Playfair Display',serif;
-  font-size:52px;font-weight:700;line-height:1;
-  color:rgba(107,26,42,0.08);display:block;margin-bottom:10px;
-}
-.t-icon{font-size:20px;display:block;margin-bottom:10px;}
-.t-card h3{
-  font-family:'Cinzel',serif;font-size:10px;
-  letter-spacing:0.3em;text-transform:uppercase;
-  color:var(--maroon2);margin-bottom:12px;
-}
-.t-card p{font-size:13.5px;line-height:1.85;color:var(--mid);}
-.t-card p strong{color:var(--dark);}
+    .pondi-gem {
+      font-size: 12px;
+      color: var(--gold);
+      opacity: 0.7;
+    }
 
-.rules-link{
-  display:inline-flex;align-items:center;gap:8px;
-  margin-top:18px;
-  background:var(--maroon);color:var(--white);
-  font-family:'Cinzel',serif;font-size:9px;
-  font-weight:600;letter-spacing:0.25em;text-transform:uppercase;
-  padding:11px 20px;text-decoration:none;
-  transition:background 0.2s;
-}
-.rules-link:hover{background:var(--maroon3);}
+    .pondi-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(28px, 7vw, 72px);
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      color: var(--cream);
+      text-transform: uppercase;
+      line-height: 1;
+      text-shadow: 0 2px 24px rgba(201,168,76,0.25);
+    }
 
-/* ── TRACKER ── */
-.tracker-section{background:var(--cream);}
-.stats-strip{
-  display:flex;background:var(--sand);gap:2px;
-  margin-bottom:48px;flex-wrap:wrap;
-}
-.s-box{
-  flex:1;min-width:130px;background:var(--cream);
-  padding:28px 20px;text-align:center;
-}
-.s-num{
-  font-family:'Playfair Display',serif;
-  font-size:54px;font-weight:700;line-height:1;display:block;
-}
-.s-num.maroon{color:var(--maroon);}
-.s-num.green{color:#2d6b3a;}
-.s-num.gold{color:var(--gold);}
-.s-num.red{color:#8b2a2a;}
-.s-lbl{
-  font-family:'Cinzel',serif;font-size:8px;
-  letter-spacing:0.3em;text-transform:uppercase;
-  color:var(--lite);display:block;margin-top:6px;
-}
-.legend{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:32px;}
-.leg{display:flex;align-items:center;gap:8px;
-  font-family:'EB Garamond',serif;font-size:11px;
-  font-weight:500;letter-spacing:0.12em;text-transform:uppercase;
-  color:var(--mid);}
-.dot{width:9px;height:9px;border-radius:50%;}
-.dot.c{background:#2d6b3a;}
-.dot.p{background:var(--gold);}
-.dot.n{background:var(--sand);border:1px solid var(--lite);}
+    .pondi-sub {
+      font-family: 'EB Garamond', serif;
+      font-size: clamp(14px, 2.5vw, 22px);
+      font-style: italic;
+      color: var(--gold);
+      letter-spacing: 0.25em;
+      padding-bottom: 28px;
+      opacity: 0.85;
+    }
 
-.p-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(190px,1fr));
-  gap:2px;background:var(--sand);
-}
-.pc{
-  background:var(--cream);padding:15px 18px;
-  display:flex;align-items:center;gap:12px;
-  transition:background 0.2s;
-}
-.pc:hover{background:var(--offwhite);}
-.pc.confirmed{background:#f0f7f2;}
-.pc.pending{background:#fdf8ee;}
-.pc-num{
-  font-family:'Playfair Display',serif;
-  font-size:22px;font-weight:600;
-  color:rgba(107,26,42,0.2);min-width:28px;line-height:1;
-}
-.pc-info{flex:1;}
-.pc-name{font-size:13px;font-weight:600;color:var(--dark);font-family:'EB Garamond',serif;}
-.pc-status{
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:0.15em;text-transform:uppercase;margin-top:3px;
-}
-.pc-status.sc{color:#2d6b3a;}
-.pc-status.sp{color:var(--gold);}
-.pc-status.sn{color:rgba(90,64,72,0.3);}
-.pc-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
-.pc-dot.c{background:#2d6b3a;box-shadow:0 0 6px rgba(45,107,58,0.5);}
-.pc-dot.p{background:var(--gold);}
-.pc-dot.n{background:var(--sand);border:1px solid var(--lite);}
+    @keyframes ballsRoll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
 
-/* ── FORM ── */
-.form-section{
-  background:var(--maroon);
-  position:relative;overflow:hidden;
-}
-.form-section::before{
-  content:'';position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 60% 50% at 0% 100%,rgba(0,0,0,0.3) 0%,transparent 60%),
-    radial-gradient(ellipse 40% 40% at 100% 0%,rgba(201,168,76,0.12) 0%,transparent 60%);
-}
-.form-section .container{position:relative;z-index:1;}
-.form-section .sec-eyebrow{color:rgba(201,168,76,0.7);}
-.form-section .sec-title{color:var(--white);}
-.form-section .sec-title em{color:var(--gold2);}
-.form-intro{
-  font-size:15px;line-height:1.9;
-  color:rgba(255,255,255,0.6);
-  max-width:560px;margin-bottom:36px;
-}
-.form-intro strong{color:var(--gold2);}
+    @keyframes ballBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
 
-.fee-strip{display:flex;gap:2px;margin-bottom:48px;background:rgba(0,0,0,0.2);flex-wrap:wrap;}
-.f-box{
-  flex:1;min-width:140px;
-  background:rgba(255,255,255,0.06);
-  padding:20px 24px;text-align:center;
-  border-bottom:2px solid transparent;
-  transition:border-color 0.2s;
-}
-.f-box:hover{border-bottom-color:var(--gold);}
-.f-box.hi{border-bottom-color:rgba(45,107,58,0.8);background:rgba(45,107,58,0.12);}
-.f-amt{
-  font-family:'Playfair Display',serif;
-  font-size:38px;font-weight:700;
-  color:var(--gold2);line-height:1;display:block;
-}
-.f-box.hi .f-amt{color:#7dcc95;}
-.f-lbl{
-  font-family:'Cinzel',serif;font-size:8px;
-  letter-spacing:0.3em;text-transform:uppercase;
-  color:rgba(255,255,255,0.35);display:block;margin-top:5px;
-}
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
 
-.cf{
-  background:rgba(0,0,0,0.2);
-  border:1px solid rgba(255,255,255,0.08);
-  padding:40px;max-width:640px;
-}
-@media(max-width:540px){.cf{padding:24px 18px;}}
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.6) 100%);
+      z-index: 1;
+    }
 
-label{
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:0.3em;text-transform:uppercase;
-  color:rgba(255,255,255,0.45);display:block;margin-bottom:8px;
-}
-input,select,textarea{
-  background:rgba(255,255,255,0.06);
-  border:none;border-bottom:1px solid rgba(255,255,255,0.15);
-  color:var(--white);
-  font-family:'EB Garamond',serif;font-size:14px;
-  padding:12px 0;outline:none;width:100%;
-  transition:border-color 0.2s;
-}
-input:focus,select:focus,textarea:focus{border-bottom-color:var(--gold2);}
-select option{background:var(--maroon);color:var(--white);}
-textarea{resize:vertical;min-height:80px;}
-.fg{margin-bottom:24px;}
-.f-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-@media(max-width:520px){.f-row{grid-template-columns:1fr;}}
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: #0d1a10;
+    }
 
-.upload-zone{
-  border:1px dashed rgba(201,168,76,0.3);
-  padding:28px;text-align:center;cursor:pointer;
-  position:relative;background:rgba(255,255,255,0.03);
-  transition:all 0.25s;
-}
-.upload-zone:hover,.upload-zone.drag{
-  border-color:var(--gold2);background:rgba(201,168,76,0.07);
-}
-.upload-zone input[type="file"]{
-  position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;
-}
-.uz-icon{font-size:26px;display:block;margin-bottom:8px;}
-.uz-txt{
-  font-family:'Cinzel',serif;font-size:10px;
-  letter-spacing:0.2em;text-transform:uppercase;
-  color:rgba(255,255,255,0.35);
-}
-.uz-sub{font-size:11px;color:rgba(255,255,255,0.2);margin-top:4px;}
-.file-prev{display:none;margin-top:12px;}
-.file-prev img{max-width:100%;max-height:130px;border:1px solid rgba(201,168,76,0.3);}
-.file-nm{font-size:11px;color:var(--gold2);margin-top:6px;font-family:'Cinzel',serif;}
-.rm-file{
-  font-size:10px;color:rgba(255,100,100,0.7);
-  cursor:pointer;display:inline-block;margin-top:4px;
-  font-family:'Cinzel',serif;letter-spacing:0.1em;text-transform:uppercase;
-}
+    .hero-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% 60%, rgba(20,60,30,0.9) 0%, #060e08 100%);
+    }
 
-.chk{display:flex;align-items:flex-start;gap:12px;margin-bottom:28px;}
-.chk input[type="checkbox"]{width:16px;height:16px;min-width:16px;margin-top:3px;accent-color:var(--gold2);}
-.chk span{font-size:12px;line-height:1.75;color:rgba(255,255,255,0.45);}
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: rgba(0,0,0,0.15);
+    }
 
-.sub-btn{
-  width:100%;background:var(--gold);color:var(--dark);
-  border:none;font-family:'Cinzel',serif;font-size:11px;
-  font-weight:600;letter-spacing:0.35em;text-transform:uppercase;
-  padding:18px;cursor:pointer;
-  position:relative;overflow:hidden;transition:all 0.3s;
-}
-.sub-btn::before{
-  content:'';position:absolute;inset:0;
-  background:var(--gold3);transform:scaleX(0);
-  transform-origin:left;transition:transform 0.4s ease;
-}
-.sub-btn:hover::before{transform:scaleX(1);}
-.sub-btn span{position:relative;z-index:1;}
-.sub-btn:disabled{opacity:0.4;cursor:not-allowed;}
+    .hero-content {
+      position: relative;
+      z-index: 3;
+    }
 
-.form-done{display:none;text-align:center;padding:56px 32px;}
-.form-done .fd-icon{font-size:52px;display:block;margin-bottom:18px;}
-.form-done h3{
-  font-family:'Playfair Display',serif;
-  font-size:42px;font-weight:700;
-  color:var(--gold2);margin-bottom:12px;
-}
-.form-done p{font-size:14px;line-height:1.8;color:rgba(255,255,255,0.55);}
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(201,168,76,0.18);
+      border: 1px solid rgba(201,168,76,0.45);
+      padding: 9px 24px;
+      margin-bottom: 36px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.3s forwards;
+    }
 
-/* ── SPONSORS ── */
-.sponsors-section{background:var(--offwhite);}
-.sp-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:2px;background:var(--sand);
-}
-.sp-card{
-  background:var(--offwhite);padding:40px 28px;
-  text-align:center;transition:background 0.25s;
-}
-.sp-card:hover{background:var(--cream);}
-.sp-emoji{font-size:34px;display:block;margin-bottom:14px;}
-.sp-role{
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:0.4em;text-transform:uppercase;
-  color:var(--maroon-lt);display:block;margin-bottom:8px;
-}
-.sp-name{
-  font-family:'Playfair Display',serif;
-  font-size:28px;font-weight:700;color:var(--dark);
-  line-height:1.1;margin-bottom:4px;
-}
-.sp-sub{font-size:12px;color:var(--lite);font-style:italic;}
+    .hero-badge span {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--gold2);
+    }
 
-/* ── ADMIN ── */
-.admin-section{background:var(--cream);padding:48px 24px;}
-.adm-toggle{
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:0.3em;text-transform:uppercase;
-  color:var(--lite);cursor:pointer;
-  display:inline-flex;align-items:center;gap:8px;
-}
-.adm-toggle:hover{color:var(--maroon);}
-.adm-panel{display:none;margin-top:28px;}
-.adm-panel.open{display:block;}
-.adm-login{max-width:340px;}
-.adm-login input{
-  background:var(--offwhite);border:1px solid var(--sand);
-  color:var(--dark);padding:12px 16px;margin-bottom:12px;
-  font-family:'EB Garamond',serif;font-size:14px;
-}
-.adm-login input:focus{border-color:var(--maroon);}
-.adm-btn{
-  background:var(--maroon);color:var(--white);
-  border:none;font-family:'Cinzel',serif;font-size:10px;
-  letter-spacing:0.25em;text-transform:uppercase;
-  padding:12px 28px;cursor:pointer;transition:background 0.2s;
-}
-.adm-btn:hover{background:var(--maroon3);}
-.adm-btn.danger{background:#8b2a2a;margin-left:10px;}
-.tbl-wrap{overflow-x:auto;margin-top:24px;}
-table{width:100%;border-collapse:collapse;font-size:13px;}
-thead tr{background:var(--dark);}
-th{
-  font-family:'Cinzel',serif;font-size:8px;
-  letter-spacing:0.25em;text-transform:uppercase;
-  color:var(--gold2);padding:13px 14px;text-align:left;white-space:nowrap;
-}
-td{padding:12px 14px;border-bottom:1px solid var(--sand);color:var(--mid);vertical-align:top;}
-tr:hover td{background:var(--offwhite);}
-.badge{
-  display:inline-block;padding:3px 10px;
-  font-family:'Cinzel',serif;font-size:8px;letter-spacing:0.15em;text-transform:uppercase;
-}
-.badge.confirmed{background:#eaf5ec;color:#2d6b3a;border:1px solid rgba(45,107,58,0.2);}
-.badge.pending{background:#fef8ec;color:#a07820;border:1px solid rgba(160,120,32,0.2);}
-.p-thumb{width:44px;height:34px;object-fit:cover;border:1px solid var(--sand);cursor:pointer;}
-.act-btn{
-  font-family:'Cinzel',serif;font-size:8px;
-  letter-spacing:0.1em;text-transform:uppercase;
-  padding:4px 10px;border:1px solid;cursor:pointer;
-  background:transparent;transition:all 0.2s;
-}
-.act-btn.cb{color:#2d6b3a;border-color:#2d6b3a;}
-.act-btn.cb:hover{background:#2d6b3a;color:white;}
-.act-btn.db{color:#8b2a2a;border-color:#8b2a2a;margin-left:6px;}
-.act-btn.db:hover{background:#8b2a2a;color:white;}
-.exp-btn{
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:0.25em;text-transform:uppercase;
-  padding:10px 22px;background:transparent;
-  border:1px solid var(--dark);color:var(--dark);
-  cursor:pointer;transition:all 0.2s;margin-top:18px;
-}
-.exp-btn:hover{background:var(--dark);color:var(--cream);}
+    .hero-badge::before, .hero-badge::after {
+      content: '◆';
+      font-size: 7px;
+      color: rgba(201,168,76,0.6);
+    }
 
-/* ── FOOTER ── */
-footer{
-  background:var(--navy);
-  padding:60px 24px 36px;
-  text-align:center;
-  border-top:3px solid var(--maroon);
-}
-.ft-logo{
-  font-family:'Playfair Display',serif;
-  font-size:26px;font-weight:700;letter-spacing:0.05em;
-  color:var(--white);display:inline-block;margin-bottom:12px;
-}
-.ft-logo span{color:var(--gold2);font-weight:400;font-style:italic;}
-.ft-sub{
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:0.35em;text-transform:uppercase;
-  color:rgba(255,255,255,0.4);margin-bottom:44px;
-}
-.ft-powered{
-  font-size:12px;color:rgba(255,255,255,0.25);
-  letter-spacing:0.05em;
-}
-.ft-powered a{color:rgba(255,255,255,0.4);text-decoration:none;}
-.ft-powered a:hover{color:var(--gold2);}
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(54px, 11vw, 130px);
+      line-height: 0.9;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.5s forwards;
+    }
 
-/* ── TOAST ── */
-.toast{
-  position:fixed;bottom:24px;left:24px;z-index:99999;
-  background:var(--dark);color:var(--white);
-  padding:14px 24px;font-size:13px;
-  box-shadow:var(--shadow2);border-left:3px solid var(--gold);
-  opacity:0;transform:translateY(20px);transition:all 0.3s ease;
-  pointer-events:none;
-}
-.toast.show{opacity:1;transform:translateY(0);pointer-events:auto;}
-.toast.err{border-left-color:#8b2a2a;}
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold2);
+      display: block;
+      font-size: 0.65em;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      margin-top: 6px;
+    }
 
-/* ── REVEAL ANIMATION ── */
-.reveal{opacity:0;transform:translateY(30px);transition:all 0.8s ease;}
-.reveal.active{opacity:1;transform:translateY(0);}
+    .hero-rule {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      justify-content: center;
+      margin: 32px auto;
+      opacity: 0;
+      animation: fadeIn 1s ease 0.9s forwards;
+      max-width: 320px;
+    }
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-@keyframes scrollBob{0%,100%{transform:translateY(0);opacity:0.7;}50%{transform:translateY(6px);opacity:0.2;}}
-</style>
+    .hero-rule::before, .hero-rule::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.6));
+    }
+
+    .hero-rule::after {
+      background: linear-gradient(270deg, transparent, rgba(201,168,76,0.6));
+    }
+
+    .hero-rule-gem {
+      width: 8px;
+      height: 8px;
+      background: var(--gold2);
+      transform: rotate(45deg);
+    }
+
+    .hero-meta {
+      gap: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 1s forwards;
+      border: 1px solid rgba(201,168,76,0.2);
+      display: inline-flex;
+    }
+
+    .meta-pill {
+      padding: 18px 28px;
+      border-right: 1px solid rgba(201,168,76,0.2);
+      text-align: center;
+    }
+
+    .meta-pill:last-child {
+      border-right: none;
+    }
+
+    .meta-lbl {
+      font-family: 'Cinzel', serif;
+      font-size: 8px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.7);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .meta-val {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(16px, 2.5vw, 22px);
+      font-weight: 600;
+      color: var(--white);
+      display: block;
+      line-height: 1;
+    }
+
+    .hero-btn {
+      opacity: 0;
+      animation: fadeUp 0.8s ease 1.2s forwards;
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark);
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      padding: 17px 44px;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s;
+      border: 1px solid var(--gold);
+    }
+
+    .hero-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--maroon);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease;
+    }
+
+    .hero-btn:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .hero-btn:hover {
+      color: var(--white);
+      border-color: var(--maroon);
+    }
+
+    .hero-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0;
+      animation: fadeIn 1s ease 1.8s forwards;
+    }
+
+    .scroll-down p {
+      font-family: 'Cinzel', serif;
+      font-size: 8px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .scroll-down-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba(201,168,76,0.7), transparent);
+      animation: scrollBob 2s ease-in-out infinite;
+    }
+
+    /* ── TICKER ── */
+    .ticker {
+      background: var(--maroon);
+      padding: 13px 0;
+      overflow: hidden;
+      border-top: 1px solid rgba(201,168,76,0.25);
+      border-bottom: 1px solid rgba(201,168,76,0.25);
+    }
+
+    .ticker-inner {
+      display: flex;
+      white-space: nowrap;
+      animation: ticker 35s linear infinite;
+    }
+
+    .ticker-inner:hover {
+      animation-play-state: paused;
+    }
+
+    .t-item {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      padding: 0 32px;
+    }
+
+    .t-item strong {
+      color: var(--gold2);
+    }
+
+    .t-sep {
+      color: rgba(201,168,76,0.4);
+      padding: 0 4px;
+    }
+
+    /* ── SHARED SECTION STYLES ── */
+    section {
+      padding: 96px 24px;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .sec-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: var(--maroon3);
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .sec-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 6vw, 68px);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--dark);
+      margin-bottom: 52px;
+    }
+
+    .sec-title em {
+      font-style: italic;
+      color: var(--maroon2);
+    }
+
+    .sec-rule {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--maroon), var(--gold));
+      margin-bottom: 52px;
+    }
+
+    /* ── PRIZES SECTION ── */
+    .prizes-section {
+      background: var(--cream);
+    }
+
+    .notice-box {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      background: var(--maroon-pale);
+      border-left: 4px solid var(--maroon2);
+      padding: 22px 28px;
+      margin-bottom: 52px;
+      max-width: 760px;
+    }
+
+    .notice-box .n-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .notice-box h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--maroon2);
+      margin-bottom: 7px;
+    }
+
+    .notice-box p {
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--mid);
+    }
+
+    .notice-box p strong {
+      color: var(--dark);
+    }
+
+    .podium {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 3px;
+      background: var(--sand);
+      margin-bottom: 3px;
+    }
+
+    .p-card {
+      background: var(--cream);
+      padding: 36px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .p-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow2);
+      z-index: 1;
+    }
+
+    .p-card.gold { background: linear-gradient(150deg, #fffdf5, #fdf5e0); }
+    .p-card.silver { background: linear-gradient(150deg, #f8f9fb, #eef0f4); }
+    .p-card.bronze { background: linear-gradient(150deg, #fdf8f2, #f5ead8); }
+
+    .p-bg-num {
+      position: absolute;
+      top: 8px;
+      right: 14px;
+      font-family: 'Playfair Display', serif;
+      font-size: 80px;
+      font-weight: 700;
+      color: rgba(107,26,42,0.04);
+      line-height: 1;
+    }
+
+    .p-emoji {
+      font-size: 30px;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .p-rank {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .gold .p-rank { color: var(--gold); }
+    .silver .p-rank { color: #7080a0; }
+    .bronze .p-rank { color: #a07840; }
+    .p-card .p-rank { color: var(--lite); }
+
+    .p-amount {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 5vw, 58px);
+      font-weight: 700;
+      line-height: 1;
+      display: block;
+    }
+
+    .gold .p-amount { color: var(--gold); }
+    .silver .p-amount { color: #7080a0; }
+    .bronze .p-amount { color: #a07840; }
+    .p-card .p-amount { color: var(--dark); }
+
+    .beer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+      background: var(--sand);
+      margin-bottom: 3px;
+    }
+
+    @media(max-width:560px) {
+      .beer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .b-card {
+      background: var(--offwhite);
+      padding: 22px 16px;
+      text-align: center;
+    }
+
+    .b-rank {
+      font-family: 'Cinzel', serif;
+      font-size: 8px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--lite);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .b-prize {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.3;
+    }
+
+    .b-sub {
+      font-size: 11px;
+      color: var(--lite);
+      margin-top: 3px;
+    }
+
+    .prize-total {
+      background: var(--maroon);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 32px 40px;
+    }
+
+    .pt-lbl {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .pt-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--gold2);
+      line-height: 1;
+    }
+
+    .pt-note {
+      font-size: 13px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.5);
+      max-width: 380px;
+    }
+
+    .pt-note strong {
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ── TERMS SECTION ── */
+    .terms-section {
+      background: var(--offwhite);
+    }
+
+    .lock-notice {
+      background: var(--dark);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 22px 28px;
+      margin-bottom: 48px;
+      max-width: 740px;
+    }
+
+    .lock-notice .l-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .lock-notice h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .lock-notice p {
+      font-size: 13px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .lock-notice p strong {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .terms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 2px;
+      background: var(--sand);
+    }
+
+    .t-card {
+      background: var(--offwhite);
+      padding: 34px 30px;
+      transition: background 0.25s;
+      position: relative;
+    }
+
+    .t-card:hover {
+      background: var(--cream);
+    }
+
+    .t-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1;
+      color: rgba(107,26,42,0.08);
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .t-icon {
+      font-size: 20px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .t-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--maroon2);
+      margin-bottom: 12px;
+    }
+
+    .t-card p {
+      font-size: 13.5px;
+      line-height: 1.85;
+      color: var(--mid);
+    }
+
+    .t-card p strong {
+      color: var(--dark);
+    }
+
+    .rules-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      background: var(--maroon);
+      color: var(--white);
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      padding: 11px 20px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .rules-link:hover {
+      background: var(--maroon3);
+    }
+
+    /* ── TRACKER ── */
+    .tracker-section {
+      background: var(--cream);
+    }
+
+    .stats-strip {
+      display: flex;
+      background: var(--sand);
+      gap: 2px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .s-box {
+      flex: 1;
+      min-width: 130px;
+      background: var(--cream);
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    .s-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 54px;
+      font-weight: 700;
+      line-height: 1;
+      display: block;
+    }
+
+    .s-num.maroon { color: var(--maroon); }
+    .s-num.green { color: #2d6b3a; }
+    .s-num.gold { color: var(--gold); }
+    .s-num.red { color: #8b2a2a; }
+
+    .s-lbl {
+      font-family: 'Cinzel', serif;
+      font-size: 8px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--lite);
+      display: block;
+      margin-top: 6px;
+    }
+
+    .legend {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .leg {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'EB Garamond', serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mid);
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
+
+    .dot.c { background: #2d6b3a; }
+    .dot.p { background: var(--gold); }
+    .dot.n { background: var(--sand); border: 1px solid var(--lite); }
+
+    .p-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 2px;
+      background: var(--sand);
+    }
+
+    .pc {
+      background: var(--cream);
+      padding: 15px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.2s;
+    }
+
+    .pc:hover {
+      background: var(--offwhite);
+    }
+
+    .pc.confirmed { background: #f0f7f2; }
+    .pc.pending { background: #fdf8ee; }
+
+    .pc-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: rgba(107,26,42,0.2);
+      min-width: 28px;
+      line-height: 1;
+    }
+
+    .pc-info {
+      flex: 1;
+    }
+
+    .pc-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--dark);
+      font-family: 'EB Garamond', serif;
+    }
+
+    .pc-status {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .pc-status.sc { color: #2d6b3a; }
+    .pc-status.sp { color: var(--gold); }
+    .pc-status.sn { color: rgba(90,64,72,0.3); }
+
+    .pc-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .pc-dot.c { background: #2d6b3a; box-shadow: 0 0 6px rgba(45,107,58,0.5); }
+    .pc-dot.p { background: var(--gold); }
+    .pc-dot.n { background: var(--sand); border: 1px solid var(--lite); }
+
+    /* ── FORM ── */
+    .form-section {
+      background: var(--maroon);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 0% 100%, rgba(0,0,0,0.3) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 100% 0%, rgba(201,168,76,0.12) 0%, transparent 60%);
+    }
+
+    .form-section .container { position: relative; z-index: 1; }
+    .form-section .sec-eyebrow { color: rgba(201,168,76,0.7); }
+    .form-section .sec-title { color: var(--white); }
+    .form-section .sec-title em { color: var(--gold2); }
+
+    .form-intro {
+      font-size: 15px;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.6);
+      max-width: 560px;
+      margin-bottom: 36px;
+    }
+
+    .form-intro strong {
+      color: var(--gold2);
+    }
+
+    .fee-strip {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 48px;
+      background: rgba(0,0,0,0.2);
+      flex-wrap: wrap;
+    }
+
+    .f-box {
+      flex: 1;
+      min-width: 140px;
+      background: rgba(255,255,255,0.06);
+      padding: 20px 24px;
+      text-align: center;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .f-box:hover { border-bottom-color: var(--gold); }
+    .f-box.hi { border-bottom-color: rgba(45,107,58,0.8); background: rgba(45,107,58,0.12); }
+
+    .f-amt {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--gold2);
+      line-height: 1;
+      display: block;
+    }
+
+    .f-box.hi .f-amt { color: #7dcc95; }
+
+    .f-lbl {
+      font-family: 'Cinzel', serif;
+      font-size: 8px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      display: block;
+      margin-top: 5px;
+    }
+
+    .cf {
+      background: rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 40px;
+      max-width: 640px;
+    }
+
+    @media(max-width:540px) {
+      .cf { padding: 24px 18px; }
+    }
+
+    label {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select, textarea {
+      background: rgba(255,255,255,0.06);
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      color: var(--white);
+      font-family: 'EB Garamond', serif;
+      font-size: 14px;
+      padding: 12px 0;
+      outline: none;
+      width: 100%;
+      transition: border-color 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-bottom-color: var(--gold2);
+    }
+
+    select option {
+      background: var(--maroon);
+      color: var(--white);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .fg { margin-bottom: 24px; }
+    .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+    @media(max-width:520px) {
+      .f-row { grid-template-columns: 1fr; }
+    }
+
+    .upload-zone {
+      border: 1px dashed rgba(201,168,76,0.3);
+      padding: 28px;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      background: rgba(255,255,255,0.03);
+      transition: all 0.25s;
+    }
+
+    .upload-zone:hover, .upload-zone.drag {
+      border-color: var(--gold2);
+      background: rgba(201,168,76,0.07);
+    }
+
+    .upload-zone input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+
+    .uz-icon {
+      font-size: 26px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .uz-txt {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .uz-sub {
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+      margin-top: 4px;
+    }
+
+    .file-prev {
+      display: none;
+      margin-top: 12px;
+    }
+
+    .file-prev img {
+      max-width: 100%;
+      max-height: 130px;
+      border: 1px solid rgba(201,168,76,0.3);
+    }
+
+    .file-nm {
+      font-size: 11px;
+      color: var(--gold2);
+      margin-top: 6px;
+      font-family: 'Cinzel', serif;
+    }
+
+    .rm-file {
+      font-size: 10px;
+      color: rgba(255,100,100,0.7);
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 4px;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .chk {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .chk input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      margin-top: 3px;
+      accent-color: var(--gold2);
+    }
+
+    .chk span {
+      font-size: 12px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .sub-btn {
+      width: 100%;
+      background: var(--gold);
+      color: var(--dark);
+      border: none;
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      padding: 18px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .sub-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gold3);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .sub-btn:hover::before { transform: scaleX(1); }
+    .sub-btn span { position: relative; z-index: 1; }
+    .sub-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .form-done {
+      display: none;
+      text-align: center;
+      padding: 56px 32px;
+    }
+
+    .form-done .fd-icon {
+      font-size: 52px;
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .form-done h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--gold2);
+      margin-bottom: 12px;
+    }
+
+    .form-done p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ── SPONSORS ── */
+    .sponsors-section {
+      background: var(--offwhite);
+    }
+
+    .sp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2px;
+      background: var(--sand);
+    }
+
+    .sp-card {
+      background: var(--offwhite);
+      padding: 40px 28px;
+      text-align: center;
+      transition: background 0.25s;
+    }
+
+    .sp-card:hover {
+      background: var(--cream);
+    }
+
+    .sp-emoji {
+      font-size: 34px;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .sp-role {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--maroon-lt);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .sp-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .sp-sub {
+      font-size: 12px;
+      color: var(--lite);
+      font-style: italic;
+    }
+
+    /* ── ADMIN ── */
+    .admin-section {
+      background: var(--cream);
+      padding: 48px 24px;
+    }
+
+    .adm-toggle {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--lite);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .adm-toggle:hover {
+      color: var(--maroon);
+    }
+
+    .adm-panel {
+      display: none;
+      margin-top: 28px;
+    }
+
+    .adm-panel.open {
+      display: block;
+    }
+
+    .adm-login {
+      max-width: 340px;
+    }
+
+    .adm-login input {
+      background: var(--offwhite);
+      border: 1px solid var(--sand);
+      color: var(--dark);
+      padding: 12px 16px;
+      margin-bottom: 12px;
+      font-family: 'EB Garamond', serif;
+      font-size: 14px;
+    }
+
+    .adm-login input:focus {
+      border-color: var(--maroon);
+    }
+
+    .adm-btn {
+      background: var(--maroon);
+      color: var(--white);
+      border: none;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .adm-btn:hover {
+      background: var(--maroon3);
+    }
+
+    .adm-btn.danger {
+      background: #8b2a2a;
+      margin-left: 10px;
+    }
+
+    .tbl-wrap {
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    thead tr {
+      background: var(--dark);
+    }
+
+    th {
+      font-family: 'Cinzel', serif;
+      font-size: 8px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold2);
+      padding: 13px 14px;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--sand);
+      color: var(--mid);
+      vertical-align: top;
+    }
+
+    tr:hover td {
+      background: var(--offwhite);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      font-family: 'Cinzel', serif;
+      font-size: 8px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .badge.confirmed { background: #eaf5ec; color: #2d6b3a; border: 1px solid rgba(45,107,58,0.2); }
+    .badge.pending { background: #fef8ec; color: #a07820; border: 1px solid rgba(160,120,32,0.2); }
+
+    .p-thumb {
+      width: 44px;
+      height: 34px;
+      object-fit: cover;
+      border: 1px solid var(--sand);
+      cursor: pointer;
+    }
+
+    .act-btn {
+      font-family: 'Cinzel', serif;
+      font-size: 8px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid;
+      cursor: pointer;
+      background: transparent;
+      transition: all 0.2s;
+    }
+
+    .act-btn.cb { color: #2d6b3a; border-color: #2d6b3a; }
+    .act-btn.cb:hover { background: #2d6b3a; color: white; }
+    .act-btn.db { color: #8b2a2a; border-color: #8b2a2a; margin-left: 6px; }
+    .act-btn.db:hover { background: #8b2a2a; color: white; }
+
+    .exp-btn {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      background: transparent;
+      border: 1px solid var(--dark);
+      color: var(--dark);
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 18px;
+    }
+
+    .exp-btn:hover {
+      background: var(--dark);
+      color: var(--cream);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      padding: 60px 24px 36px;
+      text-align: center;
+      border-top: 3px solid var(--maroon);
+    }
+
+    .ft-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: var(--white);
+      letter-spacing: 0.05em;
+      cursor: pointer;
+    }
+
+    .ft-logo span {
+      color: var(--gold);
+    }
+
+    .ft-sub {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-top: 8px;
+    }
+
+    .ft-powered {
+      font-size: 12px;
+      color: rgba(255,255,255,0.25);
+      margin-top: 44px;
+    }
+
+    .ft-powered a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+    }
+
+    /* ── ANIMATIONS & MISC ── */
+    @keyframes fadeUp {
+      from { transform: translateY(24px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes scrollBob {
+      0%, 100% { transform: scaleY(1); transform-origin: top; }
+      50% { transform: scaleY(0.4); transform-origin: top; }
+    }
+
+    @keyframes ticker {
+      from { transform: translate3d(0,0,0); }
+      to { transform: translate3d(-50%,0,0); }
+    }
+
+    .reveal {
+      opacity: 1;
+    }
+
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 14px 28px;
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      z-index: 10000;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border-left: 3px solid var(--gold);
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .toast.error {
+      border-left-color: #8b2a2a;
+    }
+  </style>
 </head>
 <body>
 
-<div class="global-lang-bar">
-  <div class="lang-switch">
-    <button class="lang-btn" id="lang-en" onclick="setLang('en')">EN</button>
-    <button class="lang-btn" id="lang-zu" onclick="setLang('zu')">ZU</button>
-  </div>
-</div>
-
-<div class="top-bar">
-  <div class="top-bar-balls" id="topBarBalls"></div>
-  <h1 class="top-bar-title">PRO 32 <span class="tb-diamond">◆</span> WINTER CUP</h1>
-  <p class="top-bar-sub" id="top-bar-sub-el">Pondi Tavern · Isipingo Rail</p>
-</div>
-
-<div class="pre-hero">
-  <div class="balls-strip">
-    <div class="balls-track" id="ballsTrack"></div>
-  </div>
-  <div class="pondi-header">
-    <span class="pondi-gem">◆</span>
-    <h2 class="pondi-title">Pondi Tavern</h2>
-    <span class="pondi-gem">◆</span>
-  </div>
-  <p class="pondi-sub" id="pondi-sub-el">Where Champions Converge</p>
-</div>
-
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-img">
-    <svg width="100%" height="100%" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="lamp1" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="rgba(255,230,150,0.3)"/>
-          <stop offset="40%" stop-color="rgba(255,210,100,0.08)"/>
-          <stop offset="100%" stop-color="rgba(255,200,100,0)"/>
-        </linearGradient>
-        <radialGradient id="sh" cx="40%" cy="30%" r="70%">
-          <stop offset="0%" stop-color="rgba(255,255,255,0.3)"/>
-          <stop offset="40%" stop-color="rgba(255,255,255,0)"/>
-          <stop offset="100%" stop-color="rgba(0,0,0,0.6)"/>
-        </radialGradient>
-        <linearGradient id="wood" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#2a1005"/>
-          <stop offset="30%" stop-color="#7a4a18"/>
-          <stop offset="75%" stop-color="#d4a060"/>
-          <stop offset="100%" stop-color="#f5e0a0"/>
-        </linearGradient>
-        <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        <filter id="softblur"><feGaussianBlur stdDeviation="6"/></filter>
-        <filter id="tinyblur"><feGaussianBlur stdDeviation="1.5"/></filter>
-      </defs>
-      <rect width="1200" height="700" fill="#060e08"/>
-      <radialGradient id="bgGlow" cx="50%" cy="55%" r="55%">
-        <stop offset="0%" stop-color="#122a18"/>
-        <stop offset="100%" stop-color="#060e08"/>
-      </radialGradient>
-      <rect width="1200" height="700" fill="url(#bgGlow)"/>
-      <line x1="380" y1="0" x2="380" y2="55" stroke="rgba(200,160,80,0.4)" stroke-width="2"/>
-      <path d="M342,55 Q380,70 418,55 L408,42 Q380,52 352,42 Z" fill="#2a1a04"/>
-      <ellipse cx="380" cy="52" rx="20" ry="7" fill="rgba(255,220,100,0.6)" filter="url(#tinyblur)"/>
-      <path d="M310,65 L220,340 L540,340 L450,65 Z" fill="url(#lamp1)" opacity="0.7"/>
-      <line x1="820" y1="0" x2="820" y2="55" stroke="rgba(200,160,80,0.4)" stroke-width="2"/>
-      <path d="M782,55 Q820,70 858,55 L848,42 Q820,52 792,42 Z" fill="#2a1a04"/>
-      <ellipse cx="820" cy="52" rx="20" ry="7" fill="rgba(255,220,100,0.6)" filter="url(#tinyblur)"/>
-      <path d="M750,65 L660,340 L980,340 L890,65 Z" fill="url(#lamp1)" opacity="0.7"/>
-      <g filter="url(#softblur)" opacity="0.4">
-        <ellipse cx="380" cy="420" rx="220" ry="80" fill="rgba(255,210,120,0.15)"/>
-        <ellipse cx="820" cy="420" rx="220" ry="80" fill="rgba(255,210,120,0.15)"/>
-      </g>
-      <path d="M100,600 L1100,600 L950,320 L250,320 Z" fill="#0f3d1d" stroke="#1c5c2e" stroke-width="3"/>
-      <path d="M70,615 L1130,615 L1100,600 L100,600 Z" fill="url(#wood)"/>
-      <path d="M250,320 L950,320 L935,308 L265,308 Z" fill="#1d1006"/>
-      <path d="M70,615 L100,600 L250,320 L265,308 L250,320 L100,600" fill="#261408"/>
-      <path d="M1130,615 L1100,600 L950,320 L935,308 L950,320 L1100,600" fill="#3a200f"/>
-      <g opacity="0.85">
-        <circle cx="340" cy="480" r="19" fill="#cc0000"/><circle cx="340" cy="480" r="19" fill="url(#sh)"/><text x="340" y="486" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="Georgia">3</text>
-        <circle cx="390" cy="495" r="19" fill="#f5c800"/><circle cx="390" cy="495" r="19" fill="url(#sh)"/><text x="390" y="501" text-anchor="middle" font-size="13" font-weight="900" fill="#111" font-family="Georgia">1</text>
-        <circle cx="435" cy="465" r="19" fill="#cc0000"/><circle cx="435" cy="465" r="19" fill="url(#sh)"/><text x="435" y="471" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="Georgia">7</text>
-        <circle cx="305" cy="515" r="19" fill="#f5c800"/><circle cx="305" cy="515" r="19" fill="url(#sh)"/><text x="305" y="521" text-anchor="middle" font-size="13" font-weight="900" fill="#111" font-family="Georgia">5</text>
-        <circle cx="460" cy="510" r="19" fill="#0044cc"/><circle cx="460" cy="510" r="19" fill="url(#sh)"/><text x="460" y="516" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="Georgia">2</text>
-      </g>
-      <g opacity="0.9">
-        <circle cx="802" cy="400" r="19" fill="#111" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><circle cx="802" cy="400" r="9" fill="white"/><text x="802" y="405" text-anchor="middle" font-size="11" font-weight="900" fill="#111" font-family="Georgia">8</text><circle cx="802" cy="400" r="19" fill="url(#sh)" opacity="0.4"/>
-      </g>
-    </svg>
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">
-      <span id="hb-text-el">Pondi Tavern Presents</span>
+  <div class="top-bar">
+    <div class="lang-switcher-container">
+      <select id="langSelectDropdown" class="lang-select-dropdown" onchange="switchLanguage(this.value)">
+        <option value="zu">Isizulu</option>
+        <option value="en">English</option>
+      </select>
     </div>
-    <h2 class="hero-title" id="ht-el">Isipingo Pool <em>Masterpiece</em></h2>
-    <div class="hero-rule"><div class="hero-rule-gem"></div></div>
-    <div class="hero-meta">
-      <div class="meta-pill"><span class="meta-lbl" id="m1-lbl-el">Date</span><span class="meta-val" id="m1-val-el">18 July 2026</span></div>
-      <div class="meta-pill"><span class="meta-lbl" id="m2-lbl-el">Entry Fee</span><span class="meta-val">R250</span></div>
-      <div class="meta-pill"><span class="meta-lbl" id="m3-lbl-el">First Prize</span><span class="meta-val">R4,500</span></div>
-    </div>
-    <div>
-      <a href="#register" class="hero-btn"><span id="hb-btn-el">Secure Entry Slot →</span></a>
-    </div>
-  </div>
-  <div class="scroll-down">
-    <p id="sd-txt-el">Scroll to explore</p>
-    <div class="scroll-down-line"></div>
-  </div>
-</section>
 
-<div class="ticker">
-  <div class="ticker-inner" id="tickerInner"></div>
-</div>
+    <div class="top-bar-balls" id="topBarBalls"></div>
+    <h1 class="top-bar-title">PRO 32 <span class="tb-diamond">◆</span> WINTER CUP</h1>
+    <p class="top-bar-sub" id="tb-sub-el">Pondi Tavern · Official Tournament Hub</p>
+  </div>
 
-<section class="prizes-section" id="prizes">
-  <div class="container">
-    <span class="sec-eyebrow reveal" id="prizes-eyebrow-el">Guaranteed Rewards</span>
-    <h2 class="sec-title reveal" id="prizes-title-el">The <em>Prize Pool</em></h2>
-    <div class="sec-rule reveal"></div>
-    <div class="notice-box reveal">
-      <span class="n-icon">⚠️</span>
+  <div class="pre-hero">
+    <div class="balls-strip">
+      <div class="balls-track" id="ballsTrack"></div>
+    </div>
+    <div class="pondi-header">
+      <span class="pondi-gem">◆</span>
+      <h2 class="pondi-title">Pondi Tavern</h2>
+      <span class="pondi-gem">◆</span>
+    </div>
+    <p class="pondi-sub" id="pondi-sub-el">The Home of Premium Blackball Pool</p>
+  </div>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span id="hero-badge-el">Grand Tournament 2026</span>
+      </div>
+      <h2 class="hero-title" id="hero-title-el">
+        Umncintiswano <em>Wasebusika</em>
+      </h2>
+      <div class="hero-rule">
+        <div class="hero-rule-gem"></div>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-pill">
+          <span class="meta-lbl" id="lbl-date-el">Usuku</span>
+          <span class="meta-val">20 June '26</span>
+        </div>
+        <div class="meta-pill">
+          <span class="meta-lbl" id="lbl-venue-el">Indawo</span>
+          <span class="meta-val">Pondi Tavern</span>
+        </div>
+        <div class="meta-pill">
+          <span class="meta-lbl" id="lbl-entry-el">Ukungena</span>
+          <span class="meta-val">R250</span>
+        </div>
+      </div>
       <div>
-        <h4>Minimum Participation Condition</h4>
-        <p id="prize-notice-body-el">All tiers heavily scale based on hitting <strong>at least 32 paid entries</strong>. Ensure quick confirmation to lock down structural totals.</p>
+        <a href="#form" class="hero-btn"><span id="hero-btn-el">Bhalisa Manje →</span></a>
       </div>
     </div>
-    <div class="podium reveal">
-      <div class="p-card gold"><span class="p-bg-num">1</span><span class="p-emoji">🏆</span><span class="p-rank">Champion</span><span class="p-amount">R4,500</span></div>
-      <div class="p-card silver"><span class="p-bg-num">2</span><span class="p-emoji">🥈</span><span class="p-rank">Runner Up</span><span class="p-amount">R2,500</span></div>
-      <div class="p-card bronze"><span class="p-bg-num">3</span><span class="p-emoji">🥉</span><span class="p-rank">Third Place</span><span class="p-amount">R1,500</span></div>
-      <div class="p-card"><span class="p-bg-num">4</span><span class="p-emoji">🎱</span><span class="p-rank">Fourth Place</span><span class="p-amount">R1,000</span></div>
+    <div class="scroll-down">
+      <p id="scroll-down-el">Scroll Down</p>
+      <div class="scroll-down-line"></div>
     </div>
-    <div class="beer-grid reveal">
-      <div class="b-card"><span class="b-rank" id="p5-el">5th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
-      <div class="b-card"><span class="b-rank" id="p6-el">6th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
-      <div class="b-card"><span class="b-rank" id="p7-el">7th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
-      <div class="b-card"><span class="b-rank" id="p8-el">8th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
-    </div>
-    <div class="prize-total reveal">
-      <div>
-        <div class="pt-lbl" id="prize-total-label-el">Total Evaluation Value</div>
-        <div class="pt-num">R9,500+</div>
-      </div>
-      <div class="pt-note" id="prize-total-note-el">Combined structural rewards matrix configured explicitly under strict baseline alignment conditions.</div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span class="t-item"><strong>PRO 32 POOL MATCHES</strong></span><span class="t-sep">◆</span>
+      <span class="t-item" id="tick1">R4,500 First Prize Champion</span><span class="t-sep">◆</span>
+      <span class="t-item" id="tick2">Race Format 7 / 9 / 11 Matches</span><span class="t-sep">◆</span>
+      <span class="t-item" id="tick3">Official Refereeing Enforced</span><span class="t-sep">◆</span>
+      <span class="t-item" id="tick4">Strict 11:00 AM Registration Deadline</span><span class="t-sep">◆</span>
+      <span class="t-item"><strong>PRO 32 POOL MATCHES</strong></span><span class="t-sep">◆</span>
+      <span class="t-item" id="tick1-alt">R4,500 First Prize Champion</span><span class="t-sep">◆</span>
+      <span class="t-item" id="tick2-alt">Race Format 7 / 9 / 11 Matches</span><span class="t-sep">◆</span>
+      <span class="t-item" id="tick3-alt">Official Refereeing Enforced</span><span class="t-sep">◆</span>
+      <span class="t-item" id="tick4-alt">Strict 11:00 AM Registration Deadline</span><span class="t-sep">◆</span>
     </div>
   </div>
-</section>
 
-<section class="terms-section" id="terms">
-  <div class="container">
-    <span class="sec-eyebrow reveal" id="terms-eyebrow-el">Tournament Framework</span>
-    <h2 class="sec-title reveal" id="terms-title-el">Rules & <em>Regulations</em></h2>
-    <div class="sec-rule reveal"></div>
-    <div class="lock-notice reveal">
-      <span class="l-icon">🔒</span>
-      <div>
-        <h4 id="lock-title-el">Binding Structural Agreement</h4>
-        <p id="lock-body-el">Published system declarations serve as legally operational guidelines for all registered configurations.</p>
+  <section class="prizes-section" id="prizes">
+    <div class="container">
+      <span class="sec-eyebrow" id="pponsors-eyebrow-el">Imiklomelo Obhekene Nayo</span>
+      <h2 class="sec-title" id="prizes-title-el">Uhlelo <em>Lwemiklomelo</em></h2>
+      <div class="sec-rule"></div>
+
+      <div class="notice-box">
+        <span class="n-icon">⚠️</span>
+        <div>
+          <h4 id="prize-notice-title-el">Minimum Participation Condition</h4>
+          <p id="prize-notice-body-el">Yonke imiklomelo incike ekufinyelelweni <strong>kokungenani omdlali abangu-32 abaqinisekisiwe futhi abakhokhe.</strong> Abadlali bayakhuthazwa ukukhokha idiphozi labo ngokushesha ukuze baqinisekise inqolobane ephelele yemiklomelo.</p>
+        </div>
+      </div>
+
+      <div class="podium">
+        <div class="p-card gold">
+          <span class="p-bg-num">1</span>
+          <span class="p-emoji">🏆</span>
+          <span class="p-rank" id="p1-el">Iqhawe</span>
+          <span class="p-amount">R4,500</span>
+        </div>
+        <div class="p-card silver">
+          <span class="p-bg-num">2</span>
+          <span class="p-emoji">🥈</span>
+          <span class="p-rank" id="p2-el">Owesibili</span>
+          <span class="p-amount">R2,500</span>
+        </div>
+        <div class="p-card bronze">
+          <span class="p-bg-num">3</span>
+          <span class="p-emoji">🥉</span>
+          <span class="p-rank" id="p3-el">Owesithathu</span>
+          <span class="p-amount">R1,500</span>
+        </div>
+        <div class="p-card">
+          <span class="p-bg-num">4</span>
+          <span class="p-emoji">🎱</span>
+          <span class="p-rank" id="p4-el">Owesine</span>
+          <span class="p-amount">R1,000</span>
+        </div>
+      </div>
+
+      <div class="beer-grid">
+        <div class="b-card"><span class="b-rank" id="p5-el">Owesihlanu</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
+        <div class="b-card"><span class="b-rank" id="p6-el">Owesithupha</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
+        <div class="b-card"><span class="b-rank" id="p7-el">Owesikhombisa</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
+        <div class="b-card"><span class="b-rank" id="p8-el">Owesishiyagalombili</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
+      </div>
+
+      <div class="prize-total">
+        <div>
+          <div class="pt-lbl" id="prize-total-label-el">Total Cash Prize Pool</div>
+          <div class="pt-num">R9,500</div>
+        </div>
+        <p class="pt-note" id="prize-total-note-el">Plus Castle Lite for 5th–8th place. Subject to <strong>32 confirmed paid entries</strong> — confirm your deposit today.</p>
       </div>
     </div>
-    <div class="terms-grid reveal">
-      <div class="t-card">
-        <span class="t-num">01</span><span class="t-icon">🎱</span>
-        <h3 id="t1-title-el">Rules of Play</h3>
-        <p id="t1-body-el">Official South African Black Ball rules govern all interactions. Re-entries limited exclusively to initial round.</p>
-        <a id="rules-link-el" href="https://blackballsa.co.za/rules/" target="_blank" rel="noopener" class="rules-link">📄 View Official SA Rules</a>
+  </section>
+
+  <section class="terms-section" id="terms">
+    <div class="container">
+      <span class="sec-eyebrow" id="terms-eyebrow-el">Imithetho Nemininingwane</span>
+      <h2 class="sec-title" id="terms-title-el">Imigomo <em>Esemthethweni</em></h2>
+      <div class="sec-rule"></div>
+
+      <div class="lock-notice">
+        <span class="l-icon">🔒</span>
+        <div>
+          <h4 id="terms-notice-title-el">Binding Declaration</h4>
+          <p id="terms-notice-body-el">Imigomo nemibandela eshicilelwe yabakhiqizi <strong>isemthethweni futhi ibophezelekile</strong> kubo honke ababhalisiwe.</p>
+        </div>
       </div>
-      <div class="t-card">
-        <span class="t-num">02</span><span class="t-icon">🏆</span>
-        <h3 id="t2-title-el">Race Format</h3>
-        <p id="t2-body-el">Group Matches: Race to 7. Semis: Race to 9. Grand Final match targets Race to 11.</p>
+
+      <div class="terms-grid">
+        <div class="t-card">
+          <span class="t-num">01</span><span class="t-icon">🎱</span>
+          <h3 id="t1-title-el">Imithetho of Play</h3>
+          <p id="t1-body-el">Imithetho yebhola elimnyama isebenza yonke indawo kuwo wonke umklomelo. <strong>Ukuphinda ubhalise kuvunyelwe umzuliswano wokuqala kuphela.</strong> Ukuze ufinyelele kuleli lungelo, umdlali owashiswa umzuliswano wokuqala kufanele abhekane nomunye ohluliwe womzuliswano wokuqala kuphela. Ngaphansi kwanoma imuphi umkhawulo, ohluliwe womzuliswano wokuqala akavunyelwe ukuhosha ngokumelana nomuntu olinde noma noma yimuphi umuntu ongakadlali umdlalo owodwa umzuliswano wokuqala. Akukho ukuphinda ubhalise okuvunyelwe kusukela umzuliswano wesibili kuya phambili.</p>
+          <a id="rules-link-el" href="https://blackballsa.co.za/rules/" target="_blank" rel="noopener" class="rules-link">📄 View Official SA Black Ball Imithetho</a>
+        </div>
+
+        <div class="t-card">
+          <span class="t-num">02</span><span class="t-icon">🏆</span>
+          <h3 id="t2-title-el">Indlela Yokudlala</h3>
+          <p id="t2-body-el">All group matches: <strong>Race to 7.</strong> Semi-finals: <strong>Race to 9.</strong> The Grand Final: <strong>Race to 11.</strong></p>
+        </div>
+
+        <div class="t-card">
+          <span class="t-num">03</span><span class="t-icon">🕐</span>
+          <h3 id="t3-title-el">Izikhathi</h3>
+          <p id="t3-body-el">Ukuhosha okusemthethweni kuqala ngo-<strong>11:00 ekuseni</strong> ePondi Tavern. Yonke imidlalo yomklomelo iqala ngo-<strong>17:00 ntambama</strong> ngoMgqibelo, ziyi-20 kuJuni 2026.</p>
+        </div>
+
+        <div class="t-card">
+          <span class="t-num">04</span><span class="t-icon">⚖️</span>
+          <h3 id="t4-title-el">Ukwahlulelwa</h3>
+          <p id="t4-body-el">Yonke imidlalo izobhekwa ngumahluleli osemthethweni. <strong>Isinqumo sikamahluleli siyigcina</strong> — akukho mpikiswano noma izicelo zezindleko ezizovunyelwa.</p>
+        </div>
+
+        <div class="t-card">
+          <span class="t-num">05</span><span class="t-icon">🚨</span>
+          <h3 id="t5-title-el">Ukweba Isikhathi</h3>
+          <p id="t5-body-el">Abadlali abafika ngemva kwe-11:00 ekuseni bazohlawuliswa <strong>inhlawulo engeziwe yama-R50 ngokulibala.</strong></p>
+        </div>
+
+        <div class="t-card">
+          <span class="t-num">06</span><span class="t-icon">💰</span>
+          <h3 id="t6-title-el">Inkokhelo</h3>
+          <p id="t6-body-el">Inkokhelo yokuqala ephelele: <strong>R250.</strong> Ibhasi elingabuyiswayo lama-<strong>R150</strong> liyadingeka ukuze uqinisekise indawo yakho. Insalela yama-<strong>R100</strong> ikhokhelwa ngosuku lomncintiswano. Akukho bhasi, akukho ngena.</p>
+        </div>
+
+        <div class="t-card">
+          <span class="t-num">07</span><span class="t-icon">📊</span>
+          <h3 id="t7-title-el">Ukuhosha Nezichibiyelo</h3>
+          <p id="t7-body-el">Ukuhosha okusemthethweni kubanjelwa ngo-<strong>11:00 ekuseni.</strong> Lapho umdlali esevele emisiwe ohlwini kodwa engakwazi ukufika ngenxa yezizathu ezizwakalayo, indawo yakhe izothathwa ngomunye olindile (standby player) ngemvume yabaphathi.</p>
+        </div>
       </div>
-      <div class="t-card">
-        <span class="t-num">
+    </div>
+  </section>
+
+  <section class="tracker-section" id="tracker">
+    <div class="container">
+      <span class="sec-eyebrow" id="tracker-eyebrow-el">Live Status</span>
+      <h2 class="sec-title" id="tracker-title-el">Player <em>Tracker</em></h2>
+      <div class="sec-rule"></div>
+
+      <div class="stats-strip">
+        <div class="s-box"><span class="s-num maroon" id="sTotal">32</span><span class="s-lbl" id="stat-reg-el">Registered</span></div>
+        <div class="s-box"><span class="s-num green" id="sConf">0</span><span class="s-lbl" id="stat-conf-el">Confirmed</span></div>
+        <div class="s-box"><span class="s-num gold" id="sPend">0</span><span class="s-lbl" id="stat-pend-el">Pending</span></div>
+        <div class="s-box"><span class="s-num red" id="sRem">32</span><span class="s-lbl" id="stat-rem-el">Still to Confirm</span></div>
+      </div>
+
+      <div class="legend">
+        <div class="leg"><div class="dot c"></div><span id="leg-conf-el">✓ Confirmed & Paid</span></div>
+        <div class="leg"><div class="dot p"></div><span id="leg-pend-el">⏳ Pending Review</span></div>
+        <div class="leg"><div class="dot n"></div><span id="leg-none-el">Not Yet Confirmed</span></div>
+      </div>
+
+      <div class="p-grid" id="playerGrid"></div>
+    </div>
+  </section>
+
+  <section class="form-section" id="form">
+    <div class="container">
+      <span class="sec-eyebrow" id="form-eyebrow-el">Reserve Your Place</span>
+      <h2 class="sec-title" id="form-title-el">Confirm <em>Entry</em></h2>
+      <div class="sec-rule"></div>
+
+      <p class="form-intro" id="form-intro-el">Select your name, complete your details and upload your <strong>proof of R150 deposit</strong>. Your entry will be reviewed and confirmed by the organiser. The <strong>R100 balance</strong> is payable on the day.</p>
+
+      <div class="fee-strip">
+        <div class="f-box"><span class="f-amt">R250</span><span class="f-lbl" id="fee1-label-el">Total Entry Fee</span></div>
+        <div class="f-box hi"><span class="f-amt">R150</span><span class="f-lbl" id="fee2-label-el">Deposit Now (non-refundable)</span></div>
+        <div class="f-box"><span class="f-amt">R100</span><span class="f-lbl" id="fee3-label-el">Balance Due on the Day</span></div>
+      </div>
+
+      <div class="cf" id="formCard">
+        <div id="formFields">
+          <div class="f-row">
+            <div class="fg"><label id="lbl-fullname-el">Full Name</label><input type="text" placeholder="Your full name" id="fName"/></div>
+            <div class="fg"><label id="lbl-nickname-el">Nickname</label><input type="text" placeholder="e.g. Slahla" id="fNick"/></div>
+          </div>
+          <div class="f-row">
+            <div class="fg"><label id="lbl-phone-el">Phone Number</label><input type="text" placeholder="0XX XXX XXXX" id="phone"/></div>
+            <div class="fg"><label id="lbl-email-el">Email (Optional)</label><input type="email" placeholder="yakho@imeyili.com" id="fEmail"/></div>
+          </div>
+          <div class="fg">
+            <label id="lbl-select-el">Khetha Igama Lakho</label>
+            <select id="playerSelect"><option value="">— Khetha igama lakho —</option></select>
+          </div>
+          <div class="fg">
+            <label id="lbl-upload-el">Layisha Ubufakazi Wediphozi Lama-R150</label>
+            <div class="upload-zone" id="uz">
+              <input type="file" id="iFile" accept="image/*,.pdf"/>
+              <span class="uz-icon">📎</span>
+              <div class="uz-txt" id="uz-txt-el">Thepha noma hudula ukulayisha</div>
+              <div class="uz-sub" id="uz-sub-el">EFT screenshot or bank notification — max 2MB</div>
+            </div>
+            <div class="file-prev" id="filePrev">
+              <img id="prevImg" src="" alt="proof"/>
+              <div class="file-nm" id="fileNm"></div>
+              <span class="rm-file" onclick="rmFile()">✕ Remove</span>
+            </div>
+          </div>
+          <div class="fg"><label id="lbl-msg-el">Umlayezo Kumhleli (Ngokuzithandela)</label><textarea id="iMsg" placeholder="Any questions or notes..."></textarea></div>
+          <div class="chk">
+            <input type="checkbox" id="iAgree"/>
+            <span id="agree-text-el">Ngifundile futhi ngiyavuma yonke imigomo eshicilelwe kuhlanganisa idiphozi elingabuyiswayo lama-R150, inxenye esele yama-R100 ngosuku, uhlelo loku-7/9/11, ukuhosha kobukhulu nobukhulu, nokuthi akukho izinguquko ezizokwenziwa ngosuku lomklomelo.</span>
+          </div>
+          <button class="sub-btn" id="subBtn" onclick="doSubmit()"><span id="submit-btn-el">Qinisekisa Ukungena Kwami →</span></button>
+        </div>
+
+        <div class="form-done" id="formDone">
+          <span class="fd-icon">🎉</span>
+          <h3 id="success-title-el">Ungene!</h3>
+          <p id="success-body-el">Ukuqinisekiswa kwakho kumukelwe futhi kuyahlolwa. Khumbula ukuletha insalela yakho yama-<strong>R100</strong> ngosuku lomklomelo. Sizohlangana ePondi Tavern mhla zili-<strong>20 kuJuni 2026.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sponsors-section" id="sponsors">
+    <div class="container">
+      <span class="sec-eyebrow" id="sponsors-eyebrow-el">Abaxhasi Bethu</span>
+      <h2 class="sec-title" id="sponsors-title-el">Sponsors & <em>Partners</em></h2>
+      <div class="sec-rule"></div>
+
+      <div class="sp-grid">
+        <div class="sp-card">
+          <span class="sp-emoji">🏢</span>
+          <span class="sp-role" id="sp1-role-el">Abaxhasi Abakhulu</span>
+          <div class="sp-name">Pondi Tavern</div>
+          <div class="sp-sub">Host Venue & Main Sponsor</div>
+        </div>
+        <div class="sp-card">
+          <span class="sp-emoji">🎱</span>
+          <span class="sp-role" id="sp2-role-el">Inhlangano Esemthethweni</span>
+          <div class="sp-name">Pro 32 Pool Committee</div>
+          <div class="sp-sub" id="sp2-sub-el">Umsunguli Womncintiswano</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="ft-logo" id="ft-logo" onclick="handleLogoTap()">Pro 32 <span>Winter Cup</span></div>
+      <p class="ft-sub" id="ft-sub-el">Pondi Tavern © 2026 · Wonke Amalungelo Agodliwe</p>
+      
+      <div class="admin-section">
+        <div class="adm-toggle" onclick="toggleAdminPanel()">
+          <span>🔒</span> <span id="adm-access-el">Admin Portal Access</span>
+        </div>
+        
+        <div class="adm-panel" id="admPanel">
+          <div class="adm-login" id="admLogin">
+            <input type="password" id="admPass" placeholder="Enter Admin Secret Password"/>
+            <button class="adm-btn" id="adm-login-btn-el" onclick="doAdminLogin()">Log In</button>
+          </div>
+          
+          <div id="admContent" style="display:none;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+              <h3 id="adm-all-el" style="font-family:'Cinzel',serif; font-size:14px; color:var(--dark);">All Submissions</h3>
+              <div>
+                <button class="adm-btn" id="adm-export-el" onclick="exportData()">Export CSV</button>
+                <button class="adm-btn danger" id="adm-clear-el" onclick="clearAllData()">Clear All</button>
+              </div>
+            </div>
+            <div class="tbl-wrap">
+              <table id="admTable">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Player Name</th>
+                    <th>Details</th>
+                    <th>Proof</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="admTbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="ft-powered" id="ft-powered-el">Powered by <a href="#">Pondi Premium Entertainment Network</a></p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toastEl"></div>
+
+  <script>
+    const STORAGE_KEY = 'pro32_v2';
+    const ADMIN_PASSWORD = 'pondi2026';
+    const PRE_CONFIRMED = ['Slahla', 'PK', 'Sandile', 'Sduduzo', 'Thabani', 'Makhenikha'];
+
+    const PLAYERS = [
+      "Slahla", "PK", "Sandile", "Sduduzo", "Thabani", "Makhenikha", "Mabhida", "Sgora",
+      "Khaya", "Muzi", "Vusi", "Bheki", "Sphiwe", "Sbu", "Jabu", "Zama",
+      "Sphelele", "Mlungisi", "Dumisani", "Lwazi", "Nkosana", "Melusi", "Themba", "Sifiso",
+      "Siyabonga", "Nhlanhla", "Mthokozisi", "Lungani", "Nhlakanipho", "Sanele", "Ayanda", "Mondli"
+    ];
+
+    // ── Build animated SVG balls strip ──
+    (function initBallsStrip() {
+      const track = document.getElementById('ballsTrack');
+      if (!track) return;
+
+      const colors = [
+        '', '#f5c800', '#0044cc', '#cc0000', '#7700bb', '#ff6600', '#007700', '#990011',
+        '#111111', '#f5c800', '#0044cc', '#cc0000', '#7700bb', '#ff6600', '#007700', '#990011'
+      ];
+
+      function makeBall(num) {
+        const color = colors[num];
+        const isBlack = num === 8;
+        const isStripe = num >= 9;
+        const isSolid = num >= 1 && num <= 7;
+        const label = num.toString();
+        const r = 24;
+        const cx = 24;
+        const cy = 24;
+        let body = '';
+
+        if (isBlack) {
+          body = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="#111"/>`;
+        } else if (isSolid) {
+          body = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${color}"/>`;
+        } else {
+          body = `
+            <defs><clipPath id="cp${num}"><circle cx="${cx}" cy="${cy}" r="${r}"/></clipPath></defs>
+            <circle cx="${cx}" cy="${cy}" r="${r}" fill="white"/>
+            <rect x="0" y="${cy - 9}" width="48" height="18" fill="${color}" clip-path="url(#cp${num})"/>
+          `;
+        }
+
+        const numCircle = `
+          <circle cx="${cx}" cy="${cy}" r="9" fill="white"/>
+          <text x="${cx}" y="${cy + 4}" text-anchor="middle" font-size="${num >= 10 ? 9 : 10}" font-weight="900" font-family="Georgia,serif" fill="#111">${label}</text>
+        `;
+
+        const shine = `<ellipse cx="${cx - 7}" cy="${cy - 10}" rx="7" ry="5" fill="rgba(255,255,255,0.45)" transform="rotate(-30,${cx - 7},${cy - 10})"/>`;
+        const ring = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5"/>`;
+        
+        const svg = `<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 4px 6px rgba(0,0,0,0.5));border-radius:50%;">${body}${numCircle}${shine}${ring}</svg>`;
+        return `<div class="ball-item">${svg}</div>`;
+      }
+
+      let innerContent = '';
+      for (let i = 1; i <= 15; i++) {
+        innerContent += makeBall(i);
+      }
+      track.innerHTML = innerContent + innerContent;
+    })();
+
+    // ── Floating Decorative Header Balls ──
+    (function initFloatingBackgroundBalls() {
+      const container = document.getElementById('topBarBalls');
+      if (!container) return;
+
+      const items = [
+        { c: '#f5c800', s: '14px' }, { c: '#0044cc', s: '20px' }, { c: '#cc0000', s: '12px' },
+        { c: '#7700bb', s: '18px' }, { c: '#ff6600', s: '15px' }, { c: '#007700', s: '22px' }
+      ];
+
+      items.forEach(item => {
+        const el = document.createElement('div');
+        el.className = 'tb-ball';
+        el.style.backgroundColor = item.c;
+        el.style.width = item.s;
+        el.style.height = item.s;
+        el.style.left = Math.floor(Math.random() * 90) + 5 + '%';
+        el.style.top = Math.floor(Math.random() * 40) + 10 + 'px';
+        el.style.setProperty('--drift', (Math.random() * 60 - 30) + 'px');
+        el.style.animationDuration = (Math.random() * 4 + 4) + 's';
+        el.style.animationDelay = (Math.random() * 3) + 's';
+        container.appendChild(el);
+      });
+    })();
+
+    // ── Local Database Helper Operations ──
+    function getStoredEntries() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) {
+        const defaults = [];
+        PRE_CONFIRMED.forEach(player => {
+          defaults.push({
+            player: player,
+            name: player,
+            nick: '',
+            phone: 'Pre-Confirmed',
+            email: '',
+            msg: 'Imported via system setup.',
+            status: 'confirmed',
+            time: new Date().toLocaleString()
+          });
+        });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(defaults));
+        return defaults;
+      }
+      return JSON.parse(saved);
+    }
+
+    function saveEntries(array) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(array));
+    }
+
+    // ── Populate Select Dropdown Options ──
+    const sel = document.getElementById('playerSelect');
+    PLAYERS.forEach(name => {
+      const option = document.createElement('option');
+      option.value = name;
+      option.textContent = name;
+      sel.appendChild(option);
+    });
+
+    // ── Render Player Status Grid Tracks ──
+    function renderPlayerGrid() {
+      const entries = getStoredEntries();
+      const grid = document.getElementById('playerGrid');
+      grid.innerHTML = '';
+      
+      let confirmedCount = 0;
+      let pendingCount = 0;
+
+      PLAYERS.forEach((name, idx) => {
+        const record = entries.find(x => x.player === name);
+        let statusClass = '';
+        let statusLabelClass = 'sn';
+        let statusString = 'Akaqinisekisiwe';
+        let dotClass = 'n';
+
+        if (record && record.status === 'confirmed') {
+          statusClass = 'confirmed';
+          statusLabelClass = 'sc';
+          statusString = '✓ Abaqinisekisiwe';
+          dotClass = 'c';
+          confirmedCount++;
+        } else if (record) {
+          statusClass = 'pending';
+          statusLabelClass = 'sp';
+          statusString = '⏳ Ulindile';
+          dotClass = 'p';
+          pendingCount++;
+        }
+
+        const card = document.createElement('div');
+        card.className = `pc ${statusClass}`;
+        card.innerHTML = `
+          <span class="pc-num">${String(idx + 1).padStart(2, '0')}</span>
+          <div class="pc-info">
+            <div class="pc-name">${name}</div>
+            <div class="pc-status ${statusLabelClass}">${statusString}</div>
+          </div>
+          <div class="pc-dot ${dotClass}"></div>
+        `;
+        grid.appendChild(card);
+      });
+
+      document.getElementById('sTotal').textContent = PLAYERS.length;
+      document.getElementById('sConf').textContent = confirmedCount;
+      document.getElementById('sPend').textContent = pendingCount;
+      document.getElementById('sRem').textContent = PLAYERS.length - confirmedCount - pendingCount;
+    }
+
+    // ── File Upload Operations ──
+    let proofData = null;
+    let proofName = null;
+
+    document.getElementById('iFile').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      if (file.size > 2.5 * 1024 * 1024) {
+        showToast('Ifayela likhulu kakhulu — okungeziwe: 2MB', true);
+        return;
+      }
+
+      proofName = file.name;
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        proofData = ev.target.result;
+        document.getElementById('prevImg').src = proofData;
+        document.getElementById('fileNm').textContent = file.name;
+        document.getElementById('filePrev').style.display = 'block';
+        document.getElementById('uz').style.borderColor = 'var(--gold2)';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    const zone = document.getElementById('uz');
+    zone.addEventListener('dragover', e => {
+      e.preventDefault();
+      zone.classList.add('drag');
+    });
+    zone.addEventListener('dragleave', () => zone.classList.remove('drag'));
+    zone.addEventListener('drop', e => {
+      e.preventDefault();
+      zone.classList.remove('drag');
+      const file = e.dataTransfer.files[0];
+      if (file) {
+        const dt = new DataTransfer();
+        dt.items.add(file);
+        document.getElementById('iFile').files = dt.files;
+        document.getElementById('iFile').dispatchEvent(new Event('change'));
+      }
+    });
+
+    function rmFile() {
+      proofData = null;
+      proofName = null;
+      document.getElementById('iFile').value = '';
+      document.getElementById('filePrev').style.display = 'none';
+      document.getElementById('uz').style.borderColor = '';
+    }
+
+    // ── Toast System Alerts ──
+    function showToast(message, isError = false) {
+      const toast = document.getElementById('toastEl');
+      toast.textContent = message;
+      toast.className = 'toast show' + (isError ? ' error' : '');
+      setTimeout(() => {
+        toast.className = 'toast';
+      }, 4000);
+    }
+
+    // ── Form Submit Control Action ──
+    function doSubmit() {
+      const fullname = document.getElementById('fName').value.trim();
+      const nickname = document.getElementById('fNick').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('fEmail').value.trim();
+      const chosenPlayer = document.getElementById('playerSelect').value;
+      const termsAgreed = document.getElementById('iAgree').checked;
+      const messageText = document.getElementById('iMsg').value.trim();
+
+      if (!fullname || !phone || !chosenPlayer) {
+        showToast('Sicela ugcwalise yonke imikhawulo edingekayo (Igama, Ucingo, Khetha Igama).', true);
+        return;
+      }
+      if (!proofData) {
+        showToast('Sicela ulayishe isithombe-skrini sobufakazi bokukhokha (Proof of Deposit).', true);
+        return;
+      }
+      if (!termsAgreed) {
+        showToast('Sicela uvume imigomo nemibandela ukuze uqhubeke.', true);
+        return;
+      }
+
+      const entries = getStoredEntries();
+      if (entries.some(x => x.player === chosenPlayer)) {
+        showToast('Leli gama selivele liyadingeka noma linefomu elilindile.', true);
+        return;
+      }
+
+      entries.push({
+        player: chosenPlayer,
+        name: fullname,
+        nick: nickname,
+        phone: phone,
+        email: email,
+        msg: messageText,
+        proofName: proofName,
+        proofData: proofData,
+        status: 'pending',
+        time: new Date().toLocaleString()
+      });
+
+      saveEntries(entries);
+      document.getElementById('formFields').style.display = 'none';
+      document.getElementById('formDone').style.display = 'block';
+      showToast('Ifomu lakho lihambisile ngempumelelo!');
+      renderPlayerGrid();
+    }
+
+    // ── SECRET ADMIN SIGN IN CONTROLS ──
+    let tapCount = 0;
+    let tapTimer = null;
+
+    function handleLogoTap() {
+      tapCount++;
+      clearTimeout(tapTimer);
+      if (tapCount >= 5) {
+        tapCount = 0;
+        document.getElementById('admPanel').style.display = 'block';
+        document.getElementById('admPanel').scrollIntoView({ behavior: 'smooth' });
+        showToast('Secret Admin Panel Triggered Context!');
+      } else {
+        tapTimer = setTimeout(() => { tapCount = 0; }, 1500);
+      }
+    }
+
+    function toggleAdminPanel() {
+      const panel = document.getElementById('admPanel');
+      panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function doAdminLogin() {
+      const pass = document.getElementById('admPass').value;
+      if (pass === ADMIN_PASSWORD) {
+        document.getElementById('admLogin').style.display = 'none';
+        document.getElementById('admContent').style.display = 'block';
+        showToast('Access Granted. Welcome Administrator.');
+        renderAdminRecordsTable();
+      } else {
+        showToast('Incorrect secret password access denied.', true);
+      }
+    }
+
+    function renderAdminRecordsTable() {
+      const entries = getStoredEntries();
+      const tbody = document.getElementById('admTbody');
+      tbody.innerHTML = '';
+
+      if (entries.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;">No records exist inside local records database.</td></tr>`;
+        return;
+      }
+
+      entries.forEach((row, idx) => {
+        const tr = document.createElement('tr');
+        
+        let proofUi = '<em>None</em>';
+        if (row.proofData) {
+          proofUi = `<img class="p-thumb" src="${row.proofData}" onclick="openImageWindow('${row.proofData}')" title="${row.proofName || 'View attachment'}"/>`;
+        }
+
+        let statusBadge = `<span class="badge pending">Pending</span>`;
+        let controlActionsUi = `<button class="act-btn cb" onclick="setRecordStatus('${row.player}', 'confirmed')">Approve</button>`;
+        
+        if (row.status === 'confirmed') {
+          statusBadge = `<span class="badge confirmed">Confirmed</span>`;
+          controlActionsUi = `<button class="act-btn db" onclick="setRecordStatus('${row.player}', 'pending')">Revoke</button>`;
+        }
+
+        controlActionsUi += `<button class="act-btn db" style="margin-left:5px;" onclick="deleteRecordItem('${row.player}')">Delete</button>`;
+
+        tr.innerHTML = `
+          <td>${idx + 1}</td>
+          <td><strong>${row.player}</strong><br><span style="font-size:11px;color:var(--lite);">${row.time || ''}</span></td>
+          <td>Name: ${row.name || ''}<br>Nick: ${row.nick || ''}<br>Phone: ${row.phone || ''}<br>Email: ${row.email || ''}<br>Msg: ${row.msg || ''}</td>
+          <td>${proofUi}</td>
+          <td>${statusBadge}</td>
+          <td>${controlActionsUi}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function openImageWindow(dataUri) {
+      const win = window.open();
+      win.document.write(`<iframe src="${dataUri}" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>`);
+    }
+
+    function setRecordStatus(playerName, newStatus) {
+      let entries = getStoredEntries();
+      entries = entries.map(item => {
+        if (item.player === playerName) {
+          item.status = newStatus;
+        }
+        return item;
+      });
+      saveEntries(entries);
+      renderAdminRecordsTable();
+      renderPlayerGrid();
+      showToast(`Record status updated successfully.`);
+    }
+
+    function deleteRecordItem(playerName) {
+      if (!confirm(`Are you certain you wish to delete registration records for ${playerName}?`)) return;
+      let entries = getStoredEntries();
+      entries = entries.filter(item => item.player !== playerName);
+      saveEntries(entries);
+      renderAdminRecordsTable();
+      renderPlayerGrid();
+      showToast(`Record entry deleted successfully.`);
+    }
+
+    function clearAllData() {
+      if (!confirm('CRITICAL WARN: Are you completely certain you wish to purge all registration data records?')) return;
+      localStorage.removeItem(STORAGE_KEY);
+      renderAdminRecordsTable();
+      renderPlayerGrid();
+      showToast('All local storage records have been successfully wiped.');
+    }
+
+    function exportData() {
+      const entries = getStoredEntries();
+      if (entries.length === 0) {
+        showToast('No entries to export.', true);
+        return;
+      }
+      let csv = 'Index,Player Option,Full Name,Nickname,Phone,Email,Message Status,Registration Date\n';
+      entries.forEach((r, i) => {
+        csv += `"${i+1}","${r.player}","${r.name}","${r.nick}","${r.phone}","${r.email}","${r.status}","${r.time}"\n`;
+      });
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.setAttribute('download', 'pro32_pool_registrations.csv');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // ── DICTIONARY LANGUAGES LITERAL TRANSLATIONS ──
+    const DICTIONARY = {
+      en: {
+        'tb-sub': 'Pondi Tavern · Official Tournament Hub',
+        'pondi-sub': 'The Home of Premium Blackball Pool',
+        'hero-badge': 'Grand Tournament 2026',
+        'hero-title': 'Winter <em>Tournament</em>',
+        'lbl-date': 'Date', 'lbl-venue': 'Venue', 'lbl-entry': 'Entry Fee',
+        'hero-btn': 'Register Now →', 'scroll-down': 'Scroll Down',
+        'tick1': 'R4,500 First Prize Champion', 'tick2': 'Race Format 7 / 9 / 11 Matches',
+        'tick3': 'Official Refereeing Enforced', 'tick4': 'Strict 11:00 AM Registration Deadline',
+        'tick1-alt': 'R4,500 First Prize Champion', 'tick2-alt': 'Race Format 7 / 9 / 11 Matches',
+        'tick3-alt': 'Official Refereeing Enforced', 'tick4-alt': 'Strict 11:00 AM Registration Deadline',
+        'ppponsors-eyebrow': 'Guaranteed Rewards', 'prizes-title': 'Prize <em>Breakdown</em>',
+        'prize-notice-title': 'Minimum Participation Condition',
+        'prize-notice-body': 'All prize pools are contingent upon securing a minimum of <strong>32 confirmed and paid entries.</strong> Players are encouraged to pay early to safeguard the overall pot.',
+        'p1': 'Champion', 'p2': 'Runner-Up', 'p3': '3rd Place', 'p4': '4th Place',
+        'p5': '5th Place', 'p6': '6th Place', 'p7': '7th Place', 'p8': '8th Place',
+        'prize-total-label': 'Total Cash Prize Pool',
+        'prize-total-note': 'Plus Castle Lite for 5th–8th place. Subject to <strong>32 confirmed paid entries</strong> — confirm your deposit today.',
+        'terms-eyebrow': 'Rules & Regulations', 'terms-title': 'Official <em>Terms</em>',
+        'terms-notice-title': 'Binding Declaration',
+        'terms-notice-body': 'The rules published by the organizers are <strong>final and legally binding</strong> upon all registered tournament entrants.',
+        't1-title': 'Rules of Play',
+        't1-body': 'Black ball rules apply exclusively throughout the tournament. <strong>Re-entries are permitted in the first round only.</strong> To qualify for a re-entry, a first-round loser must face another first-round loser exclusively. Under no circumstances may a first-round loser be drawn against a standby player or any participant who has not yet played a single match in the first round. No re-entries are permitted from the second round onwards.',
+        'rules-link': '📄 View Official SA Black Ball Rules',
+        't2-title': 'Race Format',
+        't2-body': 'All group matches: <strong>Race to 7.</strong> Semi-finals: <strong>Race to 9.</strong> Final: <strong>Race to 11.</strong>',
+        't3-title': 'Schedule',
+        't3-body': 'The official draw commences at <strong>11:00 AM</strong> at Pondi Tavern. All competitive matches begin at <strong>17:00 PM</strong> on Saturday, 20 June 2026.',
+        't4-title': 'Officiating',
+        't4-body': "All matches will be officially refereed. <strong>The referee's decision is final</strong> — no disputes or appeals will be entertained.",
+        't5-title': 'Punctuality',
+        't5-body': 'Players arriving after 11:00 AM will be subject to an <strong>additional R50 late penalty.</strong>',
+        't6-title': 'Payment',
+        't6-body': 'Total entry fee: <strong>R250.</strong> A non-refundable deposit of <strong>R150</strong> is required to secure your place. The outstanding balance of <strong>R100</strong> is due on tournament day. No deposit, no entry.',
+        't7-title': 'Draw & Fixtures',
+        't7-body': 'The official draw is held at 11:00 AM. Should a player listed on the sheet be absent with valid notification, their slot will be allocated to an official standby entrant matching management criteria.',
+        'tracker-eyebrow': 'Live Status', 'tracker-title': 'Player <em>Tracker</em>',
+        'stat-reg': 'Registered', 'stat-conf': 'Confirmed', 'stat-pend': 'Pending', 'stat-rem': 'Still to Confirm',
+        'leg-conf': '✓ Confirmed & Paid', 'leg-pend': '⏳ Pending Review', 'leg-none': 'Not Yet Confirmed',
+        'form-eyebrow': 'Reserve Your Place', 'form-title': 'Confirm <em>Entry</em>',
+        'form-intro': 'Select your name, complete your details and upload your <strong>proof of R150 deposit</strong>. Your entry will be reviewed and confirmed by the organiser. The <strong>R100 balance</strong> is payable on the day.',
+        'fee1-label': 'Total Entry Fee', 'fee2-label': 'Deposit Now (non-refundable)', 'fee3-label': 'Balance Due on the Day',
+        'lbl-fullname': 'Full Name', 'lbl-nickname': 'Nickname', 'ph-fullname': 'Your full name', 'ph-nickname': 'e.g. Slahla',
+        'lbl-phone': 'Phone Number', 'lbl-email': 'Email (Optional)', 'ph-phone': '0XX XXX XXXX', 'ph-email': 'your@email.com',
+        'lbl-select': 'Select Your Name', 'ph-select': '— Select your name —',
+        'lbl-upload': 'Upload Proof of R150 Deposit', 'uz-txt': 'Tap or drag to upload', 'uz-sub': 'EFT screenshot, bank notification — max 2MB',
+        'lbl-msg': 'Message for Organiser (Optional)', 'ph-msg': 'Any notes or questions...',
+        'agree-text': 'I have read and agree to all published terms including the non-refundable R150 deposit, R100 balance on the day, Race to 7/9/11 format, strict reporting times, and acknowledge no modifications will be allowed on race day.',
+        'submit-btn': 'Confirm My Entry →',
+        'success-title': 'You are In!',
+        'success-body': 'Your confirmation form has been received and is currently under official review. Remember to bring your remaining outstanding balance of <strong>R100</strong> on match day. See you at Pondi Tavern on <strong>20 June 2026!</strong>',
+        'sponsors-eyebrow': 'Our Benefactors', 'sponsors-title': 'Sponsors & <em>Partners</em>',
+        'sp1-role': 'Main Sponsor', 'sp2-role': 'Sanctioning Body', 'sp2-sub': 'Tournament Organiser',
+        'ft-logo': 'Pro 32 <span>Winter Cup</span>', 'ft-sub': 'Pondi Tavern © 2026 · All Rights Reserved',
+        'ft-powered': 'Powered by <a href="#">Pondi Premium Entertainment Network</a>',
+        'adm-access': 'Admin Portal Access', 'adm-login-btn': 'Log In', 'adm-all': 'All Submissions',
+        'adm-export': 'Export CSV', 'adm-clear': 'Clear All'
+      },
+      zu: {
+        'tb-sub': 'Pondi Tavern · Official Tournament Hub',
+        'pondi-sub': 'The Home of Premium Blackball Pool',
+        'hero-badge': 'Grand Tournament 2026',
+        'hero-title': 'Umncintiswano <em>Wasebusika</em>',
+        'lbl-date': 'Usuku', 'lbl-venue': 'Indawo', 'lbl-entry': 'Inkokhelo',
+        'hero-btn': 'Bhalisa Manje →', 'scroll-down': 'Scroll Down',
+        'tick1': 'R4,500 Champion Cash Prize', 'tick2': 'Race Format 7 / 9 / 11 Matches',
+        'tick3': 'Official Refereeing Enforced', 'tick4': 'Strict 11:00 AM Registration Deadline',
+        'tick1-alt': 'R4,500 Champion Cash Prize', 'tick2-alt': 'Race Format 7 / 9 / 11 Matches',
+        'tick3-alt': 'Official Refereeing Enforced', 'tick4-alt': 'Strict 11:00 AM Registration Deadline',
+        'ppponsors-eyebrow': 'Imiklomelo Obhekene Nayo', 'prizes-title': 'Uhlelo <em>Lwemiklomelo</em>',
+        'prize-notice-title': 'Minimum Participation Condition',
+        'prize-notice-body': 'Yonke imiklomelo incike ekufinyelelweni <strong>kokungenani omdlali abangu-32 abaqinisekisiwe futhi abakhokhe.</strong> Abadlali bayakhuthazwa ukukhokha idiphozi labo ngokushesha ukuze baqinisekise inqolobane ephelele yemiklomelo.',
+        'p1': 'Iqhawe', 'p2': 'Owesibili', 'p3': 'Owesithathu', 'p4': 'Owesine',
+        'p5': 'Owesihlanu', 'p6': 'Owesithupha', 'p7': 'Owesikhombisa', 'p8': 'Owesishiyagalombili',
+        'prize-total-label': 'Total Cash Prize Pool',
+        'prize-total-note': 'Plus Castle Lite for 5th–8th place. Subject to <strong>32 confirmed paid entries</strong> — confirm your deposit today.',
+        'terms-eyebrow': 'Imithetho Nemininingwane', 'terms-title': 'Imigomo <em>Esemthethweni</em>',
+        'terms-notice-title': 'Binding Declaration',
+        'terms-notice-body': 'Imigomo nemibandela eshicilelwe yabakhiqizi <strong>isemthethweni futhi ibophezelekile</strong> kubo honke ababhalisiwe.',
+        't1-title': 'Imithetho of Play',
+        't1-body': 'Imithetho yebhola elimnyama isebenza yonke indawo kuwo wonke umklomelo. <strong>Ukuphinda ubhalise kuvunyelwe umzuliswano wokuqala kuphela.</strong> Ukuze ufinyelele kuleli lungelo, umdlali owashiswa umzuliswano wokuqala kufanele abhekane nomunye ohluliwe womzuliswano wokuqala kuphela. Ngaphansi kwanoma imuphi umkhawulo, ohluliwe womzuliswano wokuqala akavunyelwe ukuhosha ngokumelana nomuntu olinde noma noma yimuphi umuntu ongakadlali umdlalo owodwa umzuliswano wokuqala. Akukho ukuphinda ubhalise okuvunyelwe kusukela umzuliswano wesibili kuya phambili.',
+        'rules-link': '📄 Bona Imithetho Esemthethweni Yebhola Elimnyama',
+        't2-title': 'Indlela Yokudlala',
+        't2-body': 'Yonke imidlalo yeqembu: <strong>Ukuqhubeka kuya ku-7.</strong> Izinqanqo: <strong>Ukuqhubeka kuya ku-9.</strong> Umphumela wokugcina: <strong>Ukuqhubeka kuya ku-11.</strong>',
+        't3-title': 'Izikhathi',
+        't3-body': 'Ukuhosha okusemthethweni kuqala ngo-<strong>11:00 ekuseni</strong> ePondi Tavern. Yonke imidlalo yomklomelo iqala ngo-<strong>17:00 ntambama</strong> ngoMgqibelo, ziyi-20 kuJuni 2026.',
+        't4-title': 'Ukwahlulelwa',
+        't4-body': "Yonke imidlalo izobhekwa ngumahluleli osemthethweni. <strong>Isinqumo sikamahluleli siyigcina</strong> — akukho mpikiswano noma izicelo zezindleko ezizovunyelwa.",
+        't5-title': 'Ukweba Isikhathi',
+        't5-body': 'Abadlali abafika ngemva kwe-11:00 ekuseni bazohlawuliswa <strong>inhlawulo engeziwe yama-R50 ngokulibala.</strong>',
+        't6-title': 'Inkokhelo',
+        't6-body': 'Inkokhelo yokuqala ephelele: <strong>R250.</strong> Ibhasi elingabuyiswayo lama-<strong>R150</strong> liyadingeka ukuze uqinisekise indawo yakho. Insalela yama-<strong>R100</strong> ikhokhelwa ngosuku lomncintiswano. Akukho bhasi, akukho ngena.',
+        't7-title': 'Ukuhosha Nezichibiyelo',
+        't7-body': 'Ukuhosha okusemthethweni kubanjelwa ngo-<strong>11:00 ekuseni.</strong> Lapho umdlali esevele emisiwe ohlwini kodwa engakwazi ukufika ngenxa yezizathu ezizwakalayo, indawo yakhe izothathwa ngomunye olindile (standby player) ngemvume yabaphathi.',
+        'tracker-eyebrow': 'Live Status', 'tracker-title': 'Player <em>Tracker</em>',
+        'stat-reg': 'Registered', 'stat-conf': 'Confirmed', 'stat-pend': 'Pending', 'stat-rem': 'Still to Confirm',
+        'leg-conf': 'Iqinisekisiwe', 'leg-pend': 'Inqubo Yokuhlola', 'leg-none': 'Ayikaqinisekiswa',
+        'form-eyebrow': 'Reserve Your Place', 'form-title': 'Confirm <em>Entry</em>',
+        'form-intro': 'Select your name, complete your details and upload your <strong>proof of R150 deposit</strong>. Your entry will be reviewed and confirmed by the organiser. The <strong>R100 balance</strong> is payable on the day.',
+        'fee1-label': 'Inkokhelo Ephelele', 'fee2-label': 'Idiphozi Yamanje (alingabuyiswa)', 'fee3-label': 'Insalela Ngosuku',
+        'lbl-fullname': 'Igama Eliphelele', 'lbl-nickname': 'Igama Lolwazi', 'ph-fullname': 'Igama lakho eliphelele', 'ph-nickname': 'isb. Slahla',
+        'lbl-phone': 'Inombolo Yefoni', 'lbl-email': 'I-imeyili (Ngokuzithandela)', 'ph-phone': '0XX XXX XXXX', 'ph-email': 'yakho@imeyili.com',
+        'lbl-select': 'Khetha Igama Lakho', 'ph-select': '— Khetha igama lakho —',
+        'lbl-upload': 'Layisha Ubufakazi Wediphozi Lama-R150', 'uz-txt': 'Thepha noma hudula ukulayisha', 'uz-sub': 'Isithombe-skrini se-EFT, isaziso sebhange — okungeziwe: 2MB',
+        'lbl-msg': 'Umlayezo Kumhleli (Ngokuzithandela)', 'ph-msg': 'Amanoti noma imibuzo...',
+        'agree-text': 'Ngifundile futhi ngiyavuma yonke imigomo eshicilelwe kuhlanganisa idiphozi elingabuyiswayo lama-R150, inxenye esele yama-R100 ngosuku, uhlelo loku-7/9/11, ukuhosha kobukhulu nobukhulu, nokuthi akukho izinguquko ezizokwenziwa ngosuku lomklomelo.',
+        'submit-btn': 'Qinisekisa Ukungena Kwami →',
+        'success-title': 'Ungene!',
+        'success-body': 'Ukuqinisekiswa kwakho kumukelwe futhi kuyahlolwa. Khumbula ukuletha insalela yakho yama-<strong>R100</strong> ngosuku lomklomelo. Sizohlangana ePondi Tavern mhla zili-<strong>20 kuJuni 2026.</strong>',
+        'sponsors-eyebrow': 'Abaxhasi Bethu', 'sponsors-title': 'Sponsors & <em>Partners</em>',
+        'sp1-role': 'Abaxhasi Abakhulu', 'sp2-role': 'Inhlangano Esemthethweni', 'sp2-sub': 'Umsunguli Womncintiswano',
+        'ft-logo': 'Pro 32 <span>Winter Cup</span>', 'ft-sub': 'Pondi Tavern © 2026 · Wonke Amalungelo Agodliwe',
+        'ft-powered': 'Powered by <a href="#">Pondi Premium Entertainment Network</a>',
+        'adm-access': 'Admin Portal Access', 'adm-login-btn': 'Log In', 'adm-all': 'All Submissions',
+        'adm-export': 'Export CSV', 'adm-clear': 'Clear All'
+      }
+    };
+
+    // ── Safe Content Update Switcher Mechanism ──
+    function switchLanguage(lang) {
+      const translation = DICTIONARY[lang];
+      if (!translation) return;
+
+      Object.keys(translation).forEach(key => {
+        const targetElement = document.getElementById(key + '-el');
+        if (targetElement) {
+          // If editing input fields, handle placeholder instead of text contents
+          if (key.startsWith('ph-')) {
+            const inputId = key.replace('ph-fullname', 'fName').replace('ph-nickname', 'fNick').replace('ph-phone', 'phone').replace('ph-email', 'fEmail').replace('ph-select', 'playerSelect').replace('ph-msg', 'iMsg');
+            const targetInput = document.getElementById(inputId);
+            if (targetInput) {
+              targetInput.placeholder = translation[key];
+            }
+          } else {
+            targetElement.innerHTML = translation[key];
+          }
+        }
+      });
+
+      // Special global selectors mapping updates for dynamic components
+      document.getElementById('tb-sub-el').textContent = translation['tb-sub'];
+      document.getElementById('pondi-sub-el').textContent = translation['pondi-sub'];
+
+      // Redraw player grid elements to adapt localized labels
+      renderPlayerGrid();
+      localStorage.setItem('pro32_lang', lang);
+    }
+
+    // Initialize application interface configurations
+    const currentLanguageState = localStorage.getItem('pro32_lang') || 'zu';
+    document.getElementById('langSelectDropdown').value = currentLanguageState;
+    
+    setTimeout(() => {
+      switchLanguage(currentLanguageState);
+    }, 100);
+  </script>
+</body>
+</html>
