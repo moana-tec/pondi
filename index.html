@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Pro 32 Umncintiswano Wasebusika 2026 · Pondi Tavern</title>
+<title>Pro 32 Winter Tour 2026 · Pondi Tavern</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"/>
 <style>
 :root {
@@ -85,32 +85,6 @@ body{background:var(--cream);color:var(--dark);font-family:'EB Garamond',serif;o
   100%{transform:translateY(-60px) translateX(var(--drift)) rotate(360deg);opacity:0;}
 }
 
-
-/* ── LANGUAGE SWITCHER ── */
-.lang-switch{
-  position:fixed;top:18px;right:18px;z-index:9999;
-  display:flex;gap:0;border:1.5px solid rgba(201,168,76,0.6);
-  border-radius:4px;overflow:hidden;
-  box-shadow:0 4px 16px rgba(0,0,0,0.3);
-}
-.lang-btn{
-  padding:8px 16px;
-  font-family:'Cinzel',serif;font-size:11px;font-weight:700;
-  letter-spacing:0.15em;text-transform:uppercase;
-  background:rgba(10,5,2,0.75);color:rgba(255,255,255,0.5);
-  border:none;cursor:pointer;transition:all 0.25s;
-  backdrop-filter:blur(8px);
-}
-.lang-btn.active{background:var(--gold);color:var(--dark);}
-.lang-btn:hover:not(.active){color:var(--gold);}
-
-/* ── ADMIN SECRET TRIGGER ── */
-.adm-secret{
-  cursor:default;user-select:none;
-  font-size:10px;color:transparent;
-  position:relative;
-}
-
 /* ── PRE-HERO ── */
 .pre-hero{
   background:var(--dark);
@@ -135,16 +109,46 @@ body{background:var(--cream);color:var(--dark);font-family:'EB Garamond',serif;o
   width:max-content;
 }
 .ball-item{
+  width:44px;height:44px;
+  border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:900;font-family:'Cinzel',serif;
   flex-shrink:0;
+  position:relative;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4), inset 0 -3px 8px rgba(0,0,0,0.25);
   animation:ballBounce 1.6s ease-in-out infinite;
-  display:inline-block;
 }
-.ball-item:nth-child(2n){animation-delay:0.25s;}
-.ball-item:nth-child(3n){animation-delay:0.5s;}
-.ball-item:nth-child(4n){animation-delay:0.75s;}
-.ball-item:nth-child(5n){animation-delay:1.0s;}
-.ball-item:nth-child(6n){animation-delay:1.25s;}
-.ball-item:nth-child(7n){animation-delay:1.5s;}
+.ball-item::before{
+  content:'';
+  position:absolute;
+  top:6px;left:9px;
+  width:14px;height:9px;
+  background:rgba(255,255,255,0.35);
+  border-radius:50%;
+  transform:rotate(-30deg);
+}
+.b1{background:radial-gradient(circle at 38% 35%, #f5d040, #c9a010); color:#111;}
+.b2{background:radial-gradient(circle at 38% 35%, #3366ee, #1133aa); color:white;}
+.b3{background:radial-gradient(circle at 38% 35%, #ee2222, #aa0000); color:white;}
+.b4{background:radial-gradient(circle at 38% 35%, #9933cc, #661199); color:white;}
+.b5{background:radial-gradient(circle at 38% 35%, #ff8800, #cc5500); color:white;}
+.b6{background:radial-gradient(circle at 38% 35%, #22aa44, #117722); color:white;}
+.b7{background:radial-gradient(circle at 38% 35%, #dd4411, #992200); color:white;}
+.b8{background:radial-gradient(circle at 38% 35%, #222222, #000000); color:white; box-shadow:0 4px 16px rgba(0,0,0,0.6),inset 0 -3px 8px rgba(0,0,0,0.4),0 0 18px rgba(255,255,255,0.08);}
+.b9{background:radial-gradient(circle at 38% 35%, #f5d040, #c9a010); color:#111;}
+.b10{background:radial-gradient(circle at 38% 35%, #3366ee, #1133aa); color:white;}
+.b11{background:radial-gradient(circle at 38% 35%, #ee2222, #aa0000); color:white;}
+.b12{background:radial-gradient(circle at 38% 35%, #9933cc, #661199); color:white;}
+.b13{background:radial-gradient(circle at 38% 35%, #ff8800, #cc5500); color:white;}
+.b14{background:radial-gradient(circle at 38% 35%, #22aa44, #117722); color:white;}
+.b15{background:radial-gradient(circle at 38% 35%, #dd4411, #992200); color:white;}
+/* Delay per ball for staggered bounce */
+.ball-item:nth-child(2n){animation-delay:0.2s;}
+.ball-item:nth-child(3n){animation-delay:0.4s;}
+.ball-item:nth-child(4n){animation-delay:0.6s;}
+.ball-item:nth-child(5n){animation-delay:0.8s;}
+.ball-item:nth-child(6n){animation-delay:1.0s;}
+.ball-item:nth-child(7n){animation-delay:1.2s;}
 
 /* Pondi Tavern heading */
 .pondi-header{
@@ -859,16 +863,10 @@ footer{
     <span class="tb-name">PONDI TAVERN</span>
     <span class="tb-diamond">◆</span>
   </div>
-  <div class="top-bar-sub">Pro 32 Umncintiswano Wasebusika · 20 June 2026</div>
+  <div class="top-bar-sub">Pro 32 Winter Tour · 20 June 2026</div>
 </div>
 
 <!-- ═══ PRE-HERO HEADER ═══ -->
-<!-- ── LANGUAGE SWITCHER ── -->
-<div class="lang-switch">
-  <button class="lang-btn active" id="btnEN" onclick="setLang('en')">EN</button>
-  <button class="lang-btn" id="btnZU" onclick="setLang('zu')">ZU</button>
-</div>
-
 <div class="pre-hero">
   <!-- Animated pool balls strip -->
   <div class="balls-strip">
@@ -880,7 +878,7 @@ footer{
     <h1 class="pondi-title">PONDI TAVERN</h1>
     <div class="pondi-gem">◆</div>
   </div>
-  <div class="pondi-sub" id="pondi-sub-el">Uyethula</div>
+  <div class="pondi-sub">Presents</div>
 </div>
 
 <section class="hero">
@@ -1032,21 +1030,23 @@ footer{
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge"><span id="hero-badge-el">Iyashisa &nbsp;·&nbsp; Abahle Kunawo Wonke</span></div>
-    <h1 class="hero-title"><span id="hero-title-line1">Pro 32</span>
-      <em id="hero-title-em">Umncintiswano Wasebusika</em></h1>
+    <div class="hero-badge"><span>Iyashisa &nbsp;·&nbsp; Best of the Best</span></div>
+    <h1 class="hero-title">
+      Pro 32
+      <em>Winter Tour 2026</em>
+    </h1>
     <div class="hero-rule"><div class="hero-rule-gem"></div></div>
     <div class="hero-meta">
-      <div class="meta-pill"><span class="meta-lbl" id="meta-venue-lbl">Venue</span><span class="meta-val">Pondi Tavern</span></div>
-      <div class="meta-pill"><span class="meta-lbl" id="meta-date-lbl">Date</span><span class="meta-val">20 June 2026</span></div>
-      <div class="meta-pill"><span class="meta-lbl" id="meta-draw-lbl">Draw</span><span class="meta-val">11:00 AM</span></div>
-      <div class="meta-pill"><span class="meta-lbl" id="meta-matches-lbl">Matches</span><span class="meta-val">17:00 PM</span></div>
-      <div class="meta-pill"><span class="meta-lbl" id="meta-entry-lbl">Entry</span><span class="meta-val">R250</span></div>
+      <div class="meta-pill"><span class="meta-lbl">Venue</span><span class="meta-val">Pondi Tavern</span></div>
+      <div class="meta-pill"><span class="meta-lbl">Date</span><span class="meta-val">20 June 2026</span></div>
+      <div class="meta-pill"><span class="meta-lbl">Draw</span><span class="meta-val">11:00 AM</span></div>
+      <div class="meta-pill"><span class="meta-lbl">Matches</span><span class="meta-val">17:00 PM</span></div>
+      <div class="meta-pill"><span class="meta-lbl">Entry</span><span class="meta-val">R250</span></div>
     </div>
-    <a href="#confirm" class="hero-btn"><span id="hero-btn-el">Bhalisa Lapha &nbsp;→</span></a>
+    <a href="#confirm" class="hero-btn"><span>Secure Your Spot &nbsp;→</span></a>
   </div>
   <div class="scroll-down">
-    <p>Skrolela</p>
+    <p>Scroll</p>
     <div class="scroll-down-line"></div>
   </div>
 </section>
@@ -1057,64 +1057,64 @@ footer{
 <!-- ═══ PRIZES ═══ -->
 <section class="terms-section" id="terms">
   <div class="container">
-    <span class="sec-eyebrow reveal" id="terms-eyebrow-el">Imithetho Nemigomo</span>
-    <h2 class="sec-title reveal" id="terms-title-el">Imigomo <em>Yomklomelo</em></h2>
+    <span class="sec-eyebrow reveal">Rules & Regulations</span>
+    <h2 class="sec-title reveal">Tournament <em>Terms</em></h2>
     <div class="sec-rule reveal"></div>
 
     <div class="lock-notice reveal">
       <span class="l-icon">🔒</span>
       <div>
-        <h4 id="final-title-el">Imigomo Isemthethweni</h4>
-        <p id="final-body-el">Akukho izinguquko ezizovunyelwa ngosuku lomklomelo. Imigomo nemibandela eshicilelwe yabakhiqizi <strong>isemthethweni futhi ibophezelekile</strong> kubo bonke ababhalisiwe.</p>
+        <h4>Terms Are Final</h4>
+        <p>No amendments will be entertained on the day of the tournament. The organisers' published terms and conditions are <strong>final and binding</strong> for all registered participants.</p>
       </div>
     </div>
 
     <div class="terms-grid reveal">
       <div class="t-card">
         <span class="t-num">01</span><span class="t-icon">🎱</span>
-        <h3>Imithetho of Play</h3>
-        <p id="t1-body-el">Imithetho yebhola elimnyama isebenza yonke indawo kuwo wonke umklomelo. <strong>Ukuphinda ubhalise kuvunyelwe umzuliswano wokuqala kuphela.</strong> Ukuze ufinyelele kuleli lungelo, umdlali owashiswa umzuliswano wokuqala kufanele abhekane nomunye ohluliwe womzuliswano wokuqala kuphela. Ngaphansi kwanoma imuphi umkhawulo, ohluliwe womzuliswano wokuqala akavunyelwe ukuhosha ngokumelana nomuntu olinde noma noma yimuphi umuntu ongakadlali umdlalo owodwa umzuliswano wokuqala. Akukho ukuphinda ubhalise okuvunyelwe kusukela umzuliswano wesibili kuya phambili.</p>
-        <a id="rules-link-el" href="https://blackballsa.co.za/rules/" target="_blank" rel="noopener" class="rules-link">📄 View Official SA Black Ball Imithetho</a>
+        <h3>Rules of Play</h3>
+        <p>Black ball rules apply exclusively throughout the tournament. <strong>Re-entries are permitted in the first round only.</strong> To qualify for a re-entry, a first-round loser must face another first-round loser exclusively. Under no circumstances may a first-round loser be drawn against a standby player or any participant who has not yet played a single match in the first round. No re-entries are permitted from the second round onwards.</p>
+        <a href="https://blackballsa.co.za/rules/" target="_blank" rel="noopener" class="rules-link">📄 View Official SA Black Ball Rules</a>
       </div>
       <div class="t-card">
         <span class="t-num">02</span><span class="t-icon">🏆</span>
-        <h3 id="t2-title-el">Indlela Yokudlala</h3>
+        <h3>Race Format</h3>
         <p>All group matches: <strong>Race to 7.</strong> Semi-finals: <strong>Race to 9.</strong> The Grand Final: <strong>Race to 11.</strong></p>
       </div>
       <div class="t-card">
         <span class="t-num">03</span><span class="t-icon">🕐</span>
-        <h3 id="t3-title-el">Izikhathi</h3>
-        <p id="t3-body-el">Ukuhosha okusemthethweni kuqala ngo-<strong>11:00 ekuseni</strong> ePondi Tavern. Yonke imidlalo yomklomelo iqala ngo-<strong>17:00 ntambama</strong> ngoMgqibelo, ziyi-20 kuJuni 2026.</p>
+        <h3>Schedule</h3>
+        <p>The official draw commences at <strong>11:00 AM</strong> at Pondi Tavern. All competitive matches begin at <strong>17:00 PM</strong> on Saturday, 20 June 2026.</p>
       </div>
       <div class="t-card">
         <span class="t-num">04</span><span class="t-icon">⚖️</span>
-        <h3 id="t4-title-el">Ukwahlulelwa</h3>
+        <h3>Officiating</h3>
         <p>All matches will be officially refereed. <strong>The referee's decision is final and absolute</strong> — no disputes, protests, or appeals will be entertained under any circumstances.</p>
       </div>
       <div class="t-card">
         <span class="t-num">05</span><span class="t-icon">⏰</span>
-        <h3 id="t5-title-el">Ukweba Isikhathi</h3>
-        <p id="t5-body-el">Abadlali abafika ngemva kwe-11:00 ekuseni bazohlawuliswa <strong>inhlawulo engeziwe yama-R50 ngokulibala.</strong></p>
+        <h3>Punctuality</h3>
+        <p>Players arriving after 11:00 AM will be subject to an <strong>additional R50 late penalty.</strong></p>
       </div>
       <div class="t-card">
         <span class="t-num">06</span><span class="t-icon">💰</span>
-        <h3>Inkokhelo Structure</h3>
-        <p id="t6-body-el">Inkokhelo yokuqala ephelele: <strong>R250.</strong> Ibhasi elingabuyiswayo lama-<strong>R150</strong> liyadingeka ukuze uqinisekise indawo yakho. Insalela yama-<strong>R100</strong> ikhokhelwa ngosuku lomncintiswano. Akukho bhasi, akukho ngena.</p>
+        <h3>Payment Structure</h3>
+        <p>Total entry fee: <strong>R250.</strong> A non-refundable deposit of <strong>R150</strong> is required to secure your place. The outstanding balance of <strong>R100</strong> is due on tournament day. No deposit, no entry.</p>
       </div>
       <div class="t-card">
         <span class="t-num">07</span><span class="t-icon">🎯</span>
-        <h3 id="t7-title-el">Ukuhosha Nezichibiyelo</h3>
+        <h3>Draw & Fixtures</h3>
         <p>The official draw is held at <strong>11:00 AM</strong> at Pondi Tavern. Upon completion, all fixtures will be published and displayed on this digital platform for all players to access.</p>
       </div>
       <div class="t-card">
         <span class="t-num">08</span><span class="t-icon">✅</span>
-        <h3 id="t8-title-el">Ukufanela</h3>
-        <p id="t8-body-el">Lo mklomelo <strong>uvuleleke kubo bonke abadlali.</strong> Wonke umuntu wamukelekile ukuzibandakanya ngaphandle kweqembu noma isigodi. Noma yimuphi umdlali owashiywa ohlelweni olwesemthethweni ngenxa yepelapela lokulawulwa uzobe ehlolisiwe futhi etholelwa indawo ngaphansi kwalezi zimigomo nezimibandela.</p>
+        <h3>Eligibility</h3>
+        <p>This tournament is <strong>open to all players.</strong> Everyone is welcome to participate regardless of club or branch affiliation. Any player omitted from the official list due to an administrative oversight will be verified and accommodated subject to these same terms and conditions.</p>
       </div>
       <div class="t-card">
         <span class="t-num">09</span><span class="t-icon">⚡</span>
-        <h3 id="t9-title-el">Ubulungiswa Emdlalweni</h3>
-        <p>Lo mncintiswano uqhutshelwa ngokuphelele <strong>ngobukhulu nobukhulu — uchwepheshe emelana nochwepheshe.</strong> Ukuhosha kuhlongozwa ukuze wonke umudlali ahlangane nomunye ngokwezinga lakhe, ukugcina ubumsulwa bomklomelo nodumo lwe-Pro 32 Umncintiswano Wasebusika.</p>
+        <h3>Level Playing Field</h3>
+        <p>This tournament is conducted on a strictly <strong>size-to-size basis — pro versus pro.</strong> The draw is structured to ensure every player is matched according to their calibre, preserving the competitive integrity and prestige of the Pro 32 Winter Tour.</p>
       </div>
     </div>
   </div>
@@ -1124,35 +1124,35 @@ footer{
 <!-- ═══ PRIZES ═══ -->
 <section class="prizes-section" id="prizes">
   <div class="container">
-    <span class="sec-eyebrow reveal" id="prizes-eyebrow-el">Imiklomelo Obhekene Nayo</span>
-    <h2 class="sec-title reveal" id="prizes-title-el">Uhlelo <em>Lwemiklomelo</em></h2>
+    <span class="sec-eyebrow reveal">What You're Playing For</span>
+    <h2 class="sec-title reveal">Prize <em>Structure</em></h2>
     <div class="sec-rule reveal"></div>
 
     <div class="notice-box reveal">
       <span class="n-icon">⚠️</span>
       <div>
         <h4>Minimum Participation Condition</h4>
-        <p id="prize-notice-body-el">Yonke imiklomelo incike ekufinyelelweni <strong>kokungenani omdlali abangu-32 abaqinisekisiwe futhi abakhokhe.</strong> Abadlali bayakhuthazwa ukukhokha idiphozi labo ngokushesha ukuze baqinisekise inqolobane ephelele yemiklomelo.</p>
+        <p>All prizes are conditional upon a <strong>minimum of 32 confirmed and paid participants</strong> being reached. Players are strongly encouraged to pay their deposit promptly to guarantee the full prize fund.</p>
       </div>
     </div>
 
     <div class="podium reveal">
-      <div class="p-card gold"><span class="p-bg-num">1</span><span class="p-emoji">🏆</span><span class="p-rank">Iqhawe</span><span class="p-amount">R4,500</span></div>
-      <div class="p-card silver"><span class="p-bg-num">2</span><span class="p-emoji">🥈</span><span class="p-rank">Owesibili</span><span class="p-amount">R2,500</span></div>
-      <div class="p-card bronze"><span class="p-bg-num">3</span><span class="p-emoji">🥉</span><span class="p-rank">Owesithathu</span><span class="p-amount">R1,500</span></div>
-      <div class="p-card"><span class="p-bg-num">4</span><span class="p-emoji">🎱</span><span class="p-rank">Owesine</span><span class="p-amount">R1,000</span></div>
+      <div class="p-card gold"><span class="p-bg-num">1</span><span class="p-emoji">🏆</span><span class="p-rank">Champion</span><span class="p-amount">R4,500</span></div>
+      <div class="p-card silver"><span class="p-bg-num">2</span><span class="p-emoji">🥈</span><span class="p-rank">Runner Up</span><span class="p-amount">R2,500</span></div>
+      <div class="p-card bronze"><span class="p-bg-num">3</span><span class="p-emoji">🥉</span><span class="p-rank">Third Place</span><span class="p-amount">R1,500</span></div>
+      <div class="p-card"><span class="p-bg-num">4</span><span class="p-emoji">🎱</span><span class="p-rank">Fourth Place</span><span class="p-amount">R1,000</span></div>
     </div>
 
     <div class="beer-grid reveal">
-      <div class="b-card"><span class="b-rank">Owesihlanu</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
-      <div class="b-card"><span class="b-rank">Owesithupha</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
-      <div class="b-card"><span class="b-rank">Owesikhombisa</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
-      <div class="b-card"><span class="b-rank">Owesishiyagalombili</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
+      <div class="b-card"><span class="b-rank">5th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
+      <div class="b-card"><span class="b-rank">6th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
+      <div class="b-card"><span class="b-rank">7th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
+      <div class="b-card"><span class="b-rank">8th Place</span><div class="b-prize">🍺 6-Pack</div><div class="b-sub">Castle Lite</div></div>
     </div>
 
     <div class="prize-total reveal">
-      <div><div class="pt-lbl" id="prize-total-label-el">Inqolobane Ephelele Yemali</div><div class="pt-num">R9,500</div></div>
-      <div class="pt-note" id="prize-total-note-el">Kanye ne-Castle Lite kubo owesihlanu kuya kowesishiyagalombili. Kuya nge-<strong>32 yamabhaliso akhokhelwe aqinisekisiwe</strong> — qinisekisa idiphozi lakho namuhla.</div>
+      <div><div class="pt-lbl">Total Cash Prize Pool</div><div class="pt-num">R9,500</div></div>
+      <div class="pt-note">Plus Castle Lite for 5th–8th place. Subject to <strong>32 confirmed paid entries</strong> — confirm your deposit today.</div>
     </div>
   </div>
 </section>
@@ -1160,19 +1160,19 @@ footer{
 <!-- ═══ TRACKER ═══ -->
 <section class="tracker-section" id="players">
   <div class="container">
-    <span class="sec-eyebrow reveal" id="tracker-eyebrow-el">Isimo Samanje</span>
-    <h2 class="sec-title reveal" id="tracker-title-el">Uhlelo <em>Lwabadlali</em></h2>
+    <span class="sec-eyebrow reveal">Live Status</span>
+    <h2 class="sec-title reveal">Player <em>Tracker</em></h2>
     <div class="sec-rule reveal"></div>
     <div class="stats-strip reveal">
-      <div class="s-box"><span class="s-num maroon" id="sTotal">52</span><span class="s-lbl" id="stat-reg-el">Ababhalisile</span></div>
-      <div class="s-box"><span class="s-num green" id="sConf">0</span><span class="s-lbl" id="stat-conf-el">Abaqinisekisiwe</span></div>
+      <div class="s-box"><span class="s-num maroon" id="sTotal">52</span><span class="s-lbl">Registered</span></div>
+      <div class="s-box"><span class="s-num green" id="sConf">0</span><span class="s-lbl">Confirmed</span></div>
       <div class="s-box"><span class="s-num gold" id="sPend">0</span><span class="s-lbl">Pending</span></div>
-      <div class="s-box"><span class="s-num red" id="sRem">52</span><span class="s-lbl">To Qinisekisa</span></div>
+      <div class="s-box"><span class="s-num red" id="sRem">52</span><span class="s-lbl">To Confirm</span></div>
     </div>
     <div class="legend reveal">
-      <div class="leg"><div class="dot c"></div>Abaqinisekisiwe & Paid</div>
-      <div class="leg"><div class="dot p"></div>Submitted — Balindile</div>
-      <div class="leg"><div class="dot n"></div>Not Yet Abaqinisekisiwe</div>
+      <div class="leg"><div class="dot c"></div>Confirmed & Paid</div>
+      <div class="leg"><div class="dot p"></div>Submitted — Pending Review</div>
+      <div class="leg"><div class="dot n"></div>Not Yet Confirmed</div>
     </div>
     <div class="p-grid reveal" id="playerGrid"></div>
   </div>
@@ -1181,40 +1181,40 @@ footer{
 <!-- ═══ CONFIRM FORM ═══ -->
 <section class="form-section" id="confirm">
   <div class="container">
-    <span class="sec-eyebrow reveal" id="form-eyebrow-el">Beka Indawo Yakho</span>
-    <h2 class="sec-title reveal" id="form-title-el">Qinisekisa <em>Ukungena</em></h2>
+    <span class="sec-eyebrow reveal">Reserve Your Place</span>
+    <h2 class="sec-title reveal">Confirm <em>Entry</em></h2>
     <div class="sec-rule reveal"></div>
-    <p class="form-intro reveal" id="form-intro-el">Khetha igama lakho, gcwalisa imininingwane yakho bese ulayisha <strong>ubufakazi wediphozi lama-R150.</strong> Ukungena kwakho kuzobhekwa bese kuqinisekiswa umhleli. <strong>Inxenye esele yama-R100</strong> ikhokhelwa ngosuku.</p>
+    <p class="form-intro reveal">Select your name, complete your details and upload your <strong>proof of R150 deposit</strong>. Your entry will be reviewed and confirmed by the organiser. The <strong>R100 balance</strong> is payable on the day.</p>
     <div class="fee-strip reveal">
-      <div class="f-box"><span class="f-amt">R250</span><span class="f-lbl" id="fee1-label-el">Inkokhelo Ephelele</span></div>
+      <div class="f-box"><span class="f-amt">R250</span><span class="f-lbl">Total Entry Fee</span></div>
       <div class="f-box"><span class="f-amt">R150</span><span class="f-lbl">Deposit Now — Non-refundable</span></div>
-      <div class="f-box hi"><span class="f-amt">R100</span><span class="f-lbl" id="fee3-label-el">Inxenye Esele Ekhokhelwa Ngosuku</span></div>
+      <div class="f-box hi"><span class="f-amt">R100</span><span class="f-lbl">Balance Due on the Day</span></div>
     </div>
     <div class="cf reveal" id="cfWrap">
       <div class="form-done" id="formDone">
         <span class="fd-icon">🎱</span>
-        <h3 id="success-title-el">Ungene!</h3>
+        <h3>You're In!</h3>
         <p>Your submission has been received. Bring your <strong>R100 balance</strong> on tournament day. See you at Pondi Tavern — <strong>20 June 2026.</strong></p>
       </div>
       <div id="formBody">
         <div class="f-row">
-          <div class="fg"><label for="iName" id="lbl-fullname-el">Igama Eligcwele</label><input id="fullName"/></div>
-          <div class="fg"><label for="iNick" id="lbl-nickname-el">Igama Lobungani</label><<input type="text" placeholder="isib. Slahla" id="nickname"/></div>
+          <div class="fg"><label for="iName">Full Name</label><input type="text" id="iName" placeholder="Your full name"/></div>
+          <div class="fg"><label for="iNick">Nickname</label><input type="text" id="iNick" placeholder="e.g. Slahla"/></div>
         </div>
         <div class="f-row">
-          <div class="fg"><label for="iPhone" id="lbl-phone-el">Inombolo Yefoni</label><<input type="tel" placeholder="0XX XXX XXXX" id="phone"/></div>
-          <div class="fg"><label for="iEmail" id="lbl-email-el">I-imeyili (Ngokuzithandela)</label><<input type="email" placeholder="yakho@imeyili.com" id="fEmail"/></div>
+          <div class="fg"><label for="iPhone">Phone Number</label><input type="tel" id="iPhone" placeholder="0XX XXX XXXX"/></div>
+          <div class="fg"><label for="iEmail">Email (Optional)</label><input type="email" id="iEmail" placeholder="your@email.com"/></div>
         </div>
         <div class="fg">
-          <label for="iSelect" id="lbl-select-el">Khetha Igama Lakho</label>
-          <select id="playerSelect" id="iSelect"><option value="">— Khetha igama lakho —</option></select>
+          <label for="iSelect">Select Your Name</label>
+          <select id="iSelect"><option value="">— Select your name —</option></select>
         </div>
         <div class="fg">
-          <label>Layisha Ubufakazi Wediphozi Lama-R150</label>
+          <label>Upload Proof of R150 Deposit</label>
           <div class="upload-zone" id="uz">
             <input type="file" id="iFile" accept="image/*,.pdf"/>
             <span class="uz-icon">📎</span>
-            <div class="uz-txt" id="uz-txt-el">Thepha noma hudula ukulayisha</div>
+            <div class="uz-txt">Tap or drag to upload</div>
             <div class="uz-sub">EFT screenshot or bank notification — max 2MB</div>
           </div>
           <div class="file-prev" id="filePrev">
@@ -1223,12 +1223,12 @@ footer{
             <span class="rm-file" onclick="rmFile()">✕ Remove</span>
           </div>
         </div>
-        <div class="fg"><label for="iMsg" id="lbl-msg-el">Umlayezo Kumhleli (Ngokuzithandela)</label><textarea id="iMsg" placeholder="Any questions or notes..."></textarea></div>
+        <div class="fg"><label for="iMsg">Message for Organiser (Optional)</label><textarea id="iMsg" placeholder="Any questions or notes..."></textarea></div>
         <div class="chk">
           <input type="checkbox" id="iAgree"/>
-          <span id="agree-text-el">Ngifundile futhi ngiyavuma yonke imigomo eshicilelwe kuhlanganisa idiphozi elingabuyiswayo lama-R150, inxenye esele yama-R100 ngosuku, uhlelo loku-7/9/11, ukuhosha kobukhulu nobukhulu, nokuthi akukho izinguquko ezizokwenziwa ngosuku lomklomelo.</span>
+          <span>I have read and agree to all published terms including the non-refundable R150 deposit, R100 balance on the day, Race to 7/9/11 format, size-to-size draw, and that no amendments will be made on tournament day.</span>
         </div>
-        <button class="sub-btn" id="subBtn" onclick="doSubmit()"><span id="submit-btn-el">Qinisekisa Ukungena Kwami →</span></button>
+        <button class="sub-btn" id="subBtn" onclick="doSubmit()"><span>Confirm My Entry →</span></button>
       </div>
     </div>
   </div>
@@ -1237,45 +1237,44 @@ footer{
 <!-- ═══ SPONSORS ═══ -->
 <section class="sponsors-section" id="sponsors">
   <div class="container">
-    <span class="sec-eyebrow reveal" id="sponsors-eyebrow-el">Abaxhasi Bethu</span>
-    <h2 class="sec-title reveal" id="sponsors-title-el">Sixhaswe Ngokukhulu <em>Ukuziqhenya</em></h2>
+    <span class="sec-eyebrow reveal">Our Partners</span>
+    <h2 class="sec-title reveal">Proudly <em>Supported By</em></h2>
     <div class="sec-rule reveal"></div>
     <div class="sp-grid reveal">
       <div class="sp-card">
         <span class="sp-emoji">🍺</span>
-        <span class="sp-role" id="sp1-role-el">Umxhasi Omkhulu</span>
+        <span class="sp-role">Title Sponsor</span>
         <div class="sp-name">Pondi Tavern</div>
         <div class="sp-sub">Chunda Trading</div>
       </div>
       <div class="sp-card">
         <span class="sp-emoji">🍺</span>
-        <span class="sp-role" id="sp2-role-el">Iziphuzo Ezisemthethweni</span>
+        <span class="sp-role">Official Refreshments</span>
         <div class="sp-name">Castle Lite</div>
-        <div class="sp-sub" id="sp2-sub-el">Iqanda Ngomkhando. Uyola Ngalunye.</div>
+        <div class="sp-sub">Ice Cold. Every Round.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ ADMIN (hidden) ═══ -->
-<section class="admin-section" id="adminSection" style="display:none;">
+<!-- ═══ ADMIN ═══ -->
+<section class="admin-section">
   <div class="container">
+    <div class="adm-toggle" onclick="toggleAdm()" style="opacity:0;user-select:none;font-size:8px;color:transparent;cursor:default;">·</div>
     <div class="adm-panel" id="admPanel">
-      <div class="adm-login" id="admNgena">
-        <span class="sec-eyebrow" id="adm-access-el">Ukungena Kwabaphathi</span>
-        <div style="display:flex;gap:0;margin-bottom:12px;">
-          <input type="password" id="admPass" placeholder="••••••••" onkeydown="if(event.key==='Enter')doNgena()" style="border-radius:0;flex:1;"/>
-          <button class="adm-btn" onclick="doNgena()" style="white-space:nowrap;" data-en="Login" data-zu="Ngena" id="adm-login-btn-el">Ngena</button>
-        </div>
+      <div class="adm-login" id="admLogin">
+        <span class="sec-eyebrow">Admin Access</span>
+        <input type="password" id="admPass" placeholder="Password" onkeydown="if(event.key==='Enter')doLogin()"/>
+        <button class="adm-btn" onclick="doLogin()">Login</button>
       </div>
       <div id="admContent" style="display:none;">
-        <span class="sec-eyebrow" data-en="All Submissions" data-zu="Yonke Imibhalo" id="adm-all-el">Yonke Imibhalo</span>
+        <span class="sec-eyebrow">All Submissions</span>
         <div class="tbl-wrap">
-          <table><thead><tr><th>#</th><th data-en="Player" data-zu="Umdlali">Umdlali</th><th data-en="Full Name" data-zu="Igama Eligcwele">Igama Eligcwele</th><th data-en="Phone" data-zu="Ifoni">Ifoni</th><th data-en="Submitted" data-zu="Ithunyelwe">Ithunyelwe</th><th data-en="Proof" data-zu="Ubufakazi">Ubufakazi</th><th data-en="Status" data-zu="Isimo">Isimo</th><th data-en="Actions" data-zu="Izenzo">Izenzo</th></tr></thead>
+          <table><thead><tr><th>#</th><th>Player</th><th>Full Name</th><th>Phone</th><th>Submitted</th><th>Proof</th><th>Status</th><th>Actions</th></tr></thead>
           <tbody id="admBody"></tbody></table>
         </div>
-        <button class="exp-btn" onclick="doExport()" data-en="⬇ Export CSV" data-zu="⬇ Khipha i-CSV" id="adm-export-el">⬇ Khipha i-CSV</button>
-        <button class="adm-btn danger" onclick="doClear()" data-en="Clear All" data-zu="Sula Konke" id="adm-clear-el">Sula Konke</button>
+        <button class="exp-btn" onclick="doExport()">⬇ Export CSV</button>
+        <button class="adm-btn danger" onclick="doClear()">Clear All</button>
       </div>
     </div>
   </div>
@@ -1283,15 +1282,15 @@ footer{
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
-  <div class="ft-logo" id="ftLogo" onclick="secretTap()" style="cursor:default;" data-en="Pro 32 Winter Tour" data-zu="Pro 32 Umncintiswano Wasebusika 2026">Pro 32 Umncintiswano Wasebusika 2026</div>
-  <div class="ft-sub" id="ft-sub-el">8 Ball Pool &nbsp;·&nbsp; Pondi Tavern &nbsp;·&nbsp; 2026</div>
+  <div class="ft-logo">Pro 32 Winter Tour</div>
+  <div class="ft-sub">8 Ball Pool &nbsp;·&nbsp; Pondi Tavern &nbsp;·&nbsp; 2026</div>
   <div class="ft-rule"></div>
   <div class="ft-contacts">
     <a href="tel:0780016136">078 001 6136</a>
     <a href="tel:0833023408">083 302 3408</a>
   </div>
   <div class="ft-email">mxolisi@auctioneer.net</div>
-  <div class="ft-powered" id="ft-powered-el">Vikelwe futhi iqashwe yi-<strong>Moana Technologies</strong></div>
+  <div class="ft-powered">Secured and powered by <strong>Moana Technologies</strong></div>
 </footer>
 
 <div class="toast" id="toastEl"></div>
@@ -1302,61 +1301,23 @@ const SK='pro32_v2';
 const AP='pondi2026';
 const PRE_CONFIRMED=['Slahla','PK','Sandile','Sduduzo','Thabani','Makhenikha'];
 
-// ── Build animated SVG balls strip ──
+// ── Build animated balls strip ──
 (function(){
   const track = document.getElementById('ballsTrack');
   if(!track) return;
-
-  // Colors: 1-7 solids, 8 black, 9-15 stripes (same colors as 1-7)
-  const colors = ['','#f5c800','#0044cc','#cc0000','#7700bb','#ff6600','#007700','#990011','#111111','#f5c800','#0044cc','#cc0000','#7700bb','#ff6600','#007700','#990011'];
-
-  function makeBall(num) {
-    const color = colors[num];
-    const isBlack = num === 8;
-    const isStripe = num >= 9;
-    const isSolid = num >= 1 && num <= 7;
-    const label = num.toString();
-    const r = 24; // radius
-    const cx = 24, cy = 24;
-
-    let body = '';
-
-    if (isBlack) {
-      // Solid black ball
-      body = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="#111"/>`;
-    } else if (isSolid) {
-      // Solid colored ball
-      body = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${color}"/>`;
-    } else {
-      // Stripe: white ball with colored band across middle
-      // Use clipPath to keep stripe inside circle
-      body = `
-        <defs><clipPath id="cp${num}"><circle cx="${cx}" cy="${cy}" r="${r}"/></clipPath></defs>
-        <circle cx="${cx}" cy="${cy}" r="${r}" fill="white"/>
-        <rect x="0" y="${cy-9}" width="48" height="18" fill="${color}" clip-path="url(#cp${num})"/>
-      `;
-    }
-
-    // Number circle (white circle with number)
-    const numCircle = `
-      <circle cx="${cx}" cy="${cy}" r="9" fill="white"/>
-      <text x="${cx}" y="${cy+4}" text-anchor="middle" font-size="${num>=10?9:10}" font-weight="900" font-family="Georgia,serif" fill="#111">${label}</text>
-    `;
-
-    // Shine highlight
-    const shine = `<ellipse cx="${cx-7}" cy="${cy-10}" rx="7" ry="5" fill="rgba(255,255,255,0.45)" transform="rotate(-30,${cx-7},${cy-10})"/>`;
-
-    // Outer ring shadow
-    const ring = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5"/>`;
-
-    const svg = `<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 4px 6px rgba(0,0,0,0.5));border-radius:50%;">${body}${numCircle}${shine}${ring}</svg>`;
-
-    return `<div class="ball-item">${svg}</div>`;
-  }
-
-  const sequence = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,8,1,9,2,10,3,11,4,12,5,13,6,14,7,15];
-  const all = [...sequence,...sequence]; // duplicate for seamless loop
-  track.innerHTML = all.map(n => makeBall(n)).join('');
+  const balls = [
+    {n:'1',c:'b1'},{n:'2',c:'b2'},{n:'3',c:'b3'},{n:'4',c:'b4'},
+    {n:'5',c:'b5'},{n:'6',c:'b6'},{n:'7',c:'b7'},{n:'8',c:'b8'},
+    {n:'9',c:'b9'},{n:'10',c:'b10'},{n:'11',c:'b11'},{n:'12',c:'b12'},
+    {n:'13',c:'b13'},{n:'14',c:'b14'},{n:'15',c:'b15'},
+    {n:'8',c:'b8'},{n:'1',c:'b1'},{n:'3',c:'b3'},{n:'5',c:'b5'},
+    {n:'2',c:'b2'},{n:'7',c:'b7'},{n:'4',c:'b4'},{n:'6',c:'b6'},
+    {n:'9',c:'b9'},{n:'11',c:'b11'},{n:'13',c:'b13'},{n:'15',c:'b15'},
+    {n:'10',c:'b10'},{n:'12',c:'b12'},{n:'14',c:'b14'}
+  ];
+  // Duplicate for seamless loop
+  const all = [...balls,...balls];
+  track.innerHTML = all.map(b=>`<div class="ball-item ${b.c}">${b.n}</div>`).join('');
 })();
 const PLAYERS=[
   'Slahla','Mcabango','Nqaba','PK','Sandile','Tshepo','Mabuza','Khaya',
@@ -1390,10 +1351,10 @@ seed();
 (function(){
   const el=document.getElementById('tickerEl');
   const items=[
-    '🎱 Pro 32 Umncintiswano Wasebusika 2026','📅 20 Junho 2026 · Pondi Tavern',
-    '🏆 Imiklomelo: R9,500','⚡ Race to 7 · 9 · 11',
-    '💰 Inkokhelo R250 · Ibhasi R150','🎯 Ukuhosha 11:00 · Imidlalo 17:00',
-    '⚠️ Kudingeka omdlali abangu-32','⚡ Ubukhulu Nobukhulu · Uchwepheshe Nochwepheshe',
+    '🎱 Pro 32 Winter Tour 2026','📅 20 June 2026 · Pondi Tavern',
+    '🏆 R9,500 Prize Pool','⚡ Race to 7 · 9 · 11',
+    '💰 Entry R250 · Deposit R150','🎯 Draw 11:00 AM · Matches 17:00 PM',
+    '⚠️ 32 players required','⚡ Size to Size · Pro vs Pro',
     ...PLAYERS.map(p=>`<strong>${p}</strong>`)
   ];
   const html=items.map(i=>`<span class="t-item">${i}</span><span class="t-sep">◆</span>`).join('');
@@ -1416,9 +1377,9 @@ function render(){
   let c=0,p=0;
   PLAYERS.forEach((n,i)=>{
     const e=arr.find(x=>x.player===n);
-    let cls='',sc='sn',st='Akaqinisekisiwe',dc='n';
-    if(e&&e.status==='confirmed'){cls='confirmed';sc='sc';st='✓ Abaqinisekisiwe';dc='c';c++;}
-    else if(e){cls='pending';sc='sp';st='⏳ Ulindile';dc='p';p++;}
+    let cls='',sc='sn',st='Not confirmed',dc='n';
+    if(e&&e.status==='confirmed'){cls='confirmed';sc='sc';st='✓ Confirmed';dc='c';c++;}
+    else if(e){cls='pending';sc='sp';st='⏳ Pending';dc='p';p++;}
     const d=document.createElement('div');
     d.className=`pc ${cls}`;
     d.innerHTML=`<span class="pc-num">${String(i+1).padStart(2,'0')}</span><div class="pc-info"><div class="pc-name">${n}</div><div class="pc-status ${sc}">${st}</div></div><div class="pc-dot ${dc}"></div>`;
@@ -1434,7 +1395,7 @@ function render(){
 let proofData=null,proofName=null;
 document.getElementById('iFile').addEventListener('change',function(e){
   const f=e.target.files[0];if(!f)return;
-  if(f.size>2.5*1024*1024){toast('Ifayela likhulu kakhulu — okungeziwe: 2MB',true);return;}
+  if(f.size>2.5*1024*1024){toast('File too large — max 2MB',true);return;}
   proofName=f.name;
   const r=new FileReader();
   r.onload=ev=>{
@@ -1468,49 +1429,49 @@ function doSubmit(){
   const player=document.getElementById('iSelect').value;
   const msg=document.getElementById('iMsg').value.trim();
   const agreed=document.getElementById('iAgree').checked;
-  if(!name){toast('Sicela ufake igama lakho eligcwele',true);return;}
-  if(!phone){toast('Sicela ufake inombolo yakho yefoni',true);return;}
-  if(!player){toast('Sicela ukhethe igama lakho ohlelweni',true);return;}
-  if(!proofData){toast('Sicela ulayishe ubufakazi bokukhokha',true);return;}
-  if(!agreed){toast('Sicela uvume imigomo kuqala',true);return;}
+  if(!name){toast('Please enter your full name',true);return;}
+  if(!phone){toast('Please enter your phone number',true);return;}
+  if(!player){toast('Please select your name from the list',true);return;}
+  if(!proofData){toast('Please upload proof of payment',true);return;}
+  if(!agreed){toast('Please agree to the terms first',true);return;}
   const arr=getE();
-  if(arr.find(e=>e.player===player)){toast(player+' usevele ethumile',true);return;}
+  if(arr.find(e=>e.player===player)){toast(player+' has already submitted',true);return;}
   const btn=document.getElementById('subBtn');
   btn.disabled=true;btn.querySelector('span').textContent='Submitting...';
   arr.push({id:Date.now(),player,fullName:name,nickname:nick,phone,email,message:msg,proof:proofData,proofName,submittedAt:new Date().toISOString(),status:'pending'});
   saveE(arr);render();
-  const sub=encodeURIComponent(`Ukungena kwe-Pro 32: ${player} – ${name}`);
-  const body=encodeURIComponent(`PRO 32 WINTER TOUR 2026\nUkungena ngewebhusayithi\n\nPlayer: ${player}\nIgama Eligcwele: ${name}\nIgama Lobungani: ${nick||'N/A'}\nPhone: ${phone}\nEmail: ${email||'N/A'}\nMessage: ${msg||'N/A'}\nTime: ${new Date().toLocaleString('en-ZA')}\n\nProof uploaded — check admin panel.`);
+  const sub=encodeURIComponent(`Pro 32 Entry: ${player} – ${name}`);
+  const body=encodeURIComponent(`PRO 32 WINTER TOUR 2026\nEntry via website\n\nPlayer: ${player}\nFull Name: ${name}\nNickname: ${nick||'N/A'}\nPhone: ${phone}\nEmail: ${email||'N/A'}\nMessage: ${msg||'N/A'}\nTime: ${new Date().toLocaleString('en-ZA')}\n\nProof uploaded — check admin panel.`);
   window.open(`mailto:mxolisi@auctioneer.net?subject=${sub}&body=${body}`,'_blank');
   setTimeout(()=>{document.getElementById('formBody').style.display='none';document.getElementById('formDone').style.display='block';},600);
 }
 
 // Admin
 function toggleAdm(){document.getElementById('admPanel').classList.toggle('open');}
-function doNgena(){
+function doLogin(){
   if(document.getElementById('admPass').value===AP){
-    document.getElementById('admNgena').style.display='none';
+    document.getElementById('admLogin').style.display='none';
     document.getElementById('admContent').style.display='block';
     admRender();
-  }else toast('Iphasiwedi asilungile',true);
+  }else toast('Incorrect password',true);
 }
 function admRender(){
   const arr=getE();const tb=document.getElementById('admBody');tb.innerHTML='';
-  if(!arr.length){tb.innerHTML='<tr><td colspan="8" style="text-align:center;padding:40px;color:var(--lite);">Akukho amabhaliso nawo.</td></tr>';return;}
+  if(!arr.length){tb.innerHTML='<tr><td colspan="8" style="text-align:center;padding:40px;color:var(--lite);">No submissions yet.</td></tr>';return;}
   arr.forEach((e,i)=>{
     const d=new Date(e.submittedAt).toLocaleString('en-ZA',{dateStyle:'short',timeStyle:'short'});
     const pr=e.proof?`<img class="p-thumb" src="${e.proof}" onclick="openLb('${e.proof}')" alt="proof"/>`:'<span style="color:var(--lite);font-size:11px;">None</span>';
     const r=document.createElement('tr');
-    r.innerHTML=`<td>${i+1}</td><td><strong>${e.player}</strong></td><td>${e.fullName}<br/><small style="color:var(--lite)">${e.phone}</small></td><td>${e.phone}</td><td style="font-size:11px;">${d}</td><td>${pr}</td><td><span class="badge ${e.status}">${e.status==='confirmed'?'✓ Abaqinisekisiwe':'⏳ Ulindile'}</span></td><td>${e.status!=='confirmed'?`<button class="act-btn cb" onclick="confE(${e.id})">Qinisekisa</button>`:''}<button class="act-btn db" onclick="delE(${e.id})">Susa</button></td>`;
+    r.innerHTML=`<td>${i+1}</td><td><strong>${e.player}</strong></td><td>${e.fullName}<br/><small style="color:var(--lite)">${e.phone}</small></td><td>${e.phone}</td><td style="font-size:11px;">${d}</td><td>${pr}</td><td><span class="badge ${e.status}">${e.status==='confirmed'?'✓ Confirmed':'⏳ Pending'}</span></td><td>${e.status!=='confirmed'?`<button class="act-btn cb" onclick="confE(${e.id})">Confirm</button>`:''}<button class="act-btn db" onclick="delE(${e.id})">Delete</button></td>`;
     tb.appendChild(r);
   });
 }
 function confE(id){const a=getE(),e=a.find(x=>x.id===id);if(e){e.status='confirmed';saveE(a);render();admRender();toast('✓ '+e.player+' confirmed!');}}
-function delE(id){if(!confirm('Susa this entry?'))return;saveE(getE().filter(e=>e.id!==id));render();admRender();toast('Ukungena kususiwe.');}
-function doClear(){if(!confirm('Susa ALL entries?'))return;localStorage.removeItem(SK);seed();render();admRender();toast('Cleared.');}
+function delE(id){if(!confirm('Delete this entry?'))return;saveE(getE().filter(e=>e.id!==id));render();admRender();toast('Entry deleted.');}
+function doClear(){if(!confirm('Delete ALL entries?'))return;localStorage.removeItem(SK);seed();render();admRender();toast('Cleared.');}
 function doExport(){
   const arr=getE();if(!arr.length){toast('No entries',true);return;}
-  const rows=[['#','Umdlali','Igama Eligcwele','Igama Lobungani','Ifoni','I-imeyili','Ithunyelwe','Isimo','Umlayezo']];
+  const rows=[['#','Player','Full Name','Nickname','Phone','Email','Submitted','Status','Message']];
   arr.forEach((e,i)=>rows.push([i+1,e.player,e.fullName,e.nickname||'',e.phone,e.email||'',new Date(e.submittedAt).toLocaleString('en-ZA'),e.status,(e.message||'').replace(/,/g,' ')]));
   const csv=rows.map(r=>r.map(v=>`"${v}"`).join(',')).join('\n');
   const a=document.createElement('a');a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);a.download='pro32-entries.csv';a.click();
@@ -1520,232 +1481,9 @@ function doExport(){
 function openLb(src){document.getElementById('lbImg').src=src;document.getElementById('lb').classList.add('open');}
 function closeLb(){document.getElementById('lb').classList.remove('open');}
 
-// Skrolela reveal
+// Scroll reveal
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');});},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-// ══════════════════════════════════════════
-// LANGUAGE SWITCHER
-// ══════════════════════════════════════════
-let currentLang = 'zu';
-
-const T = {
-  en: {
-    'pondi-sub': 'Presents',
-    'hero-badge-text': 'Iyashisa &nbsp;·&nbsp; Best of the Best',
-    'hero-title-line1': 'Pro 32',
-    'hero-title-em': 'Winter Tour',
-    'hero-title-sub': '8 Ball Pool · 2026',
-    'hero-btn-text': 'Secure Your Spot &nbsp;→',
-    'scroll-text': 'Scroll',
-    'terms-eyebrow': 'Rules & Regulations',
-    'terms-title': 'Tournament <em>Terms</em>',
-    'final-title': 'Terms Are Final',
-    'final-body': "No amendments will be entertained on the day of the tournament. The organisers' published terms and conditions are <strong>final and binding</strong> for all registered participants.",
-    't1-title': 'Rules',
-    't1-body': 'Black ball rules apply exclusively throughout the tournament. <strong>Re-entries are permitted in the first round only.</strong> To qualify for a re-entry, a first-round loser must face another first-round loser exclusively. Under no circumstances may a first-round loser be drawn against a standby player or any participant who has not yet played a single match in the first round. No re-entries are permitted from the second round onwards.',
-    'rules-link': '📄 View Official SA Black Ball Rules',
-    't2-title': 'Race Format',
-    't2-body': 'All group matches: <strong>Race to 7.</strong> Semi-finals: <strong>Race to 9.</strong> Final: <strong>Race to 11.</strong>',
-    't3-title': 'Schedule',
-    't3-body': 'The official draw commences at <strong>11:00 AM</strong> at Pondi Tavern. All competitive matches begin at <strong>17:00 PM</strong> on Saturday, 20 June 2026.',
-    't4-title': 'Officiating',
-    't4-body': "All matches will be officially refereed. <strong>The referee's decision is final</strong> — no disputes or appeals will be entertained.",
-    't5-title': 'Punctuality',
-    't5-body': 'Players arriving after 11:00 AM will be subject to an <strong>additional R50 late penalty.</strong>',
-    't6-title': 'Payment',
-    't6-body': 'Total entry fee: <strong>R250.</strong> A non-refundable deposit of <strong>R150</strong> is required to secure your place. The outstanding balance of <strong>R100</strong> is due on tournament day. No deposit, no entry.',
-    't7-title': 'Draw & Fixtures',
-    't7-body': 'The official draw is held at <strong>11:00 AM</strong> at Pondi Tavern. Once completed, all fixtures will be published on this digital platform for all players to view.',
-    't8-title': 'Eligibility',
-    't8-body': 'This tournament is <strong>open to all players.</strong> Everyone is welcome to participate regardless of club or branch affiliation. Any player omitted from the official list due to an administrative oversight will be verified and accommodated subject to these same terms and conditions.',
-    't9-title': 'Level Playing Field',
-    't9-body': 'This tournament is conducted on a strictly <strong>size-to-size basis — pro versus pro.</strong> The draw is structured to ensure every player is matched according to their calibre, preserving the competitive integrity and prestige of the Pro 32 Winter Tour.',
-    'prizes-eyebrow': "What You're Playing For",
-    'prizes-title': 'Prize <em>Structure</em>',
-    'prize-notice-title': 'Minimum Participation Required',
-    'prize-notice-body': 'All prizes are conditional upon a <strong>minimum of 32 confirmed and paid participants</strong> being reached. Players are strongly encouraged to pay their deposit promptly to guarantee the full prize fund.',
-    'p1': 'Champion','p2': 'Runner Up','p3': 'Third Place','p4': 'Fourth Place',
-    'p5': '5th Place','p6': '6th Place','p7': '7th Place','p8': '8th Place',
-    'prize-total-label': 'Total Cash Prize Pool',
-    'prize-total-note': 'Plus Castle Lite for 5th–8th place. Subject to <strong>32 confirmed paid entries</strong> — confirm your deposit today.',
-    'tracker-eyebrow': 'Live Status',
-    'tracker-title': 'Player <em>Tracker</em>',
-    'stat-reg': 'Registered','stat-conf': 'Confirmed','stat-pend': 'Pending','stat-rem': 'Still to Confirm',
-    'leg-conf': '✓ Confirmed & Paid','leg-pend': '⏳ Pending Review','leg-none': 'Not Yet Confirmed',
-    'form-eyebrow': 'Reserve Your Place',
-    'form-title': 'Confirm <em>Entry</em>',
-    'form-intro': 'Select your name, complete your details and upload your <strong>proof of R150 deposit</strong>. Your entry will be reviewed and confirmed by the organiser. The <strong>R100 balance</strong> is payable on the day.',
-    'fee1-label': 'Total Entry Fee','fee2-label': 'Deposit Now (non-refundable)','fee3-label': 'Balance Due on the Day',
-    'lbl-fullname': 'Full Name','lbl-nickname': 'Nickname','ph-fullname': 'Your full name','ph-nickname': 'e.g. Slahla',
-    'lbl-phone': 'Phone Number','lbl-email': 'Email (Optional)','ph-phone': '0XX XXX XXXX','ph-email': 'your@email.com',
-    'lbl-select': 'Select Your Name','ph-select': '— Select your name —',
-    'lbl-upload': 'Upload Proof of R150 Deposit','uz-txt': 'Tap or drag to upload','uz-sub': 'EFT screenshot, bank notification — max 2MB',
-    'lbl-msg': 'Message for Organiser (Optional)','ph-msg': 'Any notes or questions...',
-    'agree-text': 'I have read and agree to all published terms including the non-refundable R150 deposit, R100 balance on the day, Race to 7/9/11 format, size-to-size draw, and that no amendments will be made on tournament day.',
-    'submit-btn': 'Confirm My Entry →',
-    'success-title': "You're In!",'success-body': 'Your confirmation has been received and is under review. Remember to bring your remaining <strong>R100</strong> balance on tournament day. See you at Pondi Tavern on <strong>20 June 2026!</strong>',
-    'sponsors-eyebrow': 'Our Partners','sponsors-title': 'Proudly <em>Supported By</em>',
-    'sp1-role': 'Title Sponsor','sp2-role': 'Official Refreshments','sp2-sub': 'Ice Cold. Every Round.',
-    'ft-logo': 'Pro 32 Winter Tour','ft-sub': '8 Ball Pool &nbsp;·&nbsp; Pondi Tavern &nbsp;·&nbsp; 2026',
-    'ft-powered': 'Secured and powered by <strong>Moana Technologies</strong>',
-    'adm-access': 'Admin Access','adm-login-btn': 'Login','adm-all': 'All Submissions','adm-export': '⬇ Export CSV','adm-clear': 'Clear All',
-  },
-  zu: {
-    'pondi-sub': 'Uyethula',
-    'hero-badge-text': 'Iyashisa &nbsp;·&nbsp; Abahle Kunawo Wonke',
-    'hero-title-line1': 'Pro 32',
-    'hero-title-em': 'Umncintiswano Wasebusika',
-    'hero-title-sub': 'Ibhola Lomkhono · 2026',
-    'hero-btn-text': 'Bhalisa Lapha &nbsp;→',
-    'scroll-text': 'Skrolela',
-    'terms-eyebrow': 'Imithetho Nemigomo',
-    'terms-title': 'Imigomo <em>Yomklomelo</em>',
-    'final-title': 'Imigomo Isemthethweni',
-    'final-body': "Akukho izinguquko ezizovunyelwa ngosuku lomklomelo. Imigomo nemibandela eshicilelwe yabakhiqizi <strong>isemthethweni futhi ibophezelekile</strong> kubo bonke ababhalisiwe.",
-    't1-title': 'Imithetho',
-    't1-body': 'Imithetho yebhola elimnyama isebenza yonke indawo kuwo wonke umklomelo. <strong>Ukuphinda ubhalise kuvunyelwe umzuliswano wokuqala kuphela.</strong> Ukuze ufinyelele kuleli lungelo, umdlali owashiswa umzuliswano wokuqala kufanele abhekane nomunye ohluliwe womzuliswano wokuqala kuphela. Ngaphansi kwanoma imuphi umkhawulo, ohluliwe womzuliswano wokuqala akavunyelwe ukuhosha ngokumelana nomuntu olinde noma noma yimuphi umuntu ongakadlali umdlalo owodwa umzuliswano wokuqala. Akukho ukuphinda ubhalise okuvunyelwe kusukela umzuliswano wesibili kuya phambili.',
-    'rules-link': '📄 Bona Imithetho Esemthethweni Yebhola Elimnyama',
-    't2-title': 'Indlela Yokudlala',
-    't2-body': 'Yonke imidlalo yeqembu: <strong>Ukuqhubeka kuya ku-7.</strong> Izinqanqo: <strong>Ukuqhubeka kuya ku-9.</strong> Umphumela wokugcina: <strong>Ukuqhubeka kuya ku-11.</strong>',
-    't3-title': 'Izikhathi',
-    't3-body': 'Ukuhosha okusemthethweni kuqala ngo-<strong>11:00 ekuseni</strong> ePondi Tavern. Yonke imidlalo yomklomelo iqala ngo-<strong>17:00 ntambama</strong> ngoMgqibelo, ziyi-20 kuJuni 2026.',
-    't4-title': 'Ukwahlulelwa',
-    't4-body': "Yonke imidlalo izobhekwa ngumahluleli osemthethweni. <strong>Isinqumo sikamahluleli siyigcina</strong> — akukho mpikiswano noma izicelo zezindleko ezizovunyelwa.",
-    't5-title': 'Ukweba Isikhathi',
-    't5-body': 'Abadlali abafika ngemva kwe-11:00 ekuseni bazohlawuliswa <strong>inhlawulo engeziwe yama-R50 ngokulibala.</strong>',
-    't6-title': 'Inkokhelo',
-    't6-body': 'Inkokhelo yokuqala ephelele: <strong>R250.</strong> Ibhasi elingabuyiswayo lama-<strong>R150</strong> liyadingeka ukuze uqinisekise indawo yakho. Insalela yama-<strong>R100</strong> ikhokhelwa ngosuku lomncintiswano. Akukho bhasi, akukho ngena.',
-    't7-title': 'Ukuhosha Nezichibiyelo',
-    't7-body': 'Ukuhosha okusemthethweni kubanjelwa ngo-<strong>11:00 ekuseni</strong> ePondi Tavern. Ngemuva kokuphela, yonke imichibiyelo izoshicilelwa kuleli qonga ledijithali ukuze bonke abadlali bawubone.',
-    't8-title': 'Ukufanela',
-    't8-body': 'Lo mklomelo <strong>uvuleleke kubo bonke abadlali.</strong> Wonke umuntu wamukelekile ukuzibandakanya ngaphandle kweqembu noma isigodi. Noma yimuphi umdlali owashiywa ohlelweni olwesemthethweni ngenxa yepelapela lokulawulwa uzobe ehlolisiwe futhi etholelwa indawo ngaphansi kwalezi zimigomo nezimibandela.',
-    't9-title': 'Ubulungiswa Emdlalweni',
-    't9-body': 'Lo mncintiswano uqhutshelwa ngokuphelele <strong>ngobukhulu nobukhulu — uchwepheshe emelana nochwepheshe.</strong> Ukuhosha kuhlongozwa ukuze wonke umudlali ahlangane nomunye ngokwezinga lakhe, ukugcina ubumsulwa bomklomelo nodumo lwe-Pro 32 Winter Tour.',
-    'prizes-eyebrow': 'Imiklomelo Obhekene Nayo',
-    'prizes-title': 'Uhlelo <em>Lwemiklomelo</em>',
-    'prize-notice-title': 'Kudingeka Inani Eliphelele',
-    'prize-notice-body': 'Yonke imiklomelo incike ekufinyelelweni <strong>kokungenani omdlali abangu-32 abaqinisekisiwe futhi abakhokhe.</strong> Abadlali bayakhuthazwa ukukhokha idiphozi labo ngokushesha ukuze baqinisekise inqolobane ephelele yemiklomelo.',
-    'p1': 'Iqhawe','p2': 'Owesibili','p3': 'Owesithathu','p4': 'Owesine',
-    'p5': 'Owesihlanu','p6': 'Owesithupha','p7': 'Owesikhombisa','p8': 'Owesishiyagalombili',
-    'prize-total-label': 'Inqolobane Ephelele Yemali',
-    'prize-total-note': 'Kanye ne-Castle Lite kubo owesihlanu kuya kowesishiyagalombili. Kuya nge-<strong>32 yamabhaliso akhokhelwe aqinisekisiwe</strong> — qinisekisa idiphozi lakho namuhla.',
-    'tracker-eyebrow': 'Isimo Samanje',
-    'tracker-title': 'Uhlelo <em>Lwabadlali</em>',
-    'stat-reg': 'Ababhalisile','stat-conf': 'Abaqinisekisiwe','stat-pend': 'Balindile','stat-rem': 'Basazoqusekisa',
-    'leg-conf': '✓ Baqinisekisiwe Futhi Bakhokhe','leg-pend': '⏳ Balindile','leg-none': 'Abasaqinisekisiwe',
-    'form-eyebrow': 'Beka Indawo Yakho',
-    'form-title': 'Qinisekisa <em>Ukungena</em>',
-    'form-intro': 'Khetha igama lakho, gcwalisa imininingwane yakho bese ulayisha <strong>ubufakazi wediphozi lama-R150.</strong> Ukungena kwakho kuzobhekwa bese kuqinisekiswa umhleli. <strong>Inxenye esele yama-R100</strong> ikhokhelwa ngosuku.',
-    'fee1-label': 'Inkokhelo Ephelele','fee2-label': 'Idiphozi Manje (elingabuyiswayo)','fee3-label': 'Inxenye Esele Ekhokhelwa Ngosuku',
-    'lbl-fullname': 'Igama Eligcwele','lbl-nickname': 'Igama Lobungani','ph-fullname': 'Igama lakho eligcwele','ph-nickname': 'isib. Slahla',
-    'lbl-phone': 'Inombolo Yefoni','lbl-email': 'I-imeyili (Ngokuzithandela)','ph-phone': '0XX XXX XXXX','ph-email': 'yakho@imeyili.com',
-    'lbl-select': 'Khetha Igama Lakho','ph-select': '— Khetha igama lakho —',
-    'lbl-upload': 'Layisha Ubufakazi Wediphozi Lama-R150','uz-txt': 'Thepha noma hudula ukulayisha','uz-sub': 'Isithombe-skrini se-EFT, isaziso sebhange — okungeziwe: 2MB',
-    'lbl-msg': 'Umlayezo Kumhleli (Ngokuzithandela)','ph-msg': 'Amanoti noma imibuzo...',
-    'agree-text': 'Ngifundile futhi ngiyavuma yonke imigomo eshicilelwe kuhlanganisa idiphozi elingabuyiswayo lama-R150, inxenye esele yama-R100 ngosuku, uhlelo loku-7/9/11, ukuhosha kobukhulu nobukhulu, nokuthi akukho izinguquko ezizokwenziwa ngosuku lomklomelo.',
-    'submit-btn': 'Qinisekisa Ukungena Kwami →',
-    'success-title': 'Ungene!','success-body': 'Ukuqinisekiswa kwakho kumukelwe futhi kuyahlolwa. Khumbula ukuletha insalela yakho yama-<strong>R100</strong> ngosuku lomklomelo. Sizohlangana ePondi Tavern mhla zili-<strong>20 kuJuni 2026!</strong>',
-    'sponsors-eyebrow': 'Abaxhasi Bethu','sponsors-title': 'Sixhaswe Ngokukhulu <em>Ukuziqhenya</em>',
-    'sp1-role': 'Umxhasi Omkhulu','sp2-role': 'Iziphuzo Ezisemthethweni','sp2-sub': 'Iqanda Ngomkhando. Uyola Ngalunye.',
-    'ft-logo': 'Pro 32 Umncintiswano Wasebusika 2026','ft-sub': 'Ibhola Lomkhono &nbsp;·&nbsp; Pondi Tavern &nbsp;·&nbsp; 2026',
-    'ft-powered': 'Vikelwe futhi iqashwe yi-<strong>Moana Technologies</strong>',
-    'adm-access': 'Ukungena Kwabaphathi','adm-login-btn': 'Ngena','adm-all': 'Yonke Imibhalo','adm-export': '⬇ Khipha i-CSV','adm-clear': 'Sula Konke',
-  }
-};
-
-function setLang(lang) {
-  currentLang = lang;
-  const t = T[lang];
-  document.getElementById('btnEN').classList.toggle('active', lang==='en');
-  document.getElementById('btnZU').classList.toggle('active', lang==='zu');
-
-  // Helper
-  const el = id => document.getElementById(id);
-  const set = (id, html) => { const e=el(id); if(e) e.innerHTML=html; };
-  const setTxt = (id, txt) => { const e=el(id); if(e) e.textContent=txt; };
-  const setPH = (id, txt) => { const e=el(id); if(e) e.placeholder=txt; };
-
-  set('pondi-sub-el', t['pondi-sub']);
-  set('hero-badge-el', t['hero-badge-text']);
-  set('hero-title-line1', t['hero-title-line1']);
-  set('hero-title-em', t['hero-title-em']);
-  set('hero-title-sub', t['hero-title-sub']);
-  set('hero-btn-el', t['hero-btn-text']);
-  setTxt('scroll-text-el', t['scroll-text']);
-  set('terms-eyebrow-el', t['terms-eyebrow']);
-  set('terms-title-el', t['terms-title']);
-  set('final-title-el', t['final-title']);
-  set('final-body-el', t['final-body']);
-  set('t1-title-el', t['t1-title']); set('t1-body-el', t['t1-body']);
-  set('rules-link-el', t['rules-link']);
-  set('t2-title-el', t['t2-title']); set('t2-body-el', t['t2-body']);
-  set('t3-title-el', t['t3-title']); set('t3-body-el', t['t3-body']);
-  set('t4-title-el', t['t4-title']); set('t4-body-el', t['t4-body']);
-  set('t5-title-el', t['t5-title']); set('t5-body-el', t['t5-body']);
-  set('t6-title-el', t['t6-title']); set('t6-body-el', t['t6-body']);
-  set('t7-title-el', t['t7-title']); set('t7-body-el', t['t7-body']);
-  set('t8-title-el', t['t8-title']); set('t8-body-el', t['t8-body']);
-  set('t9-title-el', t['t9-title']); set('t9-body-el', t['t9-body']);
-  set('prizes-eyebrow-el', t['prizes-eyebrow']);
-  set('prizes-title-el', t['prizes-title']);
-  set('prize-notice-title-el', t['prize-notice-title']);
-  set('prize-notice-body-el', t['prize-notice-body']);
-  ['p1','p2','p3','p4','p5','p6','p7','p8'].forEach(k=>set(k+'-el',t[k]));
-  set('prize-total-label-el', t['prize-total-label']);
-  set('prize-total-note-el', t['prize-total-note']);
-  set('tracker-eyebrow-el', t['tracker-eyebrow']);
-  set('tracker-title-el', t['tracker-title']);
-  setTxt('stat-reg-el', t['stat-reg']); setTxt('stat-conf-el', t['stat-conf']);
-  setTxt('stat-pend-el', t['stat-pend']); setTxt('stat-rem-el', t['stat-rem']);
-  set('leg-conf-el', t['leg-conf']); set('leg-pend-el', t['leg-pend']); set('leg-none-el', t['leg-none']);
-  set('form-eyebrow-el', t['form-eyebrow']);
-  set('form-title-el', t['form-title']);
-  set('form-intro-el', t['form-intro']);
-  setTxt('fee1-label-el', t['fee1-label']); setTxt('fee2-label-el', t['fee2-label']); setTxt('fee3-label-el', t['fee3-label']);
-  setTxt('lbl-fullname-el', t['lbl-fullname']); setTxt('lbl-nickname-el', t['lbl-nickname']);
-  setPH('fullName', t['ph-fullname']); setPH('nickname', t['ph-nickname']);
-  setTxt('lbl-phone-el', t['lbl-phone']); setTxt('lbl-email-el', t['lbl-email']);
-  setPH('phone', t['ph-phone']); setPH('fEmail', t['ph-email']);
-  setTxt('lbl-select-el', t['lbl-select']);
-  const sel=el('playerSelect'); if(sel&&sel.options[0]) sel.options[0].text=t['ph-select'];
-  setTxt('lbl-upload-el', t['lbl-upload']); set('uz-txt-el', t['uz-txt']); set('uz-sub-el', t['uz-sub']);
-  setTxt('lbl-msg-el', t['lbl-msg']); setPH('fMsg', t['ph-msg']);
-  set('agree-text-el', t['agree-text']);
-  set('submit-btn-el', t['submit-btn']);
-  set('success-title-el', t['success-title']); set('success-body-el', t['success-body']);
-  set('sponsors-eyebrow-el', t['sponsors-eyebrow']); set('sponsors-title-el', t['sponsors-title']);
-  set('sp1-role-el', t['sp1-role']); set('sp2-role-el', t['sp2-role']); set('sp2-sub-el', t['sp2-sub']);
-  set('ft-logo', t['ft-logo']); set('ft-sub-el', t['ft-sub']); set('ft-powered-el', t['ft-powered']);
-  set('adm-access-el', t['adm-access']); set('adm-login-btn-el', t['adm-login-btn']);
-  set('adm-all-el', t['adm-all']); set('adm-export-el', t['adm-export']); set('adm-clear-el', t['adm-clear']);
-
-  // Re-render player grid so status labels update
-  render();
-  localStorage.setItem('pro32_lang', lang);
-}
-
-// Restore saved language
-const savedLang = localStorage.getItem('pro32_lang') || 'zu';
-setTimeout(() => setLang(savedLang), 100);
-
-// ══════════════════════════════════════════
-// SECRET ADMIN LOGIN — tap footer logo 5x
-// ══════════════════════════════════════════
-let tapCount = 0, tapTimer = null;
-function secretTap() {
-  tapCount++;
-  clearTimeout(tapTimer);
-  if (tapCount >= 5) {
-    tapCount = 0;
-    const sec = document.getElementById('adminSection');
-    sec.style.display = sec.style.display === 'none' ? 'block' : 'none';
-    if (sec.style.display === 'block') {
-      sec.scrollIntoView({behavior:'smooth', block:'center'});
-    }
-  }
-  tapTimer = setTimeout(() => tapCount = 0, 2000);
-}
 
 render();
 </script>
